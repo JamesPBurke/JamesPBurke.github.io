@@ -80,13 +80,16 @@ footer:
   links:
     #- label: "Twitter"
     # icon: "fab fa-fw fa-twitter-square"
-    #  url: "https://twitter.com/"
+    #  url: "https://twitter.com/"    
+    - label: "Bluesky"
+      icon: "fa-brands fa-bluesky"
+      url: "https://bsky.app/profile/drjpburke.bsky.social/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/JamesPBurke/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/drjpburke/"
 
 defaults:
   # _posts
