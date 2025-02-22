@@ -60,7 +60,7 @@ plugins:
 
 author:
   name   : "James P. Burke, PhD"
-  avatar : "/assets/images/my-photo2.jpg"
+  avatar : "/assets/images/bio-snap.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
     - label: "Website"
