@@ -3,6 +3,10 @@ title: "You Have Your America, and I Have Mine."
 published: true
 last_modified_at: 2025-02-22T02:18:41-05:00
 excerpt_separator: "<!--more-->"
+header:
+   image: "/assets/images/posts/twoamericas.jpg"
+   overlay: true
+   caption: "Image created with ChatGPT"
 categories:
   - Blog
 tags:
@@ -11,7 +15,7 @@ tags:
 ---
 
 <div style="font-family: 'Times New Roman', serif;">
-You have your America, and I have mine.<br><br>
+You have your America, and I have mine.<br><br> 
 
 You have your America of division, of walls seen and unseen,<br>
 And I have my America of hearts open and burdens shared.<br><br>
