@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: JamesPBurke
+title: JPBurke
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 # twitter_username: username
 bluesky_username: drjpburke.bsky.social
-github_username: JamesPBurke
+github_username: James P. Burke
 minimal_mistakes_skin: sunrise
 search: true
 
@@ -59,18 +59,19 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "James P. Burke, PhD"
+  name   : "JP Burke, PhD"
   avatar : "/assets/images/bio-snap.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Playful educator, culinary explorer, and lifelong learner."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://jamespburke.com"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Bluesky"
+      icon: "fa-brands fa-bluesky"
+      url: "https://bsky.app/profile/drjpburke.bsky.social/"
+
 
 footer:
   links:
