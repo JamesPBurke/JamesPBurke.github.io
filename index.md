@@ -23,4 +23,4 @@ I am a **Digital Literacy Computer and Science classroom teacher**, a former sof
 - making things
 - that intellect & romance should triumph over brute force & cynicism
 
-Masks save lives.
+Masks save lives. 
