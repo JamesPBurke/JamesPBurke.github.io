@@ -10,10 +10,10 @@ header:
    #  - label: "Push the Button"
    #   url: "http://zombo.com"
    # caption: "This is my custom banner"  # Optional: a caption over your banner
-author_profile: true 
+author_profile: true
 ---
+I am a **Digital Literacy Computer and Science classroom teacher**, a former software engineer, and MathEd postdoctoral research fellow. I believe in
 
-I am a **Digital Literacy Computer and Science classroom teacher**, a former software engineer, and MathEd postdoctoral research fellow. I believe in 
 - playful STEM learning
 - love of family and friends
 - cooking
@@ -21,6 +21,6 @@ I am a **Digital Literacy Computer and Science classroom teacher**, a former sof
 - sci-fi
 - horror
 - making things
-- that intellect & romance should triumph over brute force & cynicism
+- that [intellect & romance should triumph over brute force & cynicism](https://www.youtube.com/watch?v=M9P4SxtphJ4){:target="_blank"}
 
-Masks save lives. 
+Masks save lives.
