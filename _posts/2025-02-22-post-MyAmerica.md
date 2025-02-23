@@ -4,9 +4,9 @@ published: true
 last_modified_at: 2025-02-22T02:18:41-05:00
 excerpt_separator: "<!--more-->"
 header:
-   image: "/assets/images/posts/twoamericas.jpg"
+   image: "/assets/images/posts/twoamericas2.png"
    overlay: true
-   caption: "Image created with ChatGPT"
+   caption: "Image created with MidJourney"
 categories:
   - Blog
 tags:
