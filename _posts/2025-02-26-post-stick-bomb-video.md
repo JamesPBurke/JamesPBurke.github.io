@@ -1,6 +1,6 @@
 ---
 title: "Stick bomb video short"
-published: false
+published: true
 excerpt_separator: "<!--more-->"
 header:
   video:
