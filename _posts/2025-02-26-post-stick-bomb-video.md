@@ -23,9 +23,9 @@ The later part of the stick bomb held together well (too well) because the tensi
 
 **Blog note:** I wanted to test embedding a video as a header to this post so that I can also see what happens when I post the link to Facebook. The information about the video is added to the yml front matter of this post's markdown file:
 
-'''
+```
 header:
   video:
     id: 3i_KQVjg-Gc
     provider: youtube
-'''
+```
