@@ -2,6 +2,10 @@
 title: "Stick bomb video short"
 published: false
 excerpt_separator: "<!--more-->"
+header:
+  video:
+    id: eeI4rnJ5xhMFVTP0
+    provider: youtube
 categories:
   - Blog
 tags:
@@ -11,4 +15,4 @@ tags:
 
 This is a placeholder for the sick bomb video short post.
 
-https://youtube.com/shorts/3i_KQVjg-Gc?si=eeI4rnJ5xhMFVTP0
+# https://youtube.com/shorts/3i_KQVjg-Gc?si=eeI4rnJ5xhMFVTP0
