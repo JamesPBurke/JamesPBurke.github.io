@@ -4,7 +4,7 @@ published: true
 excerpt_separator: "<!--more-->"
 header:
   video:
-    id: eeI4rnJ5xhMFVTP0
+    id: 3i_KQVjg-Gc
     provider: youtube
 categories:
   - Blog
@@ -14,5 +14,3 @@ tags:
 ---
 
 This is a placeholder for the sick bomb video short post.
-
-# https://youtube.com/shorts/3i_KQVjg-Gc?si=eeI4rnJ5xhMFVTP0
