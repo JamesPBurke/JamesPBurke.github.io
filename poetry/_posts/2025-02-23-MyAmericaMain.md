@@ -1,26 +1,18 @@
 ---
-title: "A Two Americas Poem"
+title: "You Have Your America, and I Have Mine."
 published: true
-last_modified_at: 2025-02-23T23:14:39-05:00
-#header:
-#   image: "/assets/images/posts/twoamericas2.png"
-#   overlay: true
-#   caption: "Image created with MidJourney"
-categories:
-  - Blog
+last_modified_at: 2025-02-23T23:01:42-05:00
+header:
+   image: "/assets/images/posts/twoamericas2.png"
+   overlay: true
+   caption: "Image created with MidJourney"
 tags:
   - hope
   - resistance
 ---
-I wrote a poem this week, and it was inspired by a poem about Lebanon that was written
-by Kahlil Gibran. [Here is his poem in an Instagram post.](https://www.instagram.com/gibranslebanon/p/DBjqMjTMjji/https:/)
 
-I don't really write poetry, and I don't think mine is very good, but I was happy enough with it that I thought it might be a first poem of... well, I don't know how many. But I figure that when you feel inspired, you should get it out of your system.
-
-You can read the poem below, but [it also has its own page on this site]({% link poetry/_posts/2025-02-23-MyAmericaMain.md %})  (because I was still getting used to how the categories work, and moving things around messes up the permalinks).
-
-
-span
+<div style="font-family: 'Times New Roman', serif;">
+You have your America, and I have mine.<br><br>  
 
 You have your America of division, of walls seen and unseen,<br>
 And I have my America of hearts open and burdens shared.<br><br>
@@ -54,8 +46,8 @@ My America is enduring, rooted in hope,<br>
 
 It will outlast the storms, the shadows, the voices that call for division.<br><br>
 
-My America belongs to all who believe in one another.<br>
 
+My America belongs to all who believe in one another.<br>
 </div>
 
 <br>*Inspired by Kahlil Gibran*
