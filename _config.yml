@@ -31,8 +31,10 @@ remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: /blog/page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+repository: JamesPBurke/JamesPBurke.github.io
 
 include:
   - _pages
@@ -70,6 +72,13 @@ author:
       icon: "fa-brands fa-bluesky"
       url: "https://bsky.app/profile/jamespburke.com/"
 
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-light" # "github-dark"
+    issue_term: "pathname"
+    label: "comment" # Optional - must be existing label.
 
 footer:
   links:
