@@ -76,6 +76,8 @@ author:
 
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.ico
+og_image: /assets/images/logo.png
+
 
 
 comments:
