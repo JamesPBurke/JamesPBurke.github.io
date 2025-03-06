@@ -20,7 +20,11 @@ I don't really write poetry, and I don't think mine is very good, but I was happ
 You can read the poem below, but [it also has its own page on this site]({% link poetry/_posts/2025-02-23-MyAmericaMain.md %})  (because I was still getting used to how the categories work, and moving things around messes up the permalinks).
 
 
-span
+---
+
+
+<div style="font-family: 'Times New Roman', serif;">
+You have your America, and I have mine.<br><br>
 
 You have your America of division, of walls seen and unseen,<br>
 And I have my America of hearts open and burdens shared.<br><br>
