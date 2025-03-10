@@ -15,7 +15,7 @@ it was meant as a (lightly) educational project, but also as a place for me to r
 
 The site has its own domain ([drowfacts.com](http://drowfacts.com)) but you'll notice it's a redirect to this website. I've resurrected it after moving it here.
 
-* Check out the [Drow Facts Wiki](https://github.com/drowfacts/drowfacts.github.io/wiki) for project details.
+* Check out the [Drow Facts Wiki](https://github.com/JamesPBurke/drowfacts4u/wiki) for project details.
 * The domain redirects to [https://jamespburke.com/drowfacts4u/](https://jamespburke.com/drowfacts4u/) -- so look for it there if the fancy domain name goes away.
 
 
