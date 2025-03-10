@@ -1,5 +1,6 @@
 ---
 title: "Drow Facts is Back"
+last_modified_at: 2025-03-10T01:36:17-05:00
 published: true
 categories:
   - Blog
@@ -20,3 +21,6 @@ The site has its own domain ([drowfacts.com](http://drowfacts.com)) but you'll n
 
 
 One thing I'd like to arrange is to see if I can use a subfolder (an alternate repository on GitHub, as that's how this site is hosted) as its own webapp. I am not sure if the manifest system would interfere with the manifest I use for my main site. I plan to check that out soon. 
+
+**UPDATE:** I got rid of the redirect and applied the domain as a custom domain, which allows https to work, which is a great improvement. Also, added a site manifest so that the first time you
+visit the site on a mobile phone it should ask you if you want to install it like an app on your phone. So it's hosted on the web, but looks like an app.
