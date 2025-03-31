@@ -39,7 +39,6 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 - **rice flour** (optional) for bannetons
 
 ## Equipment
-{.equipment}
 
 - Camwear 12 qt round food storage container (for mixing and folds)
 - Cambro 6 qt round (for bulk rise)
@@ -51,7 +50,6 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 - Lame (for scoring)
 
 ## Instructions
-{.instructions}
 
 1. **Mix Ingredients:**
    In the Camwear, place 1000g KAF flour and 740g water. Mix with spatula until all flour is moistened. Eliminate all dry flour, not because the dry flour is a problem, but because a [thorough initial mixing stage confers various benefits](hhttps://youtu.be/XzK_V0N0zXY?si=JNh5lAnUj1p_6hWa).
@@ -59,6 +57,7 @@ This is a reduced hydration from what I have been doing recently. Every time I i
    Cover the bowl and let the dough rest for 30-45 minutes.
 3. **Leavening:**
    Add the 200g of starter, 50g Bolted Hard wheat flour, and active dry yeast. Mix to incorporate. I added the 50g of bolted wheat here because I was balancing the excess water in the starter (really a levain at this point) to set the dough hydration at 73%.
+
    I picked up the addition of active dry yeast from Ken Forkish in [Flour Water Salt Yeast](https://kensartisan.com/flour-water-salt-yeast). Complain to him if you don't like it.
    {: .notice--info }
 4. **Salt:**
@@ -82,14 +81,14 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 13. **Cooling:**
     Remove the bread from the oven and cool completely on a wire rack before slicing.
 
-## Tips {.tips}
+## Tips
 
 - **Temperature Considerations:**
   Ambient temperature can affect fermentation times. Adjust the proofing duration as needed.
 - **Starter Activity:**
   Since I refrigerate my starter between bakings, I feed it so that the levain will be ready for baking. Ideally, I do one 50/50 feeding overnight or something, and then another one that will bring the starter/levain up above the amount I need, and be ready for when I want to bake. For my current starter, I think it takes around 6-8 hours for the levain to be ready.
 
-Nutritional Information (Optional)
+## Nutritional Information
 
 *Total Nutritional Values (Entire Batch – 2 loaves, ~1,811 g):*
 
