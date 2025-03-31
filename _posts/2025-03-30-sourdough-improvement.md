@@ -27,7 +27,7 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 
 # Nice Loaves March 29 {#artisan-sourdough}
 
-## Ingredients {.ingredients}
+## Ingredients 
 
 - **Active Sourdough Starter:** 200g
 - **Active Dry Yeast:** 2g
@@ -38,7 +38,8 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 - **Olive oil**
 - **rice flour** (optional) for bannetons
 
-## Equipment {.equipment}
+## Equipment
+{.equipment}
 
 - Camwear 12 qt round food storage container (for mixing and folds)
 - Cambro 6 qt round (for bulk rise)
@@ -49,7 +50,8 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 - Dutch ovens
 - Lame (for scoring)
 
-## Instructions {.instructions}
+## Instructions
+{.instructions}
 
 1. **Mix Ingredients:**
    In the Camwear, place 1000g KAF flour and 740g water. Mix with spatula until all flour is moistened. Eliminate all dry flour, not because the dry flour is a problem, but because a [thorough initial mixing stage confers various benefits](hhttps://youtu.be/XzK_V0N0zXY?si=JNh5lAnUj1p_6hWa).
@@ -57,7 +59,8 @@ This is a reduced hydration from what I have been doing recently. Every time I i
    Cover the bowl and let the dough rest for 30-45 minutes.
 3. **Leavening:**
    Add the 200g of starter, 50g Bolted Hard wheat flour, and active dry yeast. Mix to incorporate. I added the 50g of bolted wheat here because I was balancing the excess water in the starter (really a levain at this point) to set the dough hydration at 73%.
-   I picked up the addition of active dry yeast from Ken Forkish in [Flour Water Salt Yeast](https://kensartisan.com/flour-water-salt-yeast). Complain to him if you don't like it.{: .notice--info }
+   I picked up the addition of active dry yeast from Ken Forkish in [Flour Water Salt Yeast](https://kensartisan.com/flour-water-salt-yeast). Complain to him if you don't like it.
+   {: .notice--info }
 4. **Salt:**
    Once the leavening is well-mixed-in, add the salt. 20g. I don't like the salt to come in concentrated contact with the leavening. Finish with some stretches and let it rest, covered, for 30 mins.
 5. **Stretch and fold:**
