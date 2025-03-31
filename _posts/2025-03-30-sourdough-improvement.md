@@ -1,3 +1,4 @@
+---
 title: "Improved Hydration Targeting"
 published: true
 categories:
@@ -14,7 +15,6 @@ gallery:
   image_path: /assets/images/posts/032025_crumb.jpg
   alt: "Cross section showing the crumb"
   title: "Obligatory crumb"
-
 ---
 
 {% include gallery caption="Aren't they beautiful?" %}
