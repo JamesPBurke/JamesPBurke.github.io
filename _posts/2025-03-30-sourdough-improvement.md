@@ -1,12 +1,11 @@
 title: "Improved Hydration Targeting"
 published: true
 categories:
-
 - Blog
-  tags:
+tags:
 - baking
 - recipes
-  gallery:
+gallery:
 - url: /assets/images/posts/032025_boules.jpg
   image_path:  /assets/images/posts/032025_boules.jpg
   alt: "Two sourdough boules"
@@ -67,7 +66,7 @@ This is a reduced hydration from what I have been doing recently. Every time I i
    After 30 minutes, do another set of stretching and folding. Then rest for 30 mins.
 6. Coil fold 1:
    Do one set of coil folds. Prior to the coil folds you should notice that the dough passes a windowpane test. If it doesn't, you might need more stretches. Rest 30 mins.
-7. Coil forld 2:
+7. Coil fold 2:
    Do a second set of coil folds. Notice the texture of the dough. It should be holding together well now and have a bounciness.
 8. Bulk Rise:
    Take the coil-folded dough and place in the Cambro container (lightly oiled with a mist of olive oil) for the bulk rise. Cover and let the dough rise at room temperature for 3+ hours until somewhere over not quite doubled in size.
