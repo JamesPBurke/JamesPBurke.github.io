@@ -10,7 +10,7 @@ gallery:
 - url: /assets/images/posts/032025_boules.jpg
   image_path:  /assets/images/posts/032025_boules.jpg
   alt: "Two sourdough boules"
-  title: "Mugh boules!"
+  title: "Muh boules!"
 - url:  /assets/images/posts/032025_crumb.jpg
   image_path: /assets/images/posts/032025_crumb.jpg
   alt: "Cross section showing the crumb"
@@ -24,21 +24,19 @@ This weekend I baked sourdough again. I want to write down my exact recipe and p
 This is a reduced hydration from what I have been doing recently. Every time I increase my hydration, I see some benefits (like thinner, crisp crust) and then I fall into a rut of poor oven spring and weak dough structure. So, this is what I will go back to when I need it to be reliable.
 
 
-* TOC
-  {:toc}
 
 # Nice Loaves March 29 {#artisan-sourdough}
 
 ## Ingredients {.ingredients}
 
 - **Active Sourdough Starter:** 200g
-- Active Dry Yeast: 2g
+- **Active Dry Yeast:** 2g
 - **Water (lukewarm temperature):** 740g
 - **KAF Sir Lancelot Flour:** 1000g
-- Castle Valley Mill Bolted Hard Wheat flour: 50 g
+- [**Castle Valley Mill Bolted Hard Wheat flour:**](https://castlevalleymill.com/Store.html#!/2lb-Bolted-Hard-Wheat-Flour-bread-pasta-pizza/p/79849245) 50 g
 - **Salt:** 20g
-- Olive oil
-- rice flour (optional) for bannetons
+- **Olive oil**
+- **rice flour** (optional) for bannetons
 
 ## Equipment {.equipment}
 
@@ -57,18 +55,18 @@ This is a reduced hydration from what I have been doing recently. Every time I i
    In the Camwear, place 1000g KAF flour and 740g water. Mix with spatula until all flour is moistened. Eliminate all dry flour, not because the dry flour is a problem, but because a [thorough initial mixing stage confers various benefits](hhttps://youtu.be/XzK_V0N0zXY?si=JNh5lAnUj1p_6hWa).
 2. **Autolyse:**
    Cover the bowl and let the dough rest for 30-45 minutes.
-3. Leavening:
+3. **Leavening:**
    Add the 200g of starter, 50g Bolted Hard wheat flour, and active dry yeast. Mix to incorporate. I added the 50g of bolted wheat here because I was balancing the excess water in the starter (really a levain at this point) to set the dough hydration at 73%.
-   I picked up the addition of active dry yeast from Ken Forkish in [Flour Water Salt Yeast](https://kensartisan.com/flour-water-salt-yeast). Complain to him if you don't like it. {: .notice--info }
-4. Salt:
+   I picked up the addition of active dry yeast from Ken Forkish in [Flour Water Salt Yeast](https://kensartisan.com/flour-water-salt-yeast). Complain to him if you don't like it.{: .notice--info }
+4. **Salt:**
    Once the leavening is well-mixed-in, add the salt. 20g. I don't like the salt to come in concentrated contact with the leavening. Finish with some stretches and let it rest, covered, for 30 mins.
 5. **Stretch and fold:**
    After 30 minutes, do another set of stretching and folding. Then rest for 30 mins.
-6. Coil fold 1:
+6. **Coil fold 1:**
    Do one set of coil folds. Prior to the coil folds you should notice that the dough passes a windowpane test. If it doesn't, you might need more stretches. Rest 30 mins.
-7. Coil fold 2:
+7. **Coil fold 2:**
    Do a second set of coil folds. Notice the texture of the dough. It should be holding together well now and have a bounciness.
-8. Bulk Rise:
+8. **Bulk Rise:**
    Take the coil-folded dough and place in the Cambro container (lightly oiled with a mist of olive oil) for the bulk rise. Cover and let the dough rise at room temperature for 3+ hours until somewhere over not quite doubled in size.
 9. **Pre-shape & Rest:**
    Gently turn the dough out onto a work surface. Divide into two. Pre-shape them into rounds by folding edges underneath, then using the heel of your palm and side of your hands to round the dough against the work surface, pulling the dough across the surface by dragging your hands against the work surface. Cover with bowls and let rest for 20 minutes.
@@ -88,7 +86,7 @@ This is a reduced hydration from what I have been doing recently. Every time I i
 - **Starter Activity:**
   Since I refrigerate my starter between bakings, I feed it so that the levain will be ready for baking. Ideally, I do one 50/50 feeding overnight or something, and then another one that will bring the starter/levain up above the amount I need, and be ready for when I want to bake. For my current starter, I think it takes around 6-8 hours for the levain to be ready.
 
-Nutritional Information (Optional) {.nutrition}
+Nutritional Information (Optional)
 
 *Total Nutritional Values (Entire Batch – 2 loaves, ~1,811 g):*
 
