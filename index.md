@@ -8,5 +8,14 @@ header:
    overlay_image: /assets/images/mapbanner2.png
 author_profile: true
 ---
+# Recent Posts
 
-[Check out the Blog](/blog/index.md){: .btn .btn--primary .btn--x-large}
+
+{% for post in site.posts limit:2 %}
+<article class="post">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  </article>
+{% endfor %}
+
+[Check out the main Blog page](/blog/index.html){: .btn .btn--primary .btn--large}

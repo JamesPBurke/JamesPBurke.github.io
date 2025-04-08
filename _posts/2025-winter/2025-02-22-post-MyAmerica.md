@@ -17,7 +17,7 @@ by Kahlil Gibran. [Here is his poem in an Instagram post.](https://www.instagram
 
 I don't really write poetry, and I don't think mine is very good, but I was happy enough with it that I thought it might be a first poem of... well, I don't know how many. But I figure that when you feel inspired, you should get it out of your system.
 
-You can read the poem below, but [it also has its own page on this site]({% link poetry/_posts/2025-02-23-MyAmericaMain.md %})  (because I was still getting used to how the categories work, and moving things around messes up the permalinks).
+You can read the poem below, but [it also has its own page on this site]({% link Poetry/_posts/2025-02-23-MyAmericaMain.md %})  (because I was still getting used to how the categories work, and moving things around messes up the permalinks).
 
 
 ---

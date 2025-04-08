@@ -28,3 +28,4 @@ In any case, the "spoiler" above was accomplished with this HTML:
    Spoiler text here
 </details>
 ```
+
