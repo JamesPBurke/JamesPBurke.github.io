@@ -81,6 +81,7 @@ author:
   avatar : "/assets/images/bio-snap.jpg"
   bio    : "Playful educator, culinary explorer, and lifelong learner. B.Sc. Computer Science, Ph.D. Mathematics Education."
   location: "Massachusetts, USA"
+  home: "/about/"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
