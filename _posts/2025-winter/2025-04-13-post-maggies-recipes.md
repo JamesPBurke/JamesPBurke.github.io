@@ -6,17 +6,17 @@ categories:
   - Blog
 tags:
   - link
-link: https://jpb-blog-files.s3.us-east-2.amazonaws.com/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf
+link: https://jpb-blog-files.s3.us-east-2.amazonaws.com/downloadables/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf
 ---
 
 Part of how I used to use my old blog was to share and remember recipes. Here's a document Maggie put together to record some Lebanese recipes she got from my family. 
 
-<iframe src="{{ 'https://jpb-blog-files.s3.us-east-2.amazonaws.com/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf' | absolute_url }}"
+<iframe src="{{ 'https://jpb-blog-files.s3.us-east-2.amazonaws.com/downloadables/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf' | absolute_url }}"
         width="100%"
         height="600px"
         style="border: none;">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="{{ 'https://jpb-blog-files.s3.us-east-2.amazonaws.com/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf' | absolute_url }}">Download PDF</a>.
+  <a href="{{ 'https://jpb-blog-files.s3.us-east-2.amazonaws.com/downloadables/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf' | absolute_url }}">Download PDF</a>.
 </iframe>
 
 
