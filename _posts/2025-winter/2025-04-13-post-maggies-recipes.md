@@ -5,6 +5,10 @@ last_modified_at: 2025-04-13T14:20:22
 categories:
   - Blog
 tags:
+  - cooking
+  - lebanese
+  - recipes
+  - downloadables
   - link
 link: https://jpb-blog-files.s3.us-east-2.amazonaws.com/downloadables/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf
 ---
