@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/sciuridae67
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jamespburke.com
+  * I am sciuridae67 (https://keybase.io/sciuridae67) on keybase.
+  * I have a public key with fingerprint F491 17AA 398B EFE3 1EE9  7C1D D9EA 38D7 DB38 5371
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01205d85f016ef8fa7fb27f8c287e8d84692fb4bbc5f709bcd5e53d4e3c6f9f40cf30a",
+      "fingerprint": "f49117aa398befe31ee97c1dd9ea38d7db385371",
+      "host": "keybase.io",
+      "key_id": "d9ea38d7db385371",
+      "kid": "010125fad194a575ca6de2d487f8fe2c3934381e669ada743d1450e7e1145fc951cf0a",
+      "uid": "c797d24dcc657b13bcdcfebfd021f119",
+      "username": "sciuridae67"
+    },
+    "service": {
+      "hostname": "jamespburke.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1745375336,
+  "expire_in": 157680000,
+  "prev": "32e483927f494984b8445590c17cd0f7b517db9b35056382c20232f190ee379e",
+  "seqno": 23,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMN8AnicbVJrTBRXGF0eJUrl1QpBEJDRGKE8ZubOc0tjlZRiVIqxcUWhm5k7d5aB
+ZXeZ3eUh1RpIWqpohQBqE2iqdsGKWNJALTUUKFIpFS1VqN0gtMWKmKBWxdYS6CzR
+f71/vtz7nXPu+c69fQE+On+vG9PcqJvbXug12NPo1OUuycwtw0SrVIrpy7B8tFiQ
+WUJ2hzFfkTA9hhMkTkscLeMEg2ROFlhZJFmZgyTHIk7iKIYnZZESRUjLLM6LUKIR
+DSQKAcjIvEzhUAa4gCVgsmIxIdWmKhaHJitTPEGwggB4TkQyAgRCPAsJSeKRADiJ
+lUTA0YAlNGKu1e5haOZEwY6SFKt2pm2Mi/b+B//ct+aclgWJ4CmBZmkoMBIiJYrT
+vMuIhIAHFOAIxDC8IAksBSSConHEIkKrMuRpAsqLvp2LcpDlWYmkJAgZmhUJoM0J
+ZSTKEk4SMkHwHqAdqRahAGloO1ScqiIJiGGxvQmY1ihSIPJk6xnmGShPK3ab6FTz
+URK0FmgKNtXqsEKrWWvmOhw2u95DdpTaPOhiJBqf6RhFxSJpaWqMIqTaFasF0xMa
+EjoUjzDBUloSNABMAoZKbIqKjIoHQbMMh2vLcw8q0iQBiSgO8NprUjzFc5TIURRN
+8zgkWCjhMivShJYrLwIapxnAkZDESUDKBI8jBFgeYZ7JCi1WTE8Czadg8kyumCyC
+w6kibG9vT7avzstf5/eCt+eb6fyXBj//fNPBQXP+WfVROSmmw3mXqpb9WnnqQERj
+2GgW24wv+W3VuKE3Rfd6Qc+FkYEn7pNRE8N9nW4m/MX6jY7o7/tds5mOyRMQgd8j
+2161Ry8MXN9/ODY4LOjKTGrS8aGK5R2Wv84nnjO058/HrAz51+vr+No17d3+J+Vr
+y6bKIyqSg7I3h9/58M5W9lZKkiXmnWPer7TMVFcf/DS09YcMw9byCmvyuF+M4QD6
+27R6tqnwntow4iSHAx6vLznyR7l+rivt6MfqxQ92Pzi96dC6CNxnf9fOh/fmlZgn
+a0eG3IxhzUR+y6w51H1+sG9VfPz9d8WMHc5j63wDd2WPpc9lrnCZH82PZQzO3m3u
+LDNtO/2wtnZuMNUQd8b3xCXdP2cvVxbfqOre1XYz8tTC0rx9bxkCvfddMFb62No3
+T7g+jxy9lt4R+WZd3NQ3k+xI7TZuKDvv5XOPGx71pAU0hlaj1py6B01jPgmuPU8d
+087325pWukrr6r+47H5j9HhsSSFhe+9s9+0Nh76bCM/tXZvauTBtPrNFABtMX2Zd
+nP+lBh6R+YY0v/6Y9ZuaazZORSTWXo15TVz45MfU4ESq6qfA0qjxu8v3lL3dseMj
+c82AXrGEX729e/z+cM5nLz2d7b8QFlf+7dxwS3SIeH3FJK6GdU1fuZWyE9PHJm6f
+2eK6ufrnoYPJga2+6cUhfwYXpXkNf3U0IP0/1CnFtQ==
+=5/FS
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sciuridae67
+
+==================================================================
