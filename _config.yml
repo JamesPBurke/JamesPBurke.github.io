@@ -33,18 +33,10 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 
 # Pagination settings
-pagination:
-  enabled: true
-  collection: posts # collection to paginate
-  per_page: 5 # number of posts per page
-  permalink: '/page/:num/' # used for the permalink of the page
-  title: ':title - page :num' # used for the title of the page
-  limit: 0 
-  sort_field: 'date' 
-  sort_reverse: true 
-  trail: 
-    before: 2 # number of pages before the current page
-    after: 2 # number of pages after the current page
+paginate: 5 # number of posts per page
+paginate_path: /blog/page:num/ # used for the permalink of the pages
+
+
 
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -69,7 +61,7 @@ include:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
