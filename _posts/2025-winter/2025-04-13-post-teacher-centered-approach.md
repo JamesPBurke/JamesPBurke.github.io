@@ -5,6 +5,8 @@ categories:
   - Blog
 tags:
   - link
+  - education
+  - computer science
 link: https://csteachers.org/a-teacher-centered-approach-to-reimagining-cs-professional-development/
 ---
 
