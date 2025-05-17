@@ -1,7 +1,7 @@
 ---
 title: "The American Experiment"
 published: true
-last_modified_at: 2025-05-17T14:40:38-05:00
+last_modified_at: 2025-05-17T17:01:09-05:00
 categories:
 - Blog
 tags:
@@ -28,68 +28,64 @@ You can click on any of the images for a larger image, and you should also be ab
 
 ---
 
+
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png)
 **JP:**  
 generate the most American photograph you can imagine.
 
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png)
-
-
 **“Most American Photograph”**
 
+
 *Ok, I see where this is going.*
+<br clear="all">
 
 ---
 
+
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(2).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(2).png)
 **JP:**  
 I want one that is even more American.
 
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(2).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(2).png)
-
-
 **“Even More American”**
 
-*Isn't this just the same picture? Maybe I should specify an amount.*
+*Isn't this basically the same picture? Maybe I should specify an amount.*
+<br clear="all">
 
 ---
 
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(3).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(3).png)
 **JP:**  
 Make it 200% more American.
-
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(3).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(3).png)
-
 
 **“200% More American”**
 
 *Check out the presidential bandanas. I'm still not satisfied.*
+<br clear="all">
 
 ---
 
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(5).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(5).png)
 **JP:**  
 I can tell you're trying, but this is not nearly American enough. If you have to make it less like a realistic photograph, go ahead, but I need it to be so much more American.
-
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(5).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(5).png)
 
 
 **"Surrealistically American"**
 
 *Who knew that the photograph specification was holding it back so much? Finally we have an eagle.*
+<br clear="all">
 
 ---
 
+
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(4).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(4).png)
 **JP:**  
 This is great, but I think you can make it more American. Supremely American.
-
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(4).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(4).png)
 
 
 **“Supremely American”**
 
 *Oh, I like this eagle better. The thumbs up is corny, though. I know we can GO DEEPER.*
+<br clear="all">
 
 ---
 
@@ -122,16 +118,14 @@ Absolutely. Let's imagine the most prototypical American man — call him *Dale 
 
 ---
 
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png)
 **JP:**  
 yes
-
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png)
-
 
 **“Dale R. Liberty Approved”**
 
 *I think it's time to make some adjustments.*
+<br clear="all">
 
 ---
 
@@ -149,26 +143,28 @@ Absolutely — they *do* have a point, and it’s a deeply American one.
 - Banner: **"One Nation. Many Journeys."**
 - Mount Rushmore joined by the **Statue of Liberty**.
 
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(7).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(7).png)
 **ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(7).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(7).png)
+
 
 
 **“One Nation. Many Journeys.”**
 
 *I like the diversity. But I can already hear the complaints. Let's imagine there is a discussion going on...*
+<br clear="all">
 
 ---
 
+
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png)
 **JP:**  
 Ok, but now the prototypical American dude has some feedback. Imagine what it is and you don't have to tell me, just follow through on it.
-
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png)
 
 
 **“Diverse + Dale Reconciled”**
 
 *Now that's some togetherness.*
+<br clear="all">
 
 ---
 
@@ -195,30 +191,27 @@ Oh, you’re ready for **Constitutional Thunder**? Buckle up.
 - And towering above all: **Ghost George Washington**, on a plasma-powered steed.
 
 ---
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png)
 
 **JP:**  
 Go
 
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png)
-
-
 **“Constitutional Thunder Painting”**
 
 *Who doesn't want constitutional thunder? And I feel like I learned something.*
+<br clear="all">
 
 ---
 
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png){: width="50%" .align-right}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png)
 **JP:**  
 Can you make a version of that, but it's a photograph?
-
-**ChatGPT:**  
-[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png)
 
 
 **“Constitutional Thunder Photo”**
 
 *Anyone want to get this as a tattoo?*
+<br clear="all">
 
 ---
 
