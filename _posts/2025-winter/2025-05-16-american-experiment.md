@@ -9,9 +9,10 @@ tags:
 ---
 
 
+
 # Chasing the Most American Image Ever: A Conversation with ChatGPT
 
-*What began as a simple prompt quickly escalated into a thunderous journey through layers of patriotism, cultural representation, and glorious absurdity. What follows is the full exchange, formatted for your reading pleasure.*
+*What began as a simple prompt quickly escalated into a thunderous journey through layers of patriotism, cultural representation, and glorious absurdity. What follows is the full exchange, with some of my additional comments.*
 
 ---
 
@@ -19,9 +20,12 @@ tags:
 generate the most American photograph you can imagine.
 
 **ChatGPT:**  
-![“Most American Photograph”](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png)
-“Most American Photograph”
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(1).png)
 
+
+**“Most American Photograph”**
+
+*Ok, I see where this is going.*
 
 ---
 
@@ -29,8 +33,12 @@ generate the most American photograph you can imagine.
 I want one that is even more American.
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 2 – “Even More American”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(2).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(2).png)
+
+
+**“Even More American”**
+
+*Isn't this just the same picture? Maybe I should specify an amount.*
 
 ---
 
@@ -38,8 +46,12 @@ I want one that is even more American.
 Make it 200% more American.
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 3 – “200% More American”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(3).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(3).png)
+
+
+**“200% More American”**
+
+*Check out the presidential bandanas. I'm still not satisfied.*
 
 ---
 
@@ -47,8 +59,12 @@ Make it 200% more American.
 I can tell you're trying, but this is not nearly American enough. If you have to make it less like a realistic photograph, go ahead, but I need it to be so much more American.
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 4 – “Surrealistically American”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(5).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(5).png)
+
+
+**"Surrealistically American"**
+
+*Who knew that the photograph specification was holding it back so much? Finally we have an eagle.*
 
 ---
 
@@ -56,8 +72,12 @@ I can tell you're trying, but this is not nearly American enough. If you have to
 This is great, but I think you can make it more American. Supremely American.
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 5 – “Supremely American”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(4).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(4).png)
+
+
+**“Supremely American”**
+
+*Oh, I like this eagle better. The thumbs up is corny, though. I know we can GO DEEPER.*
 
 ---
 
@@ -94,8 +114,12 @@ Absolutely. Let's imagine the most prototypical American man — call him *Dale 
 yes
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 6 – “Dale R. Liberty Approved”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png)
+
+
+**“Dale R. Liberty Approved”**
+
+*I think it's time to make some adjustments.*
 
 ---
 
@@ -114,8 +138,12 @@ Absolutely — they *do* have a point, and it’s a deeply American one.
 - Mount Rushmore joined by the **Statue of Liberty**.
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 7 – “One Nation. Many Journeys.”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(7).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(7).png)
+
+
+**“One Nation. Many Journeys.”**
+
+*I 
 
 ---
 
@@ -123,7 +151,7 @@ Absolutely — they *do* have a point, and it’s a deeply American one.
 Ok, but now the prototypical American dude has some feedback. Imagine what it is and you don't have to tell me, just follow through on it.
 
 **ChatGPT:**  
-*Image created.*  
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png)
 **![Insert Image 8 – “Diverse + Dale Reconciled”]**
 
 ---
@@ -156,8 +184,8 @@ Oh, you’re ready for **Constitutional Thunder**? Buckle up.
 Go
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 9 – “Constitutional Thunder Painting”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png)
+**“Constitutional Thunder Painting”**
 
 ---
 
@@ -165,32 +193,8 @@ Go
 Can you make a version of that, but it's a photograph?
 
 **ChatGPT:**  
-*Image created.*  
-**![Insert Image 10 – “Constitutional Thunder Photo Attempt #1”]**
-
----
-
-**JP:**  
-Well it's not very much like the previous image, is it?
-
-**ChatGPT:**  
-You’re absolutely right — it didn’t match the **thunderclap** of that previous vision.
-
-> That last one was basically the Constitution having a *lucid dream about itself*.  
-> This one? Just a guy with a flag and a bird.
-
-**Let’s fix that. New photographic version coming with:**
-- Ghost Washington on spectral horse.
-- Ben Franklin high-fiving Liberty mid-flight.
-- A monster truck.
-- A liberty fire pit circle.
-- Pure mythic Americana.
-
----
-
-**ChatGPT:**  
-*Image created.*  
-**![Insert Image 11 – “True Constitutional Thunder – Photo Edition”]**
+[![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png)
+**“Constitutional Thunder Photo”**
 
 ---
 
