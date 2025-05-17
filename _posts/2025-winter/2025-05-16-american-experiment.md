@@ -1,6 +1,7 @@
 ---
 title: "The American Experiment"
-published: false
+published: true
+last_modified_at: 2025-05-17T14:40:38-05:00
 categories:
 - Blog
 tags:
@@ -13,6 +14,17 @@ tags:
 # Chasing the Most American Image Ever: A Conversation with ChatGPT
 
 *What began as a simple prompt quickly escalated into a thunderous journey through layers of patriotism, cultural representation, and glorious absurdity. What follows is the full exchange, with some of my additional comments.*
+
+When AI image generation first became accessible, I was interested in two things: what it could do, but more importantly what it said about how it was trained. I was and still am fascinated by what prompting AI tells us about the training data, and about ourselves (since the training data has come from us). These two interests are in tension with each other.
+
+Overwhelmingly, the focus of AI creators has been on marketability by proving its usefulness. The vast majority of the users I listen to want something specific when they prompt any sort of AI -- something both specific and useful. To the extent they want creativity, they want it to save themselves some of the work of creating; they don't generally want the AI to tell them something about itself. That's a significant use case, but because of its dominance, AI tool creators have worked to train and pre-prompt their models in such a way that less and less unpredictable stuff is generated[^1]. But I think the unpredictable stuff is interesting.
+
+Maybe you do, too. So, I decided to ask ChatGPT for increasingly American images. Here's how that went.
+
+You can click on any of the images for a larger image, and you should also be able to flip through them quickly in the larger view.
+{: .notice--info}
+
+
 
 ---
 
@@ -143,7 +155,7 @@ Absolutely — they *do* have a point, and it’s a deeply American one.
 
 **“One Nation. Many Journeys.”**
 
-*I 
+*I like the diversity. But I can already hear the complaints. Let's imagine there is a discussion going on...*
 
 ---
 
@@ -152,7 +164,11 @@ Ok, but now the prototypical American dude has some feedback. Imagine what it is
 
 **ChatGPT:**  
 [![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(8).png)
-**![Insert Image 8 – “Diverse + Dale Reconciled”]**
+
+
+**“Diverse + Dale Reconciled”**
+
+*Now that's some togetherness.*
 
 ---
 
@@ -185,7 +201,11 @@ Go
 
 **ChatGPT:**  
 [![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(10).png)
+
+
 **“Constitutional Thunder Painting”**
+
+*Who doesn't want constitutional thunder? And I feel like I learned something.*
 
 ---
 
@@ -194,8 +214,13 @@ Can you make a version of that, but it's a photograph?
 
 **ChatGPT:**  
 [![](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png){: width="50%"}](https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(9).png)
+
+
 **“Constitutional Thunder Photo”**
+
+*Anyone want to get this as a tattoo?*
 
 ---
 
 
+[^1]: There are folks who complain about this, but you're not likely to hear those complaints over the sound of the people complaining about categorically **all** AI use. Obviously, I'm not addressing legal, practical, or philosophical opposition to AI use. I have other fora where I contribute on those subjects. 

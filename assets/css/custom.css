@@ -3,3 +3,7 @@ body {
     font-size: 18px;
     font-family: 'Merriweather', serif;
   }
+
+.footnotes {
+  color: #444;
+}
