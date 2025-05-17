@@ -1,6 +1,9 @@
 ---
 title: "The American Experiment"
 published: true
+header: 
+   teaser: https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png
+   og_image: https://jpb-blog-files.s3.us-east-2.amazonaws.com/postimages/murcagen/murcagen+(6).png
 last_modified_at: 2025-05-17T17:01:09-05:00
 categories:
 - Blog
