@@ -44,7 +44,7 @@ Recipe (or [see my cooked.wiki entry](https://cooked.wiki/saved/b07179d0-4042-43
 
 ---
 
-### Ingredients:contentReference
+### Ingredients:
 * 1 cup flour  
 * 1 cup buttermilk  _– or –  1 cup milk + 1 Tbsp lemon juice_  
 * ½ tsp salt  
@@ -56,7 +56,7 @@ Recipe (or [see my cooked.wiki entry](https://cooked.wiki/saved/b07179d0-4042-43
 
 ---
 
-### Directions:contentReference
+### Directions:
 1. **Make soured milk (if needed).** Stir the lemon juice into the milk and let it stand ≈ 10 min.  
 2. **Combine dry ingredients.** Whisk or sift the flour, salt, baking soda, baking powder, and sugar.  
 3. **Beat the egg.**  
