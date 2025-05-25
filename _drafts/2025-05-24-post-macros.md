@@ -1,6 +1,5 @@
 ---
 title: "Macros"
-published: false
 
 categories:
 - Blog
