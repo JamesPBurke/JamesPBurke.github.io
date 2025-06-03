@@ -80,6 +80,10 @@ author:
     - label: "Bluesky"
       icon: "fa-brands fa-bluesky"
       url: "https://bsky.app/profile/jamespburke.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jpburke/"
+
 
 logo: /assets/images/logo.png
 favicon: /assets/images/favicon.ico
