@@ -1,6 +1,7 @@
 ---
 title: "Owl See You Later"
 published: true
+last_modified_at: 2025-06-11T16:01:39
 header: 
    #image: 
    teaser: https://ik.imagekit.io/scurryday/thumb/foulowl.png
@@ -29,5 +30,12 @@ I suppose you might tell me that perhaps language practice just isn't a priority
 As a software engineer, I know the kind of change I'm envisioning isn't impossible to implement. And it needn't be confusing for users, either, as the "daily" option could be a default that people can choose not to fiddle with. But I suppose Duolingo would rather lose me for a few days than risk people missing their reminders and failing to support their little online army of people pestering each other about htis one spoecific kind of learning.
 
 Consider me on a short Duo vacation.
+
+## UPDATED:
+
+![](https://ik.imagekit.io/scurryday/thumb/owl_screenshot.jpg)
+
+
+Nice try, Duo. Kill my streak. I'll come back eventually and build from the ashes. But now that I know you'll offer this, maybe I'll start ignoring you more for short periods. 
 
 [^1]: It's worth noting that teaching has created ***many*** more small-to-medium-sized responsibilities, which has complicated things. But the system so far has managed to absorb the new responsibilities.
