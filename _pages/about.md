@@ -17,6 +17,8 @@ I am a **Digital Literacy Computer and Science classroom teacher**, a former sof
 
 Masks save lives.
 
+![](https://ik.imagekit.io/scurryday/aht/ghiblime.gif?updatedAt=1750287104221)
+
 
 
 My perspective is that of an anti-authoritarian educator. [![](https://ik.imagekit.io/scurryday/asst/AntiAuthoritarianEducation.png?tr=w-100)](https://ik.imagekit.io/scurryday/asst/AntiAuthoritarianEducation.png)
