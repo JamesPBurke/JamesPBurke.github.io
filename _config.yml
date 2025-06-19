@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Burke_edu
+title: jamespburke
 
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Burke_edu is James P. Burke's personal website. Playful educator, culinary explorer, and lifelong learner. 
+  jamespburke.com is James Patrick Burke's personal website. Playful educator, culinary explorer, and lifelong learner. 
   B.Sc. Computer Science, Ph.D. Mathematics Education.
 # twitter_username: username
 bluesky_username: jamespburke.com
