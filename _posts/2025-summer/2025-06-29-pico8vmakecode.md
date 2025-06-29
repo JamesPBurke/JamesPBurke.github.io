@@ -1,11 +1,11 @@
 ---
 title: "Pico-8 vs. MakeCode Arcade"
-published: false
+published: true
 last_modified_at: 2025-06-27T09:43:41
 header: 
    #image: 
-   teaser: https://ik.imagekit.io/scurryday/thumb/foulowl.png
-   og_image: https://ik.imagekit.io/scurryday/thumb/foulowl.png
+   #teaser:
+   #og_image:
 categories:
 - Blog
 tags:
@@ -13,7 +13,15 @@ tags:
 - education
 ---
 
+
+
+PICO-8 is a fantasy console that provides an environment for creating, sharing, and playing small digital games and programs. PICO-8 deliberately embraces limitations to foster creativity and learning. Hearing about this, I have thought about whether to incorporate PICO-8 in my classes, or even replace MakeCode Arcade with it. So I thought I would have Perplexity generate a comparison.
+
 This comparison evaluates both platforms specifically for educators teaching 9th-grade students who may use Chromebooks, providing detailed analysis of each platform's strengths and limitations for classroom implementation.
+
+Note that even though Perplexity is good at referring to sources, the actual URLs it provides are sometimes broken. I assume that's because it will partially hallucinate a completed URL if it has incomplete information. Also, the details in the comparisons sometimes lack context (like, whether you're talking about the paid vs. free version of something).
+
+All that said, this has helped me get a little bit of a handle on the differences between a platform I already use and what Pico-8 has to offer.
 
 ## **Technical Infrastructure & Accessibility**
 
