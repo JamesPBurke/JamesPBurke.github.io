@@ -4,8 +4,8 @@ published: false
 last_modified_at: 2025-06-27T09:43:41
 header: 
    #image: 
-   teaser: https://ik.imagekit.io/scurryday/thumb/foulowl.png
-   og_image: https://ik.imagekit.io/scurryday/thumb/foulowl.png
+   teaser: 
+   og_image: 
 categories:
 - Blog
 tags:
