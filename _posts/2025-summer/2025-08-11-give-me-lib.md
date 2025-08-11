@@ -1,6 +1,6 @@
 ---
-title: "Libertarian Disconnect"
-published: false
+title: "Have I been unfair to Libertarians?"
+published: true
 last_modified_at: 2025-08-11T16:26:02
 header: 
    #image:
@@ -14,24 +14,28 @@ tags:
 - airesearch
 ---
 
-# Have I been unfair to Libertarians?
+
+## Maybe
 
 On and off I've been lamenting aloud (only, really, among friends) about the absence of a Libertarian outcry regarding the current American regime's authoritarian actions. I reflected on that and then asked myself, "well, have libertarians really been silent?" So I did some "research" (you know -- Google searches and prompting various AIs) and what I found was that there are prominent Libertarian voices, and especially organizations, who are dismayed about what the president is doing here in 2025.
 
 ***That*** part of my criticism, therefore, was largely unfair. So, then, what's my problem? Shouldn't I just be happy with South Park dunking[^53] on today's politics?
 
-I realized the disconnect was somewhere else -- in how self-described Libertarians had acted and ultimately voted. My mind immediately went to [an interview that Ezra Klein did with Martin Gurri](https://www.youtube.com/watch?v=AMgGoJPXV2c), an Ex-CIA analyst who wrote a book in 2014 that became a sensation during the first Trump candidacy and administration because it dealt with the flow of information during political upheavals. But what I couldn't get past in the interview was that Gurri was hyper-focused on the first amendment as an issue. Particularly, it seem to me that he was angry at Democrats because Facebook had blocked some of his posts -- or something like that. He blamed Biden, and this caused him to vote for president for the first time (in decades?). He voted for Trump. I'm not going to lie, what I was surprised about is how he mostly blamed the Biden administration for something Facebook had done to him, but also how this one issue based on what felt like an immature sort of reaction to a personal affront led him to vote the way he did. Don't get me wrong, I've certainly had these sorts of impulses. But I don't think I've ever spun up a whole ideological struggle around a petty issue such as this, leading me to change a long-running pattern in my vote.
+I realized the disconnect was somewhere else -- in how self-described Libertarians had acted and ultimately voted. My mind immediately went to [an interview that Ezra Klein did with Martin Gurri](https://www.youtube.com/watch?v=AMgGoJPXV2c), an Ex-CIA analyst who wrote a book in 2014 that became a sensation during the first Trump candidacy and administration because it dealt with the flow of information during political upheavals. But what I couldn't get past in the interview was that Gurri was hyper-focused on the first amendment as an issue. Particularly, it seem to me that he was angry at Democrats because Facebook had blocked some of his posts -- or something like that. He blamed Biden, and this caused him to vote for president for the first time (in decades?). He voted for Trump. I was shocked that he mostly blamed the Biden administration for something Facebook had done to him, but also how this one issue based on what felt like an immature sort of reaction to a personal affront led him to vote the way he did. I've certainly had these sorts of impulses. But I don't think I've ever spun up a whole ideological struggle around a petty issue such as this, leading me to change a long-running pattern in my vote.
 
 I decided to have Perplexity, the AI, round up some references to help me clarify my thinking on this question: was there a disconnect between what Libertarian organizations were saying and how the people who adopt their philosophy have reacted to the events of the past year or so? And the most interesting, I think, part for me was the following table, which I had it organize after coming ot an understanding that the issues Libertarians say they care most about were only really applied to critiques of Kamala Harris, and not Donald Trump. 
 
 The table lists some issued dear to the hearts of Libertarians, how they viewed Kamala Harris through the lens of each issue, and how Trump faired on the same issue. And then a column on how big an error, if any, the disconnect between these analyses represented. The AI concluded on its own that Libertarian *voters*, in contrast to organizations and influencers, were more swayed by media narratives than by evidence or policies that were embraced by the two candidates.
 
-**DISCLAIMER:** I'm not offering this as a definitive analysis of how I am "right" about Libertarians. Clearly, when you prompt you get what you asked for. Instead, this "research" is research I did into my own thinking and my own perceptions, and the AI has connected it to references that may explain why I have come to the conclusions I have. I do think AI can make an argument for you, but I'm not saying I would view this that way necessarily. Yet, you might get something out of it, browsing and considering what Libertarian voters prioritized, and what, perhaps, they ignored. What do they find compelling?
+DISCLAIMER ONE: If you're offended because you're a Libertarian, please don't be. I'm not saying you can take any of these observations and apply them to an individual. Individuals may espouse some of the opinions below, or not. They may have voted for just about anyone. This is about the aggregate, not the individual.
+{: .notice--danger}
 
-I think these are fair questions considering multiple authoritarian actions on the part of the federal government, which, according to Libertarian organizations themselves, are troubling. So, here it is.
+DISCLAIMER TWO: I'm not offering this as a definitive analysis of how I am "right" about Libertarians. Clearly, when you prompt you get what you asked for. Instead, this "research" is research I did into my own thinking and my own perceptions, and the AI has connected it to references that may explain why I have come to the conclusions I have. I do think AI can make an argument for you, but I'm not saying I would view this that way necessarily. Yet, you might get something out of it, browsing and considering what Libertarian voters prioritized, and what, perhaps, they ignored. What do they find compelling?
+I think these are fair questions considering multiple authoritarian actions on the part of the federal government, which, according to Libertarian organizations themselves, are troubling.
+{: .notice--danger}
 
 
-[Click here for the page on Perplexity's site, where it is easier to follow down the references.](https://www.perplexity.ai/page/libertarian-issues-analysis-fe-ZfH2W7YkR7egncCFzvRUbA)
+[Click here for the page on Perplexity's site if you prefer to read it there, where it may be easier to follow up on every one of the references.](https://www.perplexity.ai/page/libertarian-issues-analysis-fe-ZfH2W7YkR7egncCFzvRUbA)
 
 # Libertarian Issues Analysis: Fears About Harris vs. Trump's Record
 
@@ -94,9 +98,9 @@ The contrast between libertarian organizational responses and voter behavior is 
 
 This analysis suggests that libertarian voters in 2024 were heavily influenced by partisan political calculations and media narratives that caused them to systematically misidentify threats to libertarian principles. Rather than conducting evidence-based analysis of candidate records and policy positions, many libertarians appeared to engage in motivated reasoning to justify supporting Trump despite his anti-libertarian record.
 
-The pattern reveals a significant gap between libertarian intellectual institutions, which maintained principled consistency, and libertarian voters, who were willing to compromise core principles for perceived strategic gains based on flawed threat assessments.
+The pattern reveals a significant gap between libertarian intellectual institutions, which maintained principled consistency, and libertarian voters, who were willing to compromise core principles for perceived strategic gains based on flawed threat assessments.[^17]
 
-**Download the complete analysis**:[^17]
+[Full references are on the Perplexity Page.](https://www.perplexity.ai/page/libertarian-issues-analysis-fe-ZfH2W7YkR7egncCFzvRUbA)
 
 <div style="text-align: center">⁂</div>
 
