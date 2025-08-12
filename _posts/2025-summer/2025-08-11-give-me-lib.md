@@ -25,7 +25,7 @@ I realized the disconnect was somewhere else -- in how self-described Libertaria
 
 I decided to have Perplexity, the AI, round up some references to help me clarify my thinking on this question: was there a disconnect between what Libertarian organizations were saying and how the people who adopt their philosophy have reacted to the events of the past year or so? And the most interesting, I think, part for me was the following table, which I had it organize after coming to an understanding that the issues Libertarians say they care most about were only really applied to critiques of Kamala Harris, and not Donald Trump. 
 
-The table lists some issued dear to the hearts of Libertarians, how they viewed Kamala Harris through the lens of each issue, and how Trump faired on the same issue. And then a column on how big an error, if any, the disconnect between these analyses represented. The AI concluded on its own that Libertarian *voters*, in contrast to organizations and influencers, were more swayed by media narratives than by evidence or policies that were embraced by the two candidates.
+The table lists some issues dear to the hearts of Libertarians, how they viewed Kamala Harris through the lens of each issue, and how Trump faired on the same issue. And then a column on how big an error, if any, the disconnect between these analyses represented. The AI concluded on its own that Libertarian *voters*, in contrast to organizations and influencers, were more swayed by media narratives than by evidence or policies that were embraced by the two candidates.
 
 DISCLAIMER ONE: If you're offended because you're a Libertarian, please don't be. I'm not saying you can take any of these observations and apply them to an individual. Individuals may espouse some of the opinions below, or not. They may have voted for just about anyone. This is about the aggregate, not the individual.
 {: .notice--danger}
@@ -49,7 +49,7 @@ The analysis reveals a striking pattern of analytical errors among libertarian v
 
 | **Issue** | **Harris Fears (Libertarian Perspective)** | **Trump Actions Libertarians Ignored** | **Error Assessment** |
 | :-- | :-- | :-- | :-- |
-| **Free Speech \& Censorship** | Called for social media "oversight and regulation"; supported content moderation pressure | Threatened to "destroy careers" of pro-free speech legislators; called media "enemy of people"; punished law firms representing opponents | **MAJOR ERROR** - Ignored direct authoritarian threats |
+| **Free Speech & Censorship** | Called for social media "oversight and regulation"; supported content moderation pressure | Threatened to "destroy careers" of pro-free speech legislators; called media "enemy of people"; punished law firms representing opponents | **MAJOR ERROR** - Ignored direct authoritarian threats |
 | **Economic Policy** | Price control proposals compared to Venezuela | Massive protectionist tariffs; \$28B farm bailouts; praised eminent domain abuse | **MAJOR ERROR** - Supported anti-free market candidate |
 | **Civil Asset Forfeiture** | Actually had strong civil liberties Senate record | Threatened legislators wanting forfeiture reform; praised "legalized theft" | **MAJOR ERROR** - Completely backwards analysis |
 | **Death Penalty** | Supported capital punishment as CA Attorney General | Executed 13 people in final months; wants expansion to non-homicide crimes | **MINOR ERROR** - Trump's record far more extreme |
