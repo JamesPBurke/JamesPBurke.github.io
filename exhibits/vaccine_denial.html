@@ -8,122 +8,132 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: #ffffff;
+            height: 100vh;
+            width: 100vw;
             overflow: hidden;
         }
 
         .slide-container {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             position: relative;
         }
 
         .slide {
             display: none;
-            width: 90%;
+            width: 96%;
             max-width: 1200px;
-            height: 90%;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 60px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            height: calc(100% - 90px); /* leave room for controls + slide number */
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            padding: 32px 24px;
+            margin: auto;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
             color: #333;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .slide.active {
             display: block;
-            animation: slideIn 0.5s ease;
+            animation: slideIn 0.35s ease;
         }
 
         @keyframes slideIn {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
             color: #1e3c72;
-            font-size: 3em;
-            margin-bottom: 30px;
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            margin-bottom: 18px;
             text-align: center;
-            border-bottom: 4px solid #d32f2f;
-            padding-bottom: 20px;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 12px;
         }
 
         h2 {
             color: #2a5298;
-            font-size: 2.2em;
-            margin-bottom: 25px;
-            margin-top: 20px;
+            font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+            margin-bottom: 16px;
+            margin-top: 16px;
         }
 
         h3 {
             color: #d32f2f;
-            font-size: 1.5em;
-            margin-top: 20px;
-            margin-bottom: 12px;
+            font-size: clamp(1.05rem, 2vw, 1.35rem);
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+            line-height: 1.6;
         }
 
         ul {
-            margin-left: 30px;
-            line-height: 1.8;
-            font-size: 1.1em;
+            margin-left: 20px;
+            margin-top: 4px;
+            margin-bottom: 8px;
         }
 
-        li { margin-bottom: 12px; }
+        li { margin-bottom: 8px; }
 
         .emphasis {
             background-color: #fff3cd;
-            padding: 15px;
+            padding: 12px;
             border-left: 5px solid #d32f2f;
-            margin: 20px 0;
+            margin: 16px 0;
             font-weight: 600;
         }
 
         .official-card {
             background: #f8f9fa;
-            border-left: 5px solid #d32f2f;
-            padding: 15px;
-            margin: 15px 0;
+            border-left: 4px solid #d32f2f;
+            padding: 10px 12px;
+            margin: 10px 0;
             border-radius: 8px;
         }
 
         .official-name {
             font-weight: bold;
             color: #d32f2f;
-            font-size: 1.2em;
+            font-size: 1.05em;
         }
 
         .official-position {
             color: #2a5298;
             font-style: italic;
-            margin: 5px 0;
+            margin: 3px 0 6px 0;
         }
 
         .timeline-item {
             border-left: 3px solid #2a5298;
-            padding-left: 20px;
-            margin: 20px 0;
+            padding-left: 14px;
+            margin: 14px 0;
         }
 
         .date {
             font-weight: bold;
             color: #d32f2f;
-            font-size: 1.1em;
+            font-size: 0.95em;
+            margin-bottom: 4px;
         }
 
         .controls {
             position: fixed;
-            bottom: 30px;
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
+            gap: 16px;
             z-index: 1000;
         }
 
@@ -131,46 +141,49 @@
             background: #2a5298;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            border-radius: 999px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
             font-weight: 600;
+            min-width: 110px;
         }
 
         button:hover {
             background: #d32f2f;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         }
 
         .slide-number {
             position: fixed;
-            top: 20px;
-            right: 30px;
+            top: 8px;
+            right: 10px;
             background: rgba(211, 47, 47, 0.9);
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 6px 12px;
+            border-radius: 999px;
             font-weight: bold;
+            font-size: 0.8rem;
+            z-index: 1000;
         }
 
         .key-stat {
             background: #d32f2f;
             color: white;
-            padding: 20px;
+            padding: 14px;
             border-radius: 10px;
-            margin: 15px 0;
+            margin: 12px 0;
             text-align: center;
-            font-size: 1.3em;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
             font-weight: bold;
         }
 
         .footnotes {
-            margin-top: 25px;
+            margin-top: 16px;
             border-top: 1px solid #ccc;
-            padding-top: 10px;
-            font-size: 0.85em;
+            padding-top: 8px;
+            font-size: 0.8rem;
             color: #555;
         }
 
@@ -184,11 +197,11 @@
         }
 
         .ref-list {
-            font-size: 0.95em;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
-        .ref-item { margin-bottom: 10px; }
+        .ref-item { margin-bottom: 8px; }
 
         .ref-item a {
             color: #2a5298;
@@ -200,6 +213,56 @@
         }
 
         .small { font-size: 0.9em; }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .slide {
+                width: 100%;
+                height: calc(100% - 90px);
+                border-radius: 0;
+                padding: 20px 14px 16px 14px;
+                box-shadow: none;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+
+            h2 { font-size: 1.25rem; }
+            h3 { font-size: 1.05rem; }
+
+            .controls {
+                bottom: 8px;
+                gap: 10px;
+            }
+
+            button {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+                min-width: 95px;
+            }
+
+            .slide-number {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 16px 10px 14px 10px;
+            }
+
+            p, li {
+                font-size: 0.9rem;
+            }
+
+            .key-stat {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -212,13 +275,13 @@
         <div class="emphasis">
             A Comprehensive Analysis of Statements and Policies Contributing to Vaccine Skepticism
         </div>
-        <h2 style="text-align: center; margin-top: 60px;">
+        <h2 style="text-align: center; margin-top: 24px;">
             How Federal Officials Have Undermined Confidence in the MMR Vaccine
         </h2>
-        <p style="text-align: center; font-size: 1.2em; margin-top: 30px; line-height: 1.6;">
+        <p style="text-align: center; margin-top: 20px;">
             This presentation documents actions taken by Trump administration officials—both before and during their time in office—that have contributed to measles vaccine skepticism and undermined public health recommendations.<sup><a href="#references">[1]</a></sup>
         </p>
-        <div class="key-stat" style="margin-top: 50px;">
+        <div class="key-stat" style="margin-top: 26px;">
             Context: South Carolina measles outbreak (Oct 2025–Feb 2026) reached 900+ cases,<br>
             the largest U.S. measles outbreak since elimination in 2000.<sup><a href="#references">[2]</a></sup>
         </div>
@@ -250,7 +313,7 @@
         <h3>Meeting with Anti-Vaccine Activists</h3>
         <div class="timeline-item">
             <div class="date">August 2016</div>
-            <p>Trump held a 45‑minute meeting with discredited MMR‑autism researcher Andrew Wakefield and other anti-vaccine activists at a Florida fundraiser, promising to watch the documentary <em>Vaxxed</em> and expressing interest in further meetings.<sup><a href="#references">[6]</a></sup></p>
+            <p>Trump held a 45‑minute meeting with discredited MMR‑autism researcher Andrew Wakefield and other anti-vaccine activists at a Florida fundraiser, promising to watch <em>Vaxxed</em> and expressing interest in further meetings.<sup><a href="#references">[6]</a></sup></p>
         </div>
 
         <div class="emphasis">
@@ -305,13 +368,13 @@
         <h3>The Samoa Measles Tragedy</h3>
         <div class="official-card">
             <p>Kennedy visited Samoa in 2019 at the invitation of a local anti‑vaccine influencer, meeting with the prime minister and anti‑vaccine activists.<sup><a href="#references">[14]</a></sup></p>
-            <p style="margin-top: 10px;">Subsequently, Samoa suffered a measles outbreak that killed 83 people, mostly infants and children, amid plummeting vaccination coverage.<sup><a href="#references">[15]</a></sup></p>
-            <p style="margin-top: 10px;">Samoan health officials later said Kennedy’s visit helped bolster local anti‑vaccine activists’ credibility before the outbreak.<sup><a href="#references">[14]</a></sup></p>
+            <p style="margin-top: 6px;">Subsequently, Samoa suffered a measles outbreak that killed 83 people, mostly infants and children, amid plummeting vaccination coverage.<sup><a href="#references">[15]</a></sup></p>
+            <p style="margin-top: 6px;">Samoan health officials later said Kennedy’s visit helped bolster local anti‑vaccine activists’ credibility before the outbreak.<sup><a href="#references">[14]</a></sup></p>
         </div>
 
         <h3>COVID‑19 Vaccine Misinformation</h3>
         <ul>
-            <li>Called COVID‑19 vaccines a "crime against humanity" and "the deadliest vaccine ever made," contrary to data showing millions of lives saved.<sup><a href="#references">[13]</a></sup></li>
+            <li>Called COVID‑19 vaccines a "crime against humanity" and "the deadliest vaccine ever made," in contrast to data showing millions of lives saved.<sup><a href="#references">[13]</a></sup></li>
             <li>Promoted books and media falsely claiming COVID vaccines caused a wave of sudden deaths in young people.<sup><a href="#references">[13]</a></sup></li>
         </ul>
 
@@ -345,7 +408,7 @@
         </div>
 
         <div class="emphasis">
-            Kennedy was publicly emphasizing "natural immunity" and sowing doubt about MMR effectiveness while a measles outbreak was killing children in Texas.<sup><a href="#references">[17]</a></sup>
+            Kennedy was emphasizing "natural immunity" and sowing doubt about MMR effectiveness while a measles outbreak was killing children in Texas.<sup><a href="#references">[17]</a></sup>
         </div>
 
         <div class="footnotes">
@@ -370,7 +433,7 @@
         </ul>
 
         <div class="emphasis">
-            Weak, misleading evidence for restricting one vaccine erodes confidence in the entire childhood schedule, including MMR.<sup><a href="#references">[19]</a></sup>
+            Restricting one vaccine on weak grounds erodes confidence in the entire childhood schedule, including MMR.<sup><a href="#references">[19]</a></sup>
         </div>
 
         <div class="footnotes">
@@ -474,7 +537,7 @@
         <div class="official-card">
             <div class="official-name">Dr. Jay Bhattacharya</div>
             <div class="official-position">NIH Director</div>
-            <p>Ended federal mRNA vaccine development citing "public distrust" and co‑signed memos reducing childhood vaccine schedule, decisions infectious‑disease leaders called dangerous.<sup><a href="#references">[27]</a></sup></p>
+            <p>Ended federal mRNA vaccine development citing "public distrust" and co‑signed memos reducing the childhood vaccine schedule, decisions infectious‑disease leaders called dangerous.<sup><a href="#references">[27]</a></sup></p>
         </div>
 
         <div class="official-card">
@@ -622,81 +685,24 @@
     <div class="slide" id="references">
         <h1>References</h1>
         <div class="ref-list small">
-            <!-- (same as previously generated references; unchanged) -->
+            <!-- same references list as before -->
             <div class="ref-item" id="ref1">[1] STAT News – "Trump, once a vaccine skeptic, changes his tune amid measles…" <a href="https://www.statnews.com/2019/04/26/trump-vaccinations-measles/" target="_blank">Link</a></div>
             <div class="ref-item" id="ref2">[2] Protect Our Care – "Trump HHS Finally Acknowledges Runaway Measles Crisis…" <a href="https://www.protectourcare.org/trump-hhs-finally-acknowledges-runaway-measles-crisis-just-not-the-many-rfk-jr-handpicked-health-officials-encouraging-vaccine-hesitancy-and-fueling-outbreak/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref3">[3] CNN/CIDRAP – South Carolina measles outbreak coverage (e.g. CIDRAP, Jan 2026). <a href="https://www.cidrap.umn.edu/measles/south-carolina-reports-99-new-measles-cases-now-more-300-cases-upstate-outbreak" target="_blank">Example link</a></div>
+            <div class="ref-item" id="ref3">[3] CNN/CIDRAP – South Carolina measles outbreak coverage (example). <a href="https://www.cidrap.umn.edu/measles/south-carolina-reports-99-new-measles-cases-now-more-300-cases-upstate-outbreak" target="_blank">Link</a></div>
             <div class="ref-item" id="ref4">[4] ABC News – "Donald Trump Plays Doctor on Twitter." <a href="https://abcnews.go.com/blogs/politics/2012/08/donald-trump-plays-doctor-on-twitter" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref5">[5] Science.org – "Trump met with prominent anti-vaccine activists during campaign." <a href="https://www.science.org/content/article/trump-met-prominent-anti-vaccine-activists-during-campaign" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref6">[6] BMJ – "Andrew Wakefield calls Trump ‘on our side’ over vaccines…" <a href="https://www.bmj.com/content/355/bmj.i6545" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref7">[7] CIDRAP – News Scan Jan 10, 2017 (Trump–RFK Jr. meeting). <a href="https://www.cidrap.umn.edu/dual-use-research/news-scan-jan-10-2017" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref8">[8] NPR – "Despite The Facts, Trump Once Again Embraces Vaccine Skeptics." <a href="https://www.npr.org/2017/01/10/509185540/despite-the-facts-trump-once-again-embraces-vaccine-skeptics" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref9">[9] ABC News – "Trump shifts position on vaccinations, urges parents to 'get the shot'." <a href="https://abcnews.go.com/Politics/trump-shifts-position-vaccinations-urges-parents-shot/story?id=62665258" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref10">[10] OPB – "The U.S. will likely lose its measles elimination status…" <a href="https://www.opb.org/article/2026/01/31/the-u-s-is-on-the-brink-of-losing-its-elimination-status-for-measles/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref11">[11] The Lancet – "The perils of RFK Junior’s anti-vaccine leadership for public health." <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02603-5/fulltext" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref12">[12] Protect Our Care – RFK Jr. background in HHS context (see ref2). <a href="https://www.protectourcare.org/trump-hhs-finally-acknowledges-runaway-measles-crisis-just-not-the-many-rfk-jr-handpicked-health-officials-encouraging-vaccine-hesitancy-and-fueling-outbreak/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref13">[13] The Lancet / CAP – RFK Jr. record on vaccines (see ref11 plus CAP report). <a href="https://www.americanprogress.org/article/rfk-jr-is-systematically-undermining-vaccine-science-and-endangering-health/" target="_blank">CAP link</a></div>
-            <div class="ref-item" id="ref14">[14] U.S. News / Samoa officials on Kennedy’s visit and Samoa outbreak (see also ref13). <a href="https://www.usnews.com/news/world/articles/2025-02-03/did-rfk-jr-mislead-the-senate-on-measles-deaths-in-samoa-the-island-nation" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref5">[5] ABC News – Fact-check coverage of Trump’s autism tweets. <a href="https://people.com/politics/donald-trump-autism-awareness-day-vaccines-tweet/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref6">[6] Science.org – "Trump met with prominent anti-vaccine activists during campaign." <a href="https://www.science.org/content/article/trump-met-prominent-anti-vaccine-activists-during-campaign" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref7">[7] HistoryOfVaccines.org – "President-Elect Donald Trump and Vaccines." <a href="https://historyofvaccines.org/blog/president-elect-donald-trump-and-vaccines/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref8">[8] CIDRAP – News Scan Jan 10, 2017. <a href="https://www.cidrap.umn.edu/dual-use-research/news-scan-jan-10-2017" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref9">[9] NPR – "Despite The Facts, Trump Once Again Embraces Vaccine Skeptics." <a href="https://www.npr.org/2017/01/10/509185540/despite-the-facts-trump-once-again-embraces-vaccine-skeptics" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref10">[10] ABC News – "Trump shifts position on vaccinations, urges parents to 'get the shot'." <a href="https://abcnews.go.com/Politics/trump-shifts-position-vaccinations-urges-parents-shot/story?id=62665258" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref11">[11] OPB – "The U.S. will likely lose its measles elimination status…" <a href="https://www.opb.org/article/2026/01/31/the-u-s-is-on-the-brink-of-losing-its-elimination-status-for-measles/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref12">[12] Protect Our Care – RFK Jr. profile in HHS context (see [2]).</div>
+            <div class="ref-item" id="ref13">[13] The Lancet / CAP – RFK Jr. vaccine record (see Lancet article and CAP report). <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02603-5/fulltext" target="_blank">Lancet</a> | <a href="https://www.americanprogress.org/article/rfk-jr-is-systematically-undermining-vaccine-science-and-endangering-health/" target="_blank">CAP</a></div>
+            <div class="ref-item" id="ref14">[14] U.S. News – "RFK Jr. Misled the US Senate on Measles Deaths, Samoa's Health Chief Says." <a href="https://www.usnews.com/news/world/articles/2025-02-03/did-rfk-jr-mislead-the-senate-on-measles-deaths-in-samoa-the-island-nation" target="_blank">Link</a></div>
             <div class="ref-item" id="ref15">[15] Wikipedia – "2019 Samoa measles outbreak." <a href="https://en.wikipedia.org/wiki/2019_Samoa_measles_outbreak" target="_blank">Link</a></div>
             <div class="ref-item" id="ref16">[16] Pulmonology Advisor – "Robert F Kennedy Jr Downplays Measles Vaccine as Cases Surge." <a href="https://www.pulmonologyadvisor.com/news/robert-f-kennedy-jr-downplays-measles-vaccine-as-cases-surge/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref17">[17] STAT News – "RFK Jr. says vaccines are 'most effective way' to prevent measles" (Texas outbreak). <a href="https://www.statnews.com/2025/04/06/rfk-jr-measles-statement-west-texas-outbreak/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref17">[17] STAT News – "RFK Jr. says vaccines are 'most effective way' to prevent measles." <a href="https://www.statnews.com/2025/04/06/rfk-jr-measles-statement-west-texas-outbreak/" target="_blank">Link</a></div>
             <div class="ref-item" id="ref18">[18] First Focus – "Trump Administration’s Removal of COVID-19 from Recommended Childhood Vaccines…" <a href="https://firstfocus.org/update/trump-administrations-removal-of-covid-19-from-recommended-childhood-vaccines-endangers-children-f" target="_blank">Link</a></div>
             <div class="ref-item" id="ref19">[19] Penn LDI – "Penn Experts Warn New Vaccine Policy Could Undermine Public Health." <a href="https://ldi.upenn.edu/our-work/research-updates/penn-experts-warn-new-vaccine-policy-could-undermine-public-health/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref20">[20] Global Biodefense – "ACIP Overhaul Raises Alarm Among Health Experts." <a href="https://globalbiodefense.com/2025/06/23/rfk-jr-unqualified-acip-overhaul-vaccine-policy-threat/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref21">[21] Biopharm International – "Implications of RFK Jr.’s CDC Vaccine Committee Overhaul…" <a href="https://www.biopharminternational.com/view/implications-of-rfk-jrs-cdc-vaccine-committee-overhaul-for-the-pharmaceutical-industry" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref22">[22] ABC News – "Trump distorts facts on autism, Tylenol and vaccines, scientists say." <a href="https://abcnews.go.com/Health/sick-stomach-trump-distorts-facts-autism-tylenol-vaccines/story?id=125852331" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref23">[23] ABC News – "Fact-checking President Donald Trump’s claims about autism." <a href="https://abcnews.go.com/Health/fact-checking-president-donald-trumps-claims-autism/story?id=125838403" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref24">[24] New York Times – "RFK Jr. Says He Instructed CDC to Change Vaccines and Autism Guidance." <a href="https://www.nytimes.com/2025/11/21/us/politics/rfk-jr-cdc-vaccines-autism-website.html" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref25">[25] NPR – "Louisiana’s top health official, a critic of the COVID vaccine…" <a href="https://www.npr.org/sections/shots-health-news/2025/11/25/nx-s1-5620991/louisiana-surgeon-general-ralph-abraham-cdc-deputy" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref26">[26] ABC News – "What to know about the new CDC deputy director who called Covid vaccines ‘dangerous’." <a href="https://abcnews.go.com/Health/new-cdc-deputy-director-critical-covid-vaccines/story?id=127891520" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref27">[27] FierceBiotech – "Jay Bhattacharya faces Senate grilling on NIH disruptions" / mRNA retreat. <a href="https://www.fiercebiotech.com/biotech/nih-turmoil-takes-center-stage-director-acknowledges-no-vaccine-autism-link" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref28">[28] STAT News / PBS / Biospace – Makary on ACIP "kangaroo court" and vaccine safety debates. <a href="https://www.statnews.com/2025/06/01/fda-marty-makary-covid-vaccine-recommenations-face-the-nation/" target="_blank">STAT link</a></div>
-            <div class="ref-item" id="ref29">[29] CDC – "CDC Acts on Presidential Memorandum to Update Childhood Immunization Schedule." <a href="https://www.cdc.gov/media/releases/2026/2026-cdc-acts-on-presidential-memorandum-to-update-childhood-immunization-schedule.html" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref30">[30] HHS – "Fact Sheet: CDC Childhood Immunization Recommendations." <a href="https://www.hhs.gov/press-room/fact-sheet-cdc-childhood-immunization-recommendations.html" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref31">[31] Families USA – "Unprecedented Changes by a Little-Known Committee That Controls Our Vaccine Access." <a href="https://familiesusa.org/resources/unprecedented-changes-by-a-little-known-committee-that-controls-our-vaccine-access/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref32">[32] NPR – "CDC’s ACIP changes recommendations for hepatitis B vaccination…" <a href="https://www.npr.org/sections/shots-health-news/2025/12/05/nx-s1-5634004/cdc-hepatitis-b-vaccine-acip-meeting" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref33">[33] ABC News – "Chair of CDC's vaccine advisory committee questions polio shot…" <a href="https://abcnews.go.com/Health/chair-cdcs-vaccine-advisory-committee-questions-polio-shot/story?id=129580522" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref34">[34] STAT News – "Top CDC vaccine adviser questions need for polio shot, other vaccines." <a href="https://www.statnews.com/2026/01/22/vaccine-policy-adviser-kirk-milhoan-individual-rights-trump-public-health/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref35">[35] CIDRAP / SC DPH – South Carolina measles outbreak case counts and hospitalizations. <a href="https://dph.sc.gov/news/tuesday-measles-update-dph-reports-89-new-measles-cases-upstate-bringing-outbreak-total-789" target="_blank">Example link</a></div>
-            <div class="ref-item" id="ref36">[36] Protect Our Care – HHS statement context during SC outbreak (see ref2). <a href="https://www.protectourcare.org/trump-hhs-finally-acknowledges-runaway-measles-crisis-just-not-the-many-rfk-jr-handpicked-health-officials-encouraging-vaccine-hesitancy-and-fueling-outbreak/" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref37">[37] PBS / KFF Health News – Oz urging measles vaccine and defending administration officials. <a href="https://www.pbs.org/newshour/health/dr-mehmet-oz-urges-public-to-take-the-measles-vaccine-as-u-s-cases-rise" target="_blank">PBS link</a></div>
-            <div class="ref-item" id="ref38">[38] KFF – "New KFF–Washington Post Survey Explores Parents’ Trust In, and Confusion About, Childhood Vaccines." <a href="https://www.kff.org/public-opinion/new-kff-washington-post-survey-explores-parents-trust-in-and-confusion-about-childhood-vaccin" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref39">[39] Journal of Experimental Social Psychology – "Donald Trump and vaccination: The effect of political identity and exposure to anti-vaccination tweets on vaccine attitudes." <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022103119302628" target="_blank">Link</a></div>
-            <div class="ref-item" id="ref40">[40] TODAY / Autism Science Foundation / pediatricians on rising hesitancy post-Kennedy (see ref27–28). <a href="https://www.today.com/health/disease/cdc-autism-vaccines-pediatricians-react-rcna245631" target="_blank">Example link</a></div>
-        </div>
-    </div>
-</div>
-
-<div class="controls">
-    <button onclick="previousSlide()">← Previous</button>
-    <button onclick="nextSlide()">Next →</button>
-</div>
-
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    function showSlide(n) {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (n + totalSlides) % totalSlides;
-        slides[currentSlide].classList.add('active');
-        document.getElementById('slideNumber').textContent =
-            `Slide ${currentSlide + 1} of ${totalSlides}`;
-    }
-
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
-
-    function previousSlide() {
-        showSlide(currentSlide - 1);
-    }
-
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowRight') nextSlide();
-        if (event.key === 'ArrowLeft') previousSlide();
-    });
-</script>
-</body>
-</html>
+            <div class="ref-item" id="ref20">[20] Global Biodefense – "ACIP Overhaul Raises Alarm Among He
