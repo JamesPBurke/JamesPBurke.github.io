@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump Administration Actions Undermining Measles Vaccination</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 90%;
+            max-width: 1200px;
+            height: 90%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            color: #333;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #1e3c72;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 4px solid #d32f2f;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: #2a5298;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            color: #d32f2f;
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            margin-left: 30px;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        li { margin-bottom: 12px; }
+
+        .emphasis {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #d32f2f;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        .official-card {
+            background: #f8f9fa;
+            border-left: 5px solid #d32f2f;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .official-name {
+            font-weight: bold;
+            color: #d32f2f;
+            font-size: 1.2em;
+        }
+
+        .official-position {
+            color: #2a5298;
+            font-style: italic;
+            margin: 5px 0;
+        }
+
+        .timeline-item {
+            border-left: 3px solid #2a5298;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #d32f2f;
+            font-size: 1.1em;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        button {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #d32f2f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            background: rgba(211, 47, 47, 0.9);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .key-stat {
+            background: #d32f2f;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .footnotes {
+            margin-top: 25px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .footnotes a {
+            color: #2a5298;
+            text-decoration: none;
+        }
+
+        .footnotes a:hover {
+            text-decoration: underline;
+        }
+
+        .ref-list {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .ref-item { margin-bottom: 10px; }
+
+        .ref-item a {
+            color: #2a5298;
+            text-decoration: none;
+        }
+
+        .ref-item a:hover {
+            text-decoration: underline;
+        }
+
+        .small { font-size: 0.9em; }
+    </style>
+</head>
+<body>
+<div class="slide-number" id="slideNumber">Slide 1 of 16</div>
+
+<div class="slide-container">
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <h1>Trump Administration Actions Undermining Measles Vaccination</h1>
+        <div class="emphasis">
+            A Comprehensive Analysis of Statements and Policies Contributing to Vaccine Skepticism
+        </div>
+        <h2 style="text-align: center; margin-top: 60px;">
+            How Federal Officials Have Undermined Confidence in the MMR Vaccine
+        </h2>
+        <p style="text-align: center; font-size: 1.2em; margin-top: 30px; line-height: 1.6;">
+            This presentation documents actions taken by Trump administration officials—both before and during their time in office—that have contributed to measles vaccine skepticism and undermined public health recommendations.<sup><a href="#references">[1]</a></sup>
+        </p>
+        <div class="key-stat" style="margin-top: 50px;">
+            Context: South Carolina measles outbreak (Oct 2025–Feb 2026) reached 900+ cases,<br>
+            the largest U.S. measles outbreak since elimination in 2000.<sup><a href="#references">[2]</a></sup>
+        </div>
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>Donald Trump's Vaccine Skepticism (2012–2016)</h1>
+
+        <h3>Twitter Statements Linking Vaccines to Autism</h3>
+        <div class="timeline-item">
+            <div class="date">August 2012</div>
+            <p>"Massive combined inoculations to small children is the cause for big increase in autism... Spread shots over long period and watch positive result."<sup><a href="#references">[3]</a></sup></p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="date">March 2014</div>
+            <p>"Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn't feel good and changes – AUTISM. Many such cases!"<sup><a href="#references">[4]</a></sup></p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="date">September 2014</div>
+            <p>"Autism WAY UP – I believe in vaccinations but not massive, all at once, shots. Too much for small child to handle. Govt. should stop NOW!"<sup><a href="#references">[5]</a></sup></p>
+        </div>
+
+        <h3>Meeting with Anti-Vaccine Activists</h3>
+        <div class="timeline-item">
+            <div class="date">August 2016</div>
+            <p>Trump held a 45‑minute meeting with discredited MMR‑autism researcher Andrew Wakefield and other anti-vaccine activists at a Florida fundraiser, promising to watch the documentary <em>Vaxxed</em> and expressing interest in further meetings.<sup><a href="#references">[6]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            Impact: These actions established Trump's credibility with the anti‑vaccine movement before he took office.<sup><a href="#references">[7]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>First Trump Administration (2017–2020)</h1>
+
+        <h3>January 2017: RFK Jr. Vaccine Commission Talk</h3>
+        <div class="timeline-item">
+            <div class="date">January 10, 2017</div>
+            <p>Trump met with Robert F. Kennedy Jr. to discuss a commission on "vaccine safety and scientific integrity"; Kennedy said Trump "has some doubts about the current vaccine policies, and he has questions about it."<sup><a href="#references">[8]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            This signaled potential federal backing for vaccine skepticism at the start of his presidency.<sup><a href="#references">[9]</a></sup>
+        </div>
+
+        <h3>April 2019: Mixed Messaging During Measles Outbreak</h3>
+        <div class="timeline-item">
+            <div class="date">April 26, 2019</div>
+            <p>During a major U.S. measles surge, Trump told reporters: "They have to get the shots. The vaccinations are so important," reversing years of public claims linking vaccines to autism.<sup><a href="#references">[10]</a></sup></p>
+        </div>
+
+        <div class="key-stat">
+            2019: U.S. nearly lost measles elimination status because of large outbreaks in under‑vaccinated communities.<sup><a href="#references">[11]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>Robert F. Kennedy Jr.'s Anti‑Vaccine Record</h1>
+
+        <h3>Children’s Health Defense and Anti‑Vaccine Campaigning</h3>
+        <ul>
+            <li>Founded and led Children’s Health Defense, a leading anti‑vaccine organization.<sup><a href="#references">[12]</a></sup></li>
+            <li>As a 2024 presidential candidate, stated: "There’s no vaccine that is safe and effective," and promoted claims that vaccines cause autism.<sup><a href="#references">[13]</a></sup></li>
+            <li>Has repeatedly urged parents to avoid vaccinating their children and framed himself as "saving" them from vaccines.<sup><a href="#references">[13]</a></sup></li>
+        </ul>
+
+        <h3>The Samoa Measles Tragedy</h3>
+        <div class="official-card">
+            <p>Kennedy visited Samoa in 2019 at the invitation of a local anti‑vaccine influencer, meeting with the prime minister and anti‑vaccine activists.<sup><a href="#references">[14]</a></sup></p>
+            <p style="margin-top: 10px;">Subsequently, Samoa suffered a measles outbreak that killed 83 people, mostly infants and children, amid plummeting vaccination coverage.<sup><a href="#references">[15]</a></sup></p>
+            <p style="margin-top: 10px;">Samoan health officials later said Kennedy’s visit helped bolster local anti‑vaccine activists’ credibility before the outbreak.<sup><a href="#references">[14]</a></sup></p>
+        </div>
+
+        <h3>COVID‑19 Vaccine Misinformation</h3>
+        <ul>
+            <li>Called COVID‑19 vaccines a "crime against humanity" and "the deadliest vaccine ever made," contrary to data showing millions of lives saved.<sup><a href="#references">[13]</a></sup></li>
+            <li>Promoted books and media falsely claiming COVID vaccines caused a wave of sudden deaths in young people.<sup><a href="#references">[13]</a></sup></li>
+        </ul>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>2025: Undermining Measles Vaccine During Texas Outbreak</h1>
+
+        <div class="key-stat">
+            Texas measles outbreak, Jan–Aug 2025:<br>
+            762 cases and 2 child deaths, largely among unvaccinated people.<sup><a href="#references">[16]</a></sup>
+        </div>
+
+        <h3>Kennedy's Misleading Claims</h3>
+        <div class="timeline-item">
+            <div class="date">April 3, 2025 – Fox News</div>
+            <p>Kennedy said: "When you and I were kids, everybody got measles, and measles gave you lifetime protection… The [MMR] vaccine doesn’t do that… For many people, it wanes," suggesting natural infection was superior to vaccination.<sup><a href="#references">[17]</a></sup></p>
+        </div>
+
+        <h3>Expert Response</h3>
+        <div class="official-card">
+            <p><strong>Dr. Paul Offit</strong> countered that if vaccine‑induced immunity waned substantially, measles would not have been eliminated in 2000 and that immune memory cells provide durable protection.<sup><a href="#references">[17]</a></sup></p>
+        </div>
+
+        <div class="official-card">
+            <p><strong>Dr. Michael Mina</strong> noted the Texas outbreak was primarily driven by unvaccinated individuals and that even people with modestly waning immunity are unlikely to transmit large amounts of virus.<sup><a href="#references">[17]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            Kennedy was publicly emphasizing "natural immunity" and sowing doubt about MMR effectiveness while a measles outbreak was killing children in Texas.<sup><a href="#references">[17]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>May 2025: Removing COVID Vaccines from Childhood Schedule</h1>
+
+        <h3>The Decision</h3>
+        <div class="timeline-item">
+            <div class="date">May 2025</div>
+            <p>HHS, led by Kennedy with NIH Director Jay Bhattacharya and FDA Commissioner Marty Makary, removed COVID‑19 vaccines from the childhood immunization schedule and from recommendations for pregnant women, restricting them mainly to adults 65+ and high‑risk groups.<sup><a href="#references">[18]</a></sup></p>
+        </div>
+
+        <h3>Misleading Rationale</h3>
+        <ul>
+            <li>Officials claimed "most countries" don’t recommend COVID vaccines for children and that peer nations only vaccinate older adults; analyses showed these countries still recommend primary COVID vaccination for children but not annual boosters.<sup><a href="#references">[18]</a></sup></li>
+            <li>Policy made COVID vaccines more expensive and harder to obtain for families, as insurers may no longer cover them and prescriptions may be required.<sup><a href="#references">[18]</a></sup></li>
+        </ul>
+
+        <div class="emphasis">
+            Weak, misleading evidence for restricting one vaccine erodes confidence in the entire childhood schedule, including MMR.<sup><a href="#references">[19]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>June 2025: Destroying the Vaccine Advisory System</h1>
+
+        <h3>Purging ACIP</h3>
+        <div class="timeline-item">
+            <div class="date">June 9, 2025</div>
+            <p>Kennedy fired all 17 expert members of the CDC’s Advisory Committee on Immunization Practices (ACIP), replacing them with eight appointees, many aligned with anti‑vaccine ideologies and lacking relevant expertise.<sup><a href="#references">[20]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            ACIP had provided nonpartisan, evidence‑based vaccine recommendations under both parties since 1964; experts called the purge "absolutely unprecedented" and a "red‑alert, level 4 alarm."<sup><a href="#references">[20]</a></sup>
+        </div>
+
+        <h3>Who Was Appointed?</h3>
+        <div class="official-card">
+            <p>New members included self‑described "anti‑vaxxer" obstetrician Kimberly Biss and pediatric cardiologist Kirk Milhoan, along with figures tied to anti‑vaccine organizations and COVID‑19 misinformation.<sup><a href="#references">[21]</a></sup></p>
+        </div>
+
+        <h3>Immediate Agenda</h3>
+        <div class="timeline-item">
+            <div class="date">June 25–26, 2025</div>
+            <p>The reconstituted ACIP put thimerosal‑containing flu vaccines on the agenda, resurrecting long‑debunked conspiracy theories linking the preservative to autism.<sup><a href="#references">[21]</a></sup></p>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+        <h1>September 2025: Trump Links Vaccines and Tylenol to Autism</h1>
+
+        <h3>The White House Briefing</h3>
+        <div class="timeline-item">
+            <div class="date">September 22, 2025</div>
+            <p>Standing beside HHS Secretary Kennedy, Trump told pregnant women "don’t take Tylenol" and said "they pump so much stuff into those beautiful little babies, it’s a disgrace," alleging links between Tylenol, vaccines, and autism without evidence.<sup><a href="#references">[22]</a></sup></p>
+        </div>
+
+        <ul>
+            <li>Trump suggested delaying the hepatitis B birth dose until age 12 and promoted leucovorin as an "autism treatment" despite limited early research.<sup><a href="#references">[23]</a></sup></li>
+        </ul>
+
+        <div class="emphasis">
+            This was a presidential endorsement of a debunked vaccine‑autism narrative during ongoing measles outbreaks.<sup><a href="#references">[22]</a></sup>
+        </div>
+
+        <h3>Scientific Pushback</h3>
+        <div class="official-card">
+            <p>Autism researchers and organizations stressed that decades of studies show no causal link between vaccines and autism, and warned that discouraging Tylenol use could be harmful by leaving fevers untreated.<sup><a href="#references">[23]</a></sup></p>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+        <h1>November 2025: CDC Removes “Vaccines Do Not Cause Autism”</h1>
+
+        <h3>Kennedy’s Direct Order</h3>
+        <div class="timeline-item">
+            <div class="date">November 2025</div>
+            <p>Kennedy instructed CDC to remove longstanding language stating that vaccines do not cause autism and to replace it with wording suggesting that conclusion is not "evidence‑based," despite decades of research.<sup><a href="#references">[24]</a></sup></p>
+        </div>
+
+        <h3>Breaking a Confirmation Promise</h3>
+        <div class="official-card">
+            <p>Sen. Bill Cassidy said Kennedy had promised during confirmation hearings not to remove that language; Kennedy acknowledged Cassidy "disagreed" with the change but proceeded anyway.<sup><a href="#references">[24]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            Reversing CDC’s clear statement that vaccines don’t cause autism gave official cover to anti‑vaccine narratives and undermined public health messaging.<sup><a href="#references">[24]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide">
+        <h1>Other Trump Officials Undermining Vaccines</h1>
+
+        <div class="official-card">
+            <div class="official-name">Dr. Ralph Abraham</div>
+            <div class="official-position">CDC Principal Deputy Director</div>
+            <p>As Louisiana’s surgeon general, he called COVID vaccines "dangerous," halted vaccine promotion, and supported investigating the debunked vaccine‑autism link.<sup><a href="#references">[25]</a></sup></p>
+            <p>During the 2025–26 measles crisis, he said losing U.S. measles elimination status would "not really" matter, framing it as a result of border realities and vaccine choice.<sup><a href="#references">[26]</a></sup></p>
+        </div>
+
+        <div class="official-card">
+            <div class="official-name">Dr. Jay Bhattacharya</div>
+            <div class="official-position">NIH Director</div>
+            <p>Ended federal mRNA vaccine development citing "public distrust" and co‑signed memos reducing childhood vaccine schedule, decisions infectious‑disease leaders called dangerous.<sup><a href="#references">[27]</a></sup></p>
+        </div>
+
+        <div class="official-card">
+            <div class="official-name">Dr. Marty Makary</div>
+            <div class="official-position">FDA Commissioner</div>
+            <p>Described CDC’s vaccine advisory panel as a "kangaroo court" and claimed the prior administration withheld myocarditis data, while defending removal of vaccines from the childhood schedule.<sup><a href="#references">[28]</a></sup></p>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="slide">
+        <h1>January 2026: Overhauling the Childhood Vaccine Schedule</h1>
+
+        <h3>The Changes</h3>
+        <div class="timeline-item">
+            <div class="date">January 4–5, 2026</div>
+            <p>Acting CDC Director Jim O’Neill signed a decision memorandum, following a Trump presidential directive, cutting universally recommended childhood vaccines from 17 diseases to 11 and moving six vaccines into "high‑risk" or "shared decision‑making" categories.<sup><a href="#references">[29]</a></sup></p>
+        </div>
+
+        <div class="key-stat">
+            Measles vaccine stayed in the "core 11," but the overall message signaled that long‑standing recommendations are negotiable.<sup><a href="#references">[30]</a></sup>
+        </div>
+
+        <h3>Process Concerns</h3>
+        <div class="official-card">
+            <p>Public health legal experts warned the changes bypassed normal ACIP deliberation and Administrative Procedure Act norms, risking "arbitrary and capricious" decision‑making and undermining trust.<sup><a href="#references">[29]</a></sup></p>
+        </div>
+
+        <h3>Insurance Implications</h3>
+        <ul>
+            <li>Under federal law, many insurers only must fully cover vaccines that ACIP recommends for all children; downgrading vaccines can lead to out‑of‑pocket costs and lower uptake.<sup><a href="#references">[31]</a></sup></li>
+        </ul>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="slide">
+        <h1>December 2025: Rolling Back Hepatitis B Birth Dose</h1>
+
+        <h3>ACIP Vote</h3>
+        <div class="timeline-item">
+            <div class="date">December 2025</div>
+            <p>The reconstituted ACIP voted 8–3 to narrow hepatitis B recommendations at birth, limiting universal newborn immunization to infants born to mothers who are hepatitis B–positive or whose status is unknown, reversing a 30‑year policy.<sup><a href="#references">[32]</a></sup></p>
+        </div>
+
+        <h3>Expert Objections</h3>
+        <div class="official-card">
+            <p>Representatives from pediatric infectious‑disease societies questioned why the committee was changing a policy that dramatically reduced hepatitis B in children based on theoretical concerns rather than clear safety data.<sup><a href="#references">[32]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            Weakening a long‑standing birth‑dose vaccine recommendation signals that core childhood vaccines can be easily rolled back, feeding broader skepticism.<sup><a href="#references">[31]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 13 -->
+    <div class="slide">
+        <h1>January 2026: ACIP Chair Questions Measles and Polio Vaccines</h1>
+
+        <h3>Kirk Milhoan’s Remarks</h3>
+        <div class="timeline-item">
+            <div class="date">January 23, 2026</div>
+            <p>On a podcast, ACIP chair Kirk Milhoan questioned whether Americans still need the polio vaccine and said key vaccines like polio and measles should be optional, prioritizing individual autonomy over public health goals.<sup><a href="#references">[33]</a></sup></p>
+        </div>
+
+        <div class="official-card">
+            <p>Milhoan argued that vaccine safety has been inadequately studied and dismissed vaccine‑safety monitoring systems as "very poor," despite extensive surveillance infrastructure.<sup><a href="#references">[33]</a></sup></p>
+        </div>
+
+        <div class="emphasis">
+            The federal vaccine advisory chair casting doubt on basic vaccines and safety systems directly undermines public confidence in MMR and other childhood shots.<sup><a href="#references">[34]</a></sup>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 14 -->
+    <div class="slide">
+        <h1>2025–26: Failed Response to South Carolina Measles Outbreak</h1>
+
+        <div class="key-stat">
+            By early February 2026, South Carolina reported 900+ measles cases, with most patients unvaccinated or under‑vaccinated and multiple hospitalizations.<sup><a href="#references">[35]</a></sup>
+        </div>
+
+        <h3>Delayed and Defensive Federal Response</h3>
+        <div class="timeline-item">
+            <div class="date">January 27, 2026</div>
+            <p>HHS issued a statement acknowledging the crisis but blamed declining vaccination rates and erosion of trust on prior administrations and the COVID era, despite the current team’s own history of anti‑vaccine messaging.<sup><a href="#references">[36]</a></sup></p>
+        </div>
+
+        <h3>Abraham’s Comments</h3>
+        <div class="official-card">
+            <p>CDC Principal Deputy Director Ralph Abraham said losing measles elimination status would "not really" matter and framed outbreaks as an expected consequence of communities choosing not to vaccinate.<sup><a href="#references">[35]</a></sup></p>
+        </div>
+
+        <h3>Mixed Signals from Oz</h3>
+        <div class="official-card">
+            <p>CMS head Dr. Mehmet Oz eventually urged: "Take the [measles] vaccine, please," yet publicly defended Kennedy and Trump as champions of vaccine safety, blurring the administration’s message.<sup><a href="#references">[37]</a></sup></p>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 15 -->
+    <div class="slide">
+        <h1>Impact on Public Trust and Vaccine Uptake</h1>
+
+        <h3>Parent Attitudes</h3>
+        <div class="official-card">
+            <p>A September 2025 KFF–Washington Post survey found fewer than 1 in 6 parents (14%) had "a lot" of confidence in CDC and FDA to ensure vaccine safety and effectiveness.<sup><a href="#references">[38]</a></sup></p>
+            <p>One in six parents (16%) reported skipping or delaying at least one recommended childhood vaccine (excluding flu/COVID); rates were higher among Republican and MAGA‑identifying parents and among homeschoolers.<sup><a href="#references">[38]</a></sup></p>
+        </div>
+
+        <h3>Research on Trump’s Influence</h3>
+        <div class="official-card">
+            <p>A Journal of Experimental Social Psychology study found that Trump supporters exposed to his anti‑vaccine tweets showed significantly increased vaccine concern, while non‑supporters did not, demonstrating a leader‑driven effect on hesitancy.<sup><a href="#references">[39]</a></sup></p>
+        </div>
+
+        <h3>Clinicians’ Experience</h3>
+        <div class="official-card">
+            <p>Pediatricians report rising vaccine hesitancy since Kennedy took over HHS, with more families questioning routine shots and expressing confusion about conflicting messages from federal leaders and clinicians.<sup><a href="#references">[40]</a></sup></p>
+        </div>
+
+        <div class="footnotes">
+            Sources for this slide are listed on the References slide.<sup><a href="#references">[R]</a></sup>
+        </div>
+    </div>
+
+    <!-- Slide 16: References -->
+    <div class="slide" id="references">
+        <h1>References</h1>
+        <div class="ref-list small">
+            <!-- (same as previously generated references; unchanged) -->
+            <div class="ref-item" id="ref1">[1] STAT News – "Trump, once a vaccine skeptic, changes his tune amid measles…" <a href="https://www.statnews.com/2019/04/26/trump-vaccinations-measles/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref2">[2] Protect Our Care – "Trump HHS Finally Acknowledges Runaway Measles Crisis…" <a href="https://www.protectourcare.org/trump-hhs-finally-acknowledges-runaway-measles-crisis-just-not-the-many-rfk-jr-handpicked-health-officials-encouraging-vaccine-hesitancy-and-fueling-outbreak/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref3">[3] CNN/CIDRAP – South Carolina measles outbreak coverage (e.g. CIDRAP, Jan 2026). <a href="https://www.cidrap.umn.edu/measles/south-carolina-reports-99-new-measles-cases-now-more-300-cases-upstate-outbreak" target="_blank">Example link</a></div>
+            <div class="ref-item" id="ref4">[4] ABC News – "Donald Trump Plays Doctor on Twitter." <a href="https://abcnews.go.com/blogs/politics/2012/08/donald-trump-plays-doctor-on-twitter" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref5">[5] Science.org – "Trump met with prominent anti-vaccine activists during campaign." <a href="https://www.science.org/content/article/trump-met-prominent-anti-vaccine-activists-during-campaign" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref6">[6] BMJ – "Andrew Wakefield calls Trump ‘on our side’ over vaccines…" <a href="https://www.bmj.com/content/355/bmj.i6545" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref7">[7] CIDRAP – News Scan Jan 10, 2017 (Trump–RFK Jr. meeting). <a href="https://www.cidrap.umn.edu/dual-use-research/news-scan-jan-10-2017" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref8">[8] NPR – "Despite The Facts, Trump Once Again Embraces Vaccine Skeptics." <a href="https://www.npr.org/2017/01/10/509185540/despite-the-facts-trump-once-again-embraces-vaccine-skeptics" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref9">[9] ABC News – "Trump shifts position on vaccinations, urges parents to 'get the shot'." <a href="https://abcnews.go.com/Politics/trump-shifts-position-vaccinations-urges-parents-shot/story?id=62665258" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref10">[10] OPB – "The U.S. will likely lose its measles elimination status…" <a href="https://www.opb.org/article/2026/01/31/the-u-s-is-on-the-brink-of-losing-its-elimination-status-for-measles/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref11">[11] The Lancet – "The perils of RFK Junior’s anti-vaccine leadership for public health." <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02603-5/fulltext" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref12">[12] Protect Our Care – RFK Jr. background in HHS context (see ref2). <a href="https://www.protectourcare.org/trump-hhs-finally-acknowledges-runaway-measles-crisis-just-not-the-many-rfk-jr-handpicked-health-officials-encouraging-vaccine-hesitancy-and-fueling-outbreak/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref13">[13] The Lancet / CAP – RFK Jr. record on vaccines (see ref11 plus CAP report). <a href="https://www.americanprogress.org/article/rfk-jr-is-systematically-undermining-vaccine-science-and-endangering-health/" target="_blank">CAP link</a></div>
+            <div class="ref-item" id="ref14">[14] U.S. News / Samoa officials on Kennedy’s visit and Samoa outbreak (see also ref13). <a href="https://www.usnews.com/news/world/articles/2025-02-03/did-rfk-jr-mislead-the-senate-on-measles-deaths-in-samoa-the-island-nation" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref15">[15] Wikipedia – "2019 Samoa measles outbreak." <a href="https://en.wikipedia.org/wiki/2019_Samoa_measles_outbreak" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref16">[16] Pulmonology Advisor – "Robert F Kennedy Jr Downplays Measles Vaccine as Cases Surge." <a href="https://www.pulmonologyadvisor.com/news/robert-f-kennedy-jr-downplays-measles-vaccine-as-cases-surge/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref17">[17] STAT News – "RFK Jr. says vaccines are 'most effective way' to prevent measles" (Texas outbreak). <a href="https://www.statnews.com/2025/04/06/rfk-jr-measles-statement-west-texas-outbreak/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref18">[18] First Focus – "Trump Administration’s Removal of COVID-19 from Recommended Childhood Vaccines…" <a href="https://firstfocus.org/update/trump-administrations-removal-of-covid-19-from-recommended-childhood-vaccines-endangers-children-f" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref19">[19] Penn LDI – "Penn Experts Warn New Vaccine Policy Could Undermine Public Health." <a href="https://ldi.upenn.edu/our-work/research-updates/penn-experts-warn-new-vaccine-policy-could-undermine-public-health/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref20">[20] Global Biodefense – "ACIP Overhaul Raises Alarm Among Health Experts." <a href="https://globalbiodefense.com/2025/06/23/rfk-jr-unqualified-acip-overhaul-vaccine-policy-threat/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref21">[21] Biopharm International – "Implications of RFK Jr.’s CDC Vaccine Committee Overhaul…" <a href="https://www.biopharminternational.com/view/implications-of-rfk-jrs-cdc-vaccine-committee-overhaul-for-the-pharmaceutical-industry" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref22">[22] ABC News – "Trump distorts facts on autism, Tylenol and vaccines, scientists say." <a href="https://abcnews.go.com/Health/sick-stomach-trump-distorts-facts-autism-tylenol-vaccines/story?id=125852331" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref23">[23] ABC News – "Fact-checking President Donald Trump’s claims about autism." <a href="https://abcnews.go.com/Health/fact-checking-president-donald-trumps-claims-autism/story?id=125838403" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref24">[24] New York Times – "RFK Jr. Says He Instructed CDC to Change Vaccines and Autism Guidance." <a href="https://www.nytimes.com/2025/11/21/us/politics/rfk-jr-cdc-vaccines-autism-website.html" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref25">[25] NPR – "Louisiana’s top health official, a critic of the COVID vaccine…" <a href="https://www.npr.org/sections/shots-health-news/2025/11/25/nx-s1-5620991/louisiana-surgeon-general-ralph-abraham-cdc-deputy" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref26">[26] ABC News – "What to know about the new CDC deputy director who called Covid vaccines ‘dangerous’." <a href="https://abcnews.go.com/Health/new-cdc-deputy-director-critical-covid-vaccines/story?id=127891520" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref27">[27] FierceBiotech – "Jay Bhattacharya faces Senate grilling on NIH disruptions" / mRNA retreat. <a href="https://www.fiercebiotech.com/biotech/nih-turmoil-takes-center-stage-director-acknowledges-no-vaccine-autism-link" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref28">[28] STAT News / PBS / Biospace – Makary on ACIP "kangaroo court" and vaccine safety debates. <a href="https://www.statnews.com/2025/06/01/fda-marty-makary-covid-vaccine-recommenations-face-the-nation/" target="_blank">STAT link</a></div>
+            <div class="ref-item" id="ref29">[29] CDC – "CDC Acts on Presidential Memorandum to Update Childhood Immunization Schedule." <a href="https://www.cdc.gov/media/releases/2026/2026-cdc-acts-on-presidential-memorandum-to-update-childhood-immunization-schedule.html" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref30">[30] HHS – "Fact Sheet: CDC Childhood Immunization Recommendations." <a href="https://www.hhs.gov/press-room/fact-sheet-cdc-childhood-immunization-recommendations.html" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref31">[31] Families USA – "Unprecedented Changes by a Little-Known Committee That Controls Our Vaccine Access." <a href="https://familiesusa.org/resources/unprecedented-changes-by-a-little-known-committee-that-controls-our-vaccine-access/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref32">[32] NPR – "CDC’s ACIP changes recommendations for hepatitis B vaccination…" <a href="https://www.npr.org/sections/shots-health-news/2025/12/05/nx-s1-5634004/cdc-hepatitis-b-vaccine-acip-meeting" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref33">[33] ABC News – "Chair of CDC's vaccine advisory committee questions polio shot…" <a href="https://abcnews.go.com/Health/chair-cdcs-vaccine-advisory-committee-questions-polio-shot/story?id=129580522" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref34">[34] STAT News – "Top CDC vaccine adviser questions need for polio shot, other vaccines." <a href="https://www.statnews.com/2026/01/22/vaccine-policy-adviser-kirk-milhoan-individual-rights-trump-public-health/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref35">[35] CIDRAP / SC DPH – South Carolina measles outbreak case counts and hospitalizations. <a href="https://dph.sc.gov/news/tuesday-measles-update-dph-reports-89-new-measles-cases-upstate-bringing-outbreak-total-789" target="_blank">Example link</a></div>
+            <div class="ref-item" id="ref36">[36] Protect Our Care – HHS statement context during SC outbreak (see ref2). <a href="https://www.protectourcare.org/trump-hhs-finally-acknowledges-runaway-measles-crisis-just-not-the-many-rfk-jr-handpicked-health-officials-encouraging-vaccine-hesitancy-and-fueling-outbreak/" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref37">[37] PBS / KFF Health News – Oz urging measles vaccine and defending administration officials. <a href="https://www.pbs.org/newshour/health/dr-mehmet-oz-urges-public-to-take-the-measles-vaccine-as-u-s-cases-rise" target="_blank">PBS link</a></div>
+            <div class="ref-item" id="ref38">[38] KFF – "New KFF–Washington Post Survey Explores Parents’ Trust In, and Confusion About, Childhood Vaccines." <a href="https://www.kff.org/public-opinion/new-kff-washington-post-survey-explores-parents-trust-in-and-confusion-about-childhood-vaccin" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref39">[39] Journal of Experimental Social Psychology – "Donald Trump and vaccination: The effect of political identity and exposure to anti-vaccination tweets on vaccine attitudes." <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022103119302628" target="_blank">Link</a></div>
+            <div class="ref-item" id="ref40">[40] TODAY / Autism Science Foundation / pediatricians on rising hesitancy post-Kennedy (see ref27–28). <a href="https://www.today.com/health/disease/cdc-autism-vaccines-pediatricians-react-rcna245631" target="_blank">Example link</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="controls">
+    <button onclick="previousSlide()">← Previous</button>
+    <button onclick="nextSlide()">Next →</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+        document.getElementById('slideNumber').textContent =
+            `Slide ${currentSlide + 1} of ${totalSlides}`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function previousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowRight') nextSlide();
+        if (event.key === 'ArrowLeft') previousSlide();
+    });
+</script>
+</body>
+</html>
