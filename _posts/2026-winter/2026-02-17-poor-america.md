@@ -1,6 +1,7 @@
 ---
 title: "Poor America"
 published: true
+date: 2026-02-16 12:55:07-0500
 excerpt_separator: "<!--more-->"
 categories:
   - Song

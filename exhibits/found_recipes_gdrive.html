@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Recipes of JP Burke</title>
+    <style>
+        :root {
+            --color-bg-primary: #fcfcf9;
+            --color-bg-secondary: #fffffe;
+            --color-text-primary: #1f2121;
+            --color-text-secondary: #626c71;
+            --color-accent: #218089;
+            --color-accent-hover: #1d7480;
+            --color-border: rgba(94, 82, 64, 0.2);
+            --color-card: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg-primary: #1f2121;
+                --color-bg-secondary: #262828;
+                --color-text-primary: #f5f5f5;
+                --color-text-secondary: #a7a9a9;
+                --color-accent: #32b8c6;
+                --color-accent-hover: #2da6b2;
+                --color-border: rgba(119, 124, 124, 0.3);
+                --color-card: #262828;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 3px double var(--color-accent);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+            position: relative;
+        }
+
+        header::before {
+            content: "🍴";
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+
+        header::after {
+            content: "🥘";
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: var(--color-text-secondary);
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .search-filter {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: var(--color-card);
+            color: var(--color-text-primary);
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus {
+            outline: 2px solid var(--color-accent);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid var(--color-border);
+            background: var(--color-card);
+            color: var(--color-text-primary);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .filter-btn:hover {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(33, 128, 137, 0.2);
+        }
+
+        .filter-btn.active {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+            box-shadow: 0 4px 12px rgba(33, 128, 137, 0.3);
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .recipe-card {
+            background: var(--color-card);
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recipe-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(33, 128, 137, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .recipe-card:hover::before {
+            left: 100%;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(33, 128, 137, 0.2);
+            border-color: var(--color-accent);
+        }
+
+        .recipe-card h3 {
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .recipe-tag {
+            display: inline-block;
+            padding: 0.3rem 0.9rem;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .recipe-tag.main {
+            background: #e74c3c;
+        }
+
+        .recipe-tag.sauce {
+            background: #f39c12;
+        }
+
+        .recipe-tag.beverage {
+            background: #3498db;
+        }
+
+        .recipe-tag.side {
+            background: #2ecc71;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            background: var(--color-card);
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            color: var(--color-accent);
+        }
+
+        .recipe-detail h2 {
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .recipe-meta {
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .recipe-section {
+            margin-bottom: 2rem;
+        }
+
+        .recipe-section h3 {
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .ingredient-list, .instruction-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredient-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .ingredient-list li:before {
+            content: "✓ ";
+            color: var(--color-accent);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .instruction-list {
+            counter-reset: step-counter;
+        }
+
+        .instruction-list li {
+            counter-increment: step-counter;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-border);
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .instruction-list li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            background: var(--color-accent);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--color-text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Found Recipes of JP Burke</h1>
+            <p class="subtitle">A curated collection of favorite recipes</p>
+        </header>
+
+        <div class="search-filter">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search recipes...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="main">Main Dishes</button>
+                <button class="filter-btn" data-category="sauce">Sauces &amp; Seasonings</button>
+                <button class="filter-btn" data-category="beverage">Beverages</button>
+                <button class="filter-btn" data-category="side">Sides &amp; Appetizers</button>
+            </div>
+        </div>
+
+        <div id="recipeGrid" class="recipe-grid"></div>
+        <div id="noResults" class="no-results" style="display: none;">
+            No recipes found matching your search.
+        </div>
+    </div>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div id="recipeDetail" class="recipe-detail"></div>
+        </div>
+    </div>
+
+    <script>
+        const recipes = [
+            {
+                name: "Sautéed Mushrooms",
+                category: "side",
+                source: "Epicurious.com",
+                ingredients: [
+                    "15ml (1 tablespoon) fresh lemon juice",
+                    "7.5ml (½ tablespoon) soy sauce",
+                    "5ml (1 teaspoon) sugar",
+                    "30ml (2 tablespoons) olive oil",
+                    "285g (10 ounces) mushrooms, quartered",
+                    "15ml (1 tablespoon) unsalted butter",
+                    "1 garlic clove, chopped"
+                ],
+                instructions: [
+                    "Stir together lemon juice, soy sauce, and sugar in a small bowl.",
+                    "Heat a 12-inch heavy skillet over moderately high heat until very hot.",
+                    "Add olive oil to the hot pan.",
+                    "Sauté mushrooms, stirring frequently, until golden brown, about 5 minutes.",
+                    "Add butter and chopped garlic.",
+                    "Sauté, stirring, until butter is fully absorbed by mushrooms.",
+                    "Add the lemon-soy mixture to the mushrooms.",
+                    "Stir until sauce is fully absorbed.",
+                    "Remove from heat and serve immediately."
+                ],
+                notes: "These mushrooms make a wonderful side dish for just about anything. Serves 2 people. Best served hot."
+            },
+            {
+                name: "7-Bone Slow Cooker Beef Stew",
+                category: "main",
+                source: "Personal Recipe",
+                ingredients: [
+                    "1 large onion, sliced into rounds",
+                    "4 carrots, cut like baby carrots (or 2 handfuls baby carrots)",
+                    "450-900g (1-2 lbs) small red potatoes, larger ones cut into 3.5cm chunks",
+                    "3 celery stalks, sliced",
+                    "4 beef bouillon cubes dissolved in 180ml (¾ cup) hot water",
+                    "1.8kg (4 lbs) 7-bone chuck steak, browned and cubed into 5cm pieces",
+                    "375ml (1½ cups / ½ bottle) red wine (Burgundy style)",
+                    "4 sprigs fresh rosemary, chopped",
+                    "2.5ml (½ teaspoon) black pepper",
+                    "45ml (3 tablespoons) soy sauce",
+                    "5ml (1 teaspoon) Gravy Master (optional)",
+                    "30ml (2 tablespoons) Worcestershire sauce",
+                    "10ml (2 teaspoons) garlic powder",
+                    "15ml (1 tablespoon) dried parsley flakes",
+                    "10ml (2 teaspoons) onion powder",
+                    "½ of 170g (6 oz) can tomato paste",
+                    "2 bay leaves",
+                    "Flour to thicken"
+                ],
+                instructions: [
+                    "Brown 7-bone steak in large cast iron pan. These steaks are large but don't need to be completely browned. Watch closely if using broiler.",
+                    "Line bottom of 7-quart slow cooker with onion slices.",
+                    "Carve steak into large chunks (about half a portion each). Small pieces from carving can be added too.",
+                    "Scoop tomato paste into cooker and mix into beef as best you can.",
+                    "Place carrot pieces around edges, shoving them between sides of cooker and meat like a fence. This helps them heat first.",
+                    "Distribute potatoes and celery on top and around.",
+                    "Sprinkle dry spices over mixture: rosemary, pepper, garlic powder, parsley, onion powder.",
+                    "Shove bay leaves into the mixture.",
+                    "Pour over Worcestershire sauce, soy sauce, and Gravy Master (if using).",
+                    "Pour over dissolved bouillon cubes.",
+                    "Pour wine over everything.",
+                    "Cover and cook on LOW. Time varies with cooker but 8 hours is usually plenty. Check after 7 hours on first cooking.",
+                    "When done, meat will still have some connective tissue. If completely falling apart, it's still edible but will lose juiciness.",
+                    "Before serving, ladle off some liquid, whisk flour into it, then return mixture to slow cooker to thicken broth."
+                ],
+                notes: "Use a 7-quart or larger slow cooker. A 7-bone steak has a 7-shaped bone - it's excellent stew meat. Result is large chunks of beef and carrots that reheat well without becoming 'stew gruel' with no meat. Cook time varies by slow cooker - check after 7 hours first time."
+            },
+            {
+                name: "Beef and Mushroom Garden Soup",
+                category: "main",
+                source: "Personal Recipe",
+                ingredients: [
+                    "1-2 onions (2 small or 1 large), chopped to small dice",
+                    "4 cloves garlic",
+                    "225g (8 oz) sliced mushrooms",
+                    "240ml (1 cup) water",
+                    "30ml (2 tablespoons) dried onion flake",
+                    "10ml (2 teaspoons) onion powder",
+                    "30ml (2 tablespoons) olive oil",
+                    "680g (1.5 lbs) lean ground beef (450g/1 lb minimum)",
+                    "15ml (1 tablespoon) Italian spice mix (4 parts oregano, 4 parts basil, 2 parts rosemary, 1 part thyme, 1 part marjoram)",
+                    "5ml (1 teaspoon) curry powder",
+                    "15ml (3 teaspoons) Lee Kum Kee chicken bouillon powder",
+                    "1.4 liters (48 oz) beef broth or stock",
+                    "410g (14.5 oz) can petite diced tomatoes",
+                    "Two 425g (15 oz) cans Veg-All or equivalent mixed vegetables",
+                    "120ml (½ cup) dried orzo",
+                    "Salt and pepper to taste",
+                    "Optional: 1 packet unflavored gelatin"
+                ],
+                instructions: [
+                    "Place garlic, onion, and mushrooms in bottom of large, hot Dutch oven.",
+                    "Add 1 cup preheated water and stir. Cover. Water allows onion to cook without constant stirring. Check occasionally until onion becomes translucent.",
+                    "Add olive oil, dried onion, and onion powder. Dried onion will absorb remaining water. As mixture dries out, it will begin to fry.",
+                    "Fry for 5 minutes.",
+                    "Add and brown the ground beef.",
+                    "Add Italian spice mixture and curry powder, stir to incorporate.",
+                    "Add chicken bouillon powder.",
+                    "Add beef stock and bring to gentle simmer. (See optional step below)",
+                    "Add petite diced tomatoes.",
+                    "Add two cans of vegetables (white beans, green beans, or other combinations work).",
+                    "Add dried orzo.",
+                    "Add ground black pepper to taste and salt if needed (many ingredients are already salty).",
+                    "When orzo is cooked, serve with fresh bread."
+                ],
+                notes: "OPTIONAL STEP for creamier texture: After adding beef broth while it's warming, ladle off some broth including floating fat. Add to immersion blender container (no more than half full). Add packet of unflavored gelatin and blend until fat is emulsified. Return emulsified fat to pot and continue. This soup completely fills a 4.6-quart Dutch oven."
+            },
+            {
+                name: "Korean Bulgogi Bolognese",
+                category: "main",
+                source: "NYT Cooking - Kay Chun",
+                ingredients: [
+                    "30ml (2 tablespoons) safflower or canola oil",
+                    "1 cup finely chopped onion",
+                    "1 cup finely chopped carrot",
+                    "1 cup finely chopped celery",
+                    "7 garlic cloves, minced",
+                    "30ml (2 tablespoons) peeled, minced ginger",
+                    "30ml (2 tablespoons) tomato paste",
+                    "450g (1 pound) ground beef",
+                    "115g (4 oz) white button mushrooms, finely chopped (about 2 cups)",
+                    "180ml (¾ cup) finely chopped scallions",
+                    "180ml (¾ cup) low-sodium soy sauce",
+                    "60ml (¼ cup) turbinado sugar",
+                    "Kosher salt and black pepper",
+                    "340g (12 oz) dried egg pasta (tagliatelle or pappardelle)",
+                    "Freshly grated Parmesan for serving"
+                ],
+                instructions: [
+                    "Heat oil in large Dutch oven over medium heat. Add onion and cook, stirring, until softened, 3 minutes.",
+                    "Add carrot and celery and cook for 5 minutes.",
+                    "Stir in garlic, ginger, and tomato paste. Cook until caramelized, 2-3 minutes, lowering heat as necessary to avoid burning. Return heat to medium.",
+                    "Add beef, mushrooms, and ½ cup scallions. Cook, stirring to break up beef, until browned, 3-4 minutes.",
+                    "Add soy sauce, sugar, and ¼ cup water. Bring to simmer.",
+                    "Cover and simmer gently over low heat, stirring occasionally, until sauce has thickened, 30 minutes.",
+                    "Stir in remaining ¼ cup scallions and season with pepper.",
+                    "While sauce cooks, bring large pot of well-salted water to boil. Cook pasta according to package directions until al dente. Drain.",
+                    "Divide pasta in bowls and top with Bolognese. Serve with Parmesan."
+                ],
+                notes: "Serves 4. Takes about 45 minutes total. Fusion recipe combining Korean bulgogi flavors with Italian Bolognese technique."
+            },
+            {
+                name: "Sicilian Pizza with Pepperoni",
+                category: "main",
+                source: "Serious Eats - J. Kenji López-Alt",
+                ingredients: [
+                    "DOUGH: 500g (17.5 oz / ~3½ cups) bread flour",
+                    "14g (½ oz / 1 tablespoon) salt",
+                    "6g (¼ oz / 1½ teaspoons) instant yeast",
+                    "20g (0.35 oz / 2 tablespoons) extra-virgin olive oil",
+                    "60ml (¼ cup) olive oil for pan",
+                    "325g (11.5 oz / ~1 cup + 7 tablespoons) room-temperature water",
+                    "SAUCE: 30ml (2 tablespoons) extra-virgin olive oil",
+                    "9 medium cloves garlic, roughly chopped",
+                    "15ml (1 tablespoon) dried oregano",
+                    "10ml (2 teaspoons) dried red pepper flakes",
+                    "800g (28 oz) can whole peeled tomatoes",
+                    "5ml (1 teaspoon) sugar",
+                    "Kosher salt to taste",
+                    "TOPPINGS: 450g (1 pound) sliced mozzarella cheese",
+                    "325g (12 oz) natural-casing pepperoni, sliced 3mm thick",
+                    "115g (4 oz) ground Pecorino Romano cheese"
+                ],
+                instructions: [
+                    "DOUGH (Food Processor Method): Combine flour, salt, yeast, 20g olive oil, and water in food processor. Process until dough forms and rides around blade, then continue for 30 seconds.",
+                    "Pour 60ml olive oil into 33×45cm rimmed baking sheet. Spread over entire surface with hands.",
+                    "Transfer dough to sheet and turn in oil until coated. Spread gently. Cover with plastic wrap.",
+                    "Let rise at room temperature until dough slackens and spreads, 2-3 hours.",
+                    "Remove plastic. Using oiled hands, gently push and stretch dough into corners. Let rest 20-30 minutes.",
+                    "SAUCE: Heat 30ml olive oil in saucepan over medium heat until shimmering.",
+                    "Add garlic, oregano, and red pepper flakes. Cook, stirring, until aromatic, about 1 minute.",
+                    "Add tomatoes and break up with potato masher. Stir in sugar.",
+                    "Simmer 15 minutes to meld flavors. Season with salt. Cool slightly.",
+                    "Preheat oven to 288°C (550°F) with rack in lower position, 30 minutes before baking.",
+                    "ASSEMBLY: Spread mozzarella slices evenly over dough surface.",
+                    "Spoon sauce over cheese (use sparingly). Spread pepperoni evenly.",
+                    "Sprinkle with half the Romano cheese.",
+                    "Bake until pepperoni is crisp and bottom is golden brown, about 10 minutes.",
+                    "Remove from oven. Sprinkle remaining Romano. Cut and serve immediately."
+                ],
+                notes: "Makes one 33×45cm (13×18-inch) pie, serving 6-8. Use a kitchen scale for best results. For curled pepperoni, use natural-casing stick pepperoni sliced yourself."
+            },
+            {
+                name: "Turkey Meatloaf",
+                category: "main",
+                source: "Epicurious.com",
+                ingredients: [
+                    "225g (1½ cups) finely chopped onion",
+                    "15ml (1 tablespoon) minced garlic",
+                    "5ml (1 teaspoon) olive oil",
+                    "1 medium carrot, cut into 3mm dice",
+                    "340g cremini mushrooms, trimmed and very finely chopped",
+                    "5ml (1 teaspoon) salt",
+                    "2.5ml (½ teaspoon) black pepper",
+                    "7.5ml (1½ teaspoons) Worcestershire sauce",
+                    "80ml (⅓ cup) finely chopped fresh parsley",
+                    "75ml (¼ cup plus 1 tablespoon) ketchup",
+                    "240ml (1 cup) fine fresh bread crumbs",
+                    "80ml (⅓ cup) 1% milk",
+                    "1 large egg, lightly beaten",
+                    "1 large egg white, lightly beaten",
+                    "570g ground turkey (mix of dark and light meat)"
+                ],
+                instructions: [
+                    "Preheat oven to 180°C (350°F).",
+                    "Sauté onion and garlic in olive oil until softened, about 5 minutes.",
+                    "Add diced carrot and mushrooms, cook until moisture evaporates, about 10 minutes.",
+                    "Season with salt, pepper, and Worcestershire sauce. Stir in parsley and 15ml ketchup.",
+                    "In large bowl, combine bread crumbs and milk. Let stand 5 minutes.",
+                    "Add vegetable mixture, eggs, and ground turkey. Mix gently until combined.",
+                    "Form into loaf shape in baking pan. Brush top with remaining ketchup.",
+                    "Bake for 1 hour or until internal temperature reaches 74°C (165°F).",
+                    "Let rest 10 minutes before slicing."
+                ],
+                notes: "Serve with roasted red pepper tomato sauce or additional ketchup. Use a meat thermometer to ensure proper doneness."
+            },
+            {
+                name: "Poultry Seasoning Mix",
+                category: "sauce",
+                source: "CookingCache.com",
+                ingredients: [
+                    "45ml (3 tablespoons) dried thyme",
+                    "30ml (2 tablespoons) dried rosemary",
+                    "15ml (1 tablespoon) dried savory",
+                    "2.5ml (½ teaspoon) ground allspice",
+                    "1.25ml (¼ teaspoon) pepper",
+                    "30ml (2 tablespoons) dried marjoram",
+                    "15ml (1 tablespoon) dried sage",
+                    "10ml (2 teaspoons) celery seeds",
+                    "2.5ml (½ teaspoon) dried oregano"
+                ],
+                instructions: [
+                    "Combine all dried herbs and spices in a bowl.",
+                    "Mix thoroughly to distribute evenly.",
+                    "Store in an airtight container in a cool, dark place.",
+                    "Use as needed for seasoning poultry dishes."
+                ],
+                notes: "This blend keeps well for up to 6 months. Great for roasting chicken or turkey."
+            },
+            {
+                name: "Pumpkin Spice Latte",
+                category: "beverage",
+                source: "A Year of CrockPotting",
+                ingredients: [
+                    "475ml (2 cups) milk (1% or preferred)",
+                    "30ml (2 tablespoons) canned pumpkin",
+                    "30ml (2 tablespoons) white sugar",
+                    "30ml (2 tablespoons) vanilla extract",
+                    "2.5ml (½ teaspoon) pumpkin pie spice OR: 1.25ml cinnamon, 0.6ml cloves, 0.6ml nutmeg, pinch ground ginger",
+                    "120ml (½ cup) brewed espresso or 180ml (¾ cup) strong coffee",
+                    "Whipped cream for garnish (optional)"
+                ],
+                instructions: [
+                    "Add coffee/espresso and milk to slow cooker.",
+                    "Whisk in pumpkin, spices, sugar, and vanilla until well combined.",
+                    "Cover and cook on high for 2 hours if starting with cold ingredients.",
+                    "Whisk again before serving.",
+                    "Ladle into mugs and garnish with whipped cream and additional cinnamon if desired."
+                ],
+                notes: "Makes enough for 2 large servings. Scale up proportionally for more servings. Use a 1.5 to 4-quart slow cooker."
+            },
+            {
+                name: "Exquisite Pizza Sauce",
+                category: "sauce",
+                source: "Allrecipes",
+                ingredients: [
+                    "170g (6 ounce) can tomato paste",
+                    "180ml warm water (45°C / 110°F)",
+                    "45ml (3 tablespoons) grated Parmesan cheese",
+                    "5ml (1 teaspoon) minced garlic",
+                    "30ml (2 tablespoons) honey",
+                    "5ml (1 teaspoon) anchovy paste (optional)",
+                    "3.75ml (¾ teaspoon) onion powder",
+                    "1.25ml (¼ teaspoon) dried oregano",
+                    "1.25ml (¼ teaspoon) dried marjoram",
+                    "1.25ml (¼ teaspoon) dried basil",
+                    "1.25ml (¼ teaspoon) ground black pepper",
+                    "0.6ml (⅛ teaspoon) cayenne pepper",
+                    "0.6ml (⅛ teaspoon) dried red pepper flakes",
+                    "Salt to taste"
+                ],
+                instructions: [
+                    "In a bowl, combine tomato paste with warm water.",
+                    "Add Parmesan cheese, garlic, honey, and anchovy paste (if using).",
+                    "Add all dried herbs and spices: onion powder, oregano, marjoram, basil, black pepper, cayenne, and red pepper flakes.",
+                    "Mix thoroughly, breaking up any clumps of cheese.",
+                    "Season with salt to taste.",
+                    "Let sauce sit for 30 minutes to blend flavors before using.",
+                    "Spread over pizza dough and prepare as desired."
+                ],
+                notes: "This sauce benefits from resting time to allow flavors to meld. Can be made ahead and refrigerated."
+            },
+            {
+                name: "Chicken Cacciatore",
+                category: "main",
+                source: "EA Forums",
+                ingredients: [
+                    "1 large onion or shallot, thinly sliced",
+                    "680g (1.5 pounds) skinless, boneless chicken breasts",
+                    "340-510g (2-3 cans, 6 oz each) tomato paste",
+                    "225g (8 oz) fresh sliced mushrooms",
+                    "2.5ml (½ teaspoon) salt",
+                    "1.25ml (¼ teaspoon) pepper",
+                    "2 cloves garlic, minced",
+                    "5ml (1 teaspoon) oregano",
+                    "2.5ml (½ teaspoon) basil",
+                    "1 bay leaf",
+                    "60ml (¼ cup) dry white wine",
+                    "60ml (¼ cup) water",
+                    "Alternative: 120ml (½ cup) low-fat chicken broth instead of wine and water"
+                ],
+                instructions: [
+                    "Place sliced onion in bottom of slow cooker.",
+                    "Add chicken pieces on top of onions.",
+                    "In separate bowl, combine tomato paste, mushrooms, salt, pepper, garlic, oregano, basil, bay leaf, wine, and water (or chicken broth).",
+                    "Pour mixture over chicken. It will look thick but will become more liquid during cooking.",
+                    "Cook on LOW for 7-9 hours, or on HIGH for 3-4 hours.",
+                    "Remove bay leaf before serving.",
+                    "Serve over pasta or rice."
+                ],
+                notes: "Look for low-sodium or no-salt-added canned goods if desired. The sauce will thicken and develop rich flavors during slow cooking."
+            },
+            {
+                name: "Hummus",
+                category: "side",
+                source: "Personal Recipe",
+                ingredients: [
+                    "5 cloves garlic",
+                    "120ml (½ cup) tahini",
+                    "120ml (½ cup) water (mostly from chickpea can, plus some fresh)",
+                    "120ml (½ cup) lemon juice",
+                    "2.5ml (½ teaspoon) salt",
+                    "540g (19 oz) can Progresso chickpeas, drained (reserve liquid)",
+                    "Olive oil and paprika for garnish"
+                ],
+                instructions: [
+                    "In food processor or blender, combine garlic, tahini, water (use chickpea liquid plus fresh water), lemon juice, and salt.",
+                    "Blend until smooth and well combined.",
+                    "Add drained chickpeas to the mixture.",
+                    "Blend until smooth and creamy, scraping down sides as needed.",
+                    "Adjust consistency with additional water if needed.",
+                    "Transfer to serving bowl.",
+                    "Garnish with a drizzle of olive oil and sprinkle of paprika."
+                ],
+                notes: "For smoother hummus, peel the chickpeas before blending (optional but makes a difference). Serve with pita bread, vegetables, or crackers."
+            },
+            {
+                name: "Honey Garlic Grilled Eggplant",
+                category: "side",
+                source: "Beyond Salmon Blog",
+                ingredients: [
+                    "2 medium eggplants",
+                    "60ml (¼ cup) honey",
+                    "4-5 cloves garlic, minced",
+                    "45ml (3 tablespoons) soy sauce",
+                    "30ml (2 tablespoons) olive oil",
+                    "15ml (1 tablespoon) rice vinegar",
+                    "Salt and pepper to taste",
+                    "Sesame seeds for garnish"
+                ],
+                instructions: [
+                    "Slice eggplants into 1cm thick rounds.",
+                    "Salt slices and let sit 15 minutes to draw out moisture, then pat dry.",
+                    "Mix honey, minced garlic, soy sauce, olive oil, and rice vinegar to make glaze.",
+                    "Preheat grill to medium-high heat.",
+                    "Brush eggplant slices with half the glaze mixture.",
+                    "Grill for 4-5 minutes per side until tender and grill marks appear.",
+                    "Brush with remaining glaze during last minute of cooking.",
+                    "Garnish with sesame seeds before serving."
+                ],
+                notes: "Salting the eggplant first removes bitterness and excess moisture. Can also be broiled in oven if grill unavailable."
+            },
+            {
+                name: "Cedar Plank Salmon",
+                category: "main",
+                source: "Food Network",
+                ingredients: [
+                    "1 cedar plank, soaked in water 2-4 hours",
+                    "680-900g (1.5-2 pounds) salmon fillet",
+                    "30ml (2 tablespoons) olive oil",
+                    "15ml (1 tablespoon) lemon juice",
+                    "2 cloves garlic, minced",
+                    "5ml (1 teaspoon) dried dill",
+                    "Salt and pepper to taste",
+                    "Lemon slices for garnish"
+                ],
+                instructions: [
+                    "Soak cedar plank in water for at least 2 hours, weighted down to keep submerged.",
+                    "Preheat grill to medium heat (175-190°C / 350-375°F).",
+                    "Mix olive oil, lemon juice, garlic, dill, salt, and pepper.",
+                    "Place salmon skin-side down on soaked cedar plank.",
+                    "Brush salmon with oil mixture.",
+                    "Place plank on grill and close lid.",
+                    "Grill for 15-20 minutes until salmon reaches 63°C (145°F) internal temperature.",
+                    "Salmon should flake easily with fork when done.",
+                    "Garnish with lemon slices and serve directly from plank."
+                ],
+                notes: "Cedar plank adds smoky, aromatic flavor. Watch carefully as plank edges may char (this is normal). Keep spray bottle of water handy for flare-ups."
+            },
+            {
+                name: "Carne Asada",
+                category: "main",
+                source: "Simply Recipes",
+                ingredients: [
+                    "900g (2 pounds) flank steak or skirt steak",
+                    "120ml (½ cup) fresh lime juice",
+                    "120ml (½ cup) orange juice",
+                    "4 cloves garlic, minced",
+                    "15ml (1 tablespoon) olive oil",
+                    "5ml (1 teaspoon) ground cumin",
+                    "5ml (1 teaspoon) chili powder",
+                    "2.5ml (½ teaspoon) salt",
+                    "2.5ml (½ teaspoon) black pepper",
+                    "60ml (¼ cup) fresh cilantro, chopped"
+                ],
+                instructions: [
+                    "In bowl, combine lime juice, orange juice, garlic, olive oil, cumin, chili powder, salt, and pepper.",
+                    "Place steak in shallow dish or resealable bag.",
+                    "Pour marinade over meat, turning to coat.",
+                    "Refrigerate for 2-8 hours, turning occasionally.",
+                    "Remove from refrigerator 30 minutes before cooking.",
+                    "Preheat grill to high heat.",
+                    "Remove steak from marinade and pat dry.",
+                    "Grill 4-6 minutes per side for medium-rare, or to desired doneness.",
+                    "Let rest 5-10 minutes before slicing against the grain.",
+                    "Garnish with fresh cilantro and serve."
+                ],
+                notes: "Slice thinly against the grain for maximum tenderness. Perfect for tacos, burritos, or served with rice and beans."
+            },
+            {
+                name: "French Beef Stew",
+                category: "main",
+                source: "Food Network",
+                ingredients: [
+                    "1.35kg (3 pounds) beef chuck, cut into 5cm cubes",
+                    "45ml (3 tablespoons) flour",
+                    "45ml (3 tablespoons) olive oil",
+                    "2 large onions, chopped",
+                    "3 carrots, cut into chunks",
+                    "3 cloves garlic, minced",
+                    "480ml (2 cups) red wine",
+                    "480ml (2 cups) beef stock",
+                    "30ml (2 tablespoons) tomato paste",
+                    "2 bay leaves",
+                    "5ml (1 teaspoon) dried thyme",
+                    "Salt and pepper to taste",
+                    "450g (1 pound) pearl onions, peeled",
+                    "225g button mushrooms, halved"
+                ],
+                instructions: [
+                    "Season beef cubes with salt and pepper, then dredge in flour.",
+                    "Heat olive oil in large Dutch oven over medium-high heat.",
+                    "Brown beef in batches, removing to plate when browned.",
+                    "Add onions and carrots to pot, sauté until softened, about 5 minutes.",
+                    "Add garlic, cook 1 minute until fragrant.",
+                    "Return beef to pot. Add wine, stock, tomato paste, bay leaves, and thyme.",
+                    "Bring to boil, then reduce heat to low.",
+                    "Cover and simmer 2 hours until beef is tender.",
+                    "Add pearl onions and mushrooms, cook additional 30 minutes.",
+                    "Remove bay leaves. Adjust seasoning with salt and pepper.",
+                    "Serve hot with crusty bread."
+                ],
+                notes: "This classic French stew (Boeuf Bourguignon) improves with time - even better the next day. Can be made in slow cooker on LOW for 6-8 hours."
+            },
+            {
+                name: "Fish House Punch",
+                category: "beverage",
+                source: "Great Party Recipes",
+                ingredients: [
+                    "750ml (1 bottle) dark rum",
+                    "375ml (½ bottle) cognac or brandy",
+                    "120ml (½ cup) peach brandy",
+                    "480ml (2 cups) fresh lemon juice",
+                    "240ml (1 cup) simple syrup",
+                    "1 liter cold water",
+                    "Ice block or ice cubes",
+                    "Lemon slices for garnish"
+                ],
+                instructions: [
+                    "In large punch bowl, combine dark rum, cognac, and peach brandy.",
+                    "Add fresh lemon juice and simple syrup, stir well.",
+                    "Add cold water and stir to combine.",
+                    "Add large ice block or plenty of ice cubes.",
+                    "Let mixture chill for 30 minutes before serving.",
+                    "Garnish with lemon slices.",
+                    "Serve in punch cups or small glasses."
+                ],
+                notes: "This historic 18th century punch is strong - serve in small portions. Make simple syrup by dissolving equal parts sugar and water over heat, then cooling. Serves approximately 20 people."
+            },
+            {
+                name: "Master Muffin Recipe",
+                category: "side",
+                source: "Flour Bakery - Joanne Chang",
+                ingredients: [
+                    "454g (1 pound / 3½ cups) all-purpose flour",
+                    "20ml (4 teaspoons) baking powder",
+                    "2.5ml (½ teaspoon) baking soda",
+                    "2.5ml (½ teaspoon) salt",
+                    "265g (1⅓ cups) granulated sugar",
+                    "140g (5 oz / 10 tablespoons) unsalted butter, melted and cooled",
+                    "240ml (1 cup) whole milk, room temperature",
+                    "240ml (1 cup) crème fraîche or sour cream, room temperature",
+                    "2 large eggs, room temperature",
+                    "1 large egg yolk, room temperature",
+                    "Add-ins: Choose 1-2 flavorings, 1½ cups fruit/chocolate, optional ¾ cup nuts"
+                ],
+                instructions: [
+                    "Position rack in center of oven and heat to 175°C (350°F). Oil or spray muffin tin top and line with paper cups.",
+                    "Sift together flour, baking powder, baking soda, and salt in large bowl. Mix well.",
+                    "In medium bowl, whisk together sugar, melted butter, milk, crème fraîche, eggs, and egg yolk until well combined.",
+                    "Pour wet ingredients into dry and fold gently with rubber spatula just until mostly moistened (batter will be lumpy with streaks of dry flour).",
+                    "Choose add-ins: Flavorings like vanilla extract (5ml), lemon zest (10ml), cinnamon (4ml), etc.",
+                    "Add 1½ cups total of fruits (blueberries, raspberries, chopped apples, bananas, etc.) or chocolate chips.",
+                    "Optionally add up to ¾ cup toasted nuts (pecans, almonds, walnuts).",
+                    "Sprinkle add-ins on batter and fold until just combined. Do not overmix.",
+                    "Scoop batter into muffin cups. Mound ¾ inch higher than rim for bakery-style tops.",
+                    "Bake 30-35 minutes until golden brown and spring back when pressed in middle.",
+                    "Cool tin on rack 15-20 minutes.",
+                    "For glaze: Whisk 360g (3 cups) confectioners' sugar with 90ml (6 tablespoons) liquid (water, lemon juice, orange juice, maple syrup).",
+                    "Separate muffin tops with knife, pop out, place on rack over foil. Brush or spoon glaze on while slightly warm.",
+                    "Wait 20-30 minutes for glaze to set before serving."
+                ],
+                notes: "Makes 12 muffins. This is Flour Bakery's powerhouse recipe - a versatile master batter that makes tender, light muffins sturdy enough for lots of fruit. Room temperature ingredients are key. Don't overmix - fold add-ins before batter is fully mixed. Overfill cups for big bakery-style tops. Glaze while warm but not hot."
+            },
+            {
+                name: "Homemade Eggo Waffles",
+                category: "side",
+                source: "Top Secret Recipes",
+                ingredients: [
+                    "4 eggs",
+                    "37ml (2½ tablespoons) granulated sugar",
+                    "300ml (1¼ cups) whole milk",
+                    "120ml (½ cup) water",
+                    "60ml (¼ cup) buttermilk",
+                    "60ml (¼ cup) unsalted butter, melted",
+                    "30ml (2 tablespoons) vegetable oil",
+                    "453g (16 oz / 3 cups) all-purpose flour",
+                    "20ml (4 teaspoons) baking powder",
+                    "6ml (1⅛ teaspoons) salt",
+                    "Optional: 8 drops yellow food coloring"
+                ],
+                instructions: [
+                    "Heat up waffle iron.",
+                    "Beat eggs with sugar in large bowl with electric mixer for 1 minute on high speed.",
+                    "Add milk, water, buttermilk, melted butter, and oil. Mix until combined.",
+                    "Add flour, baking powder, and salt to bowl. Mix about 30 seconds until batter is smooth with no lumps.",
+                    "Mix in food coloring if you want waffles to match Eggo color.",
+                    "Spray waffle iron with non-stick spray.",
+                    "Pour ½ to 1 cup batter (or amount your waffle iron requires) onto iron, close and cook 1-2 minutes until just light brown and slightly undercooked.",
+                    "When waffles are cool, seal in freezer bags and freeze.",
+                    "To serve: Cook in toaster on lowest setting until hot all the way through. If waffles are large, break in half to fit in toaster."
+                ],
+                notes: "Makes 8-10 waffles. Waffles are deliberately slightly undercooked so they can be frozen and reheated in toaster without overcooking. VARIATIONS: Buttermilk (use ¾ cup milk + ¾ cup buttermilk), Blueberry (add ¾ cup dried chopped blueberries), Whole Wheat (use half all-purpose, half whole wheat flour, no food coloring)."
+            },
+            {
+                name: "Mrs. Fields Chocolate Chip Cookies",
+                category: "side",
+                source: "Top Secret Recipes",
+                ingredients: [
+                    "227g (1 cup / 2 sticks) softened butter",
+                    "150g (¾ cup) granulated sugar",
+                    "165g (¾ cup) packed brown sugar",
+                    "2 eggs",
+                    "10ml (2 teaspoons) vanilla extract",
+                    "5ml (1 teaspoon) baking soda",
+                    "5ml (1 teaspoon) salt",
+                    "280g (2¼ cups) all-purpose flour",
+                    "340g (12 oz / 2 cups) semi-sweet chocolate chips"
+                ],
+                instructions: [
+                    "Preheat oven to 175°C (350°F).",
+                    "In large mixing bowl, cream together butter and both sugars with electric mixer on medium speed.",
+                    "Add eggs and vanilla, beat until fluffy.",
+                    "In separate bowl, combine baking soda, salt, and flour.",
+                    "Pour dry mixture into wet mixture while beating.",
+                    "Add chocolate chips and mix until combined.",
+                    "Drop rounded tablespoons of dough onto ungreased cookie sheets, spacing 2 inches apart.",
+                    "Bake 9-10 minutes until edges are light brown.",
+                    "Cool on baking sheet for 2 minutes, then transfer to wire rack."
+                ],
+                notes: "Makes about 3 dozen cookies. For chewier cookies, slightly underbake. For crispier cookies, bake an additional 1-2 minutes. Store in airtight container."
+            },
+            {
+                name: "Kobe Steakhouse Shrimp Sauce",
+                category: "sauce",
+                source: "Top Secret Recipes - Kobe Ichiban",
+                ingredients: [
+                    "180ml (¾ cup) mayonnaise",
+                    "30ml (2 tablespoons) water",
+                    "10ml (2 teaspoons) tomato paste",
+                    "7ml (1½ teaspoons) melted butter",
+                    "5ml (1 teaspoon) granulated sugar",
+                    "5ml (1 teaspoon) rice vinegar",
+                    "2.5ml (½ teaspoon) paprika",
+                    "1.25ml (¼ teaspoon) garlic powder",
+                    "Pinch cayenne pepper"
+                ],
+                instructions: [
+                    "Combine all ingredients in small bowl.",
+                    "Mix well with whisk until smooth.",
+                    "Cover and refrigerate for at least 1 hour to let flavors blend.",
+                    "Serve with grilled shrimp, chicken, or steak."
+                ],
+                notes: "This is the famous pink sauce served at Kobe Ichiban Japanese Steakhouse. Makes about 1 cup. Keeps refrigerated for up to 1 week."
+            },      
+            {
+                name: "Placeholder Recipe",
+                category: "snack",
+                source: "Muh Brain",
+                ingredients: [
+                    "First thing",
+                    "30ml (2 tablespoons) water",
+                    "Pinch cayenne pepper"
+                ],
+                instructions: [
+                    "Combine all ingredients in small bowl.",
+                    "Mix well with whisk until smooth.",
+                    "Throw it out, because it's horrible."
+                ],
+                notes: "No notes."
+            },
+            {
+                name: "Cracker Barrel Fried Apples",
+                category: "side",
+                source: "Top Secret Recipes",
+                ingredients: [
+                    "60ml (¼ cup) butter",
+                    "4-5 Granny Smith apples, peeled, cored, and sliced",
+                    "60ml (¼ cup) apple juice",
+                    "50g (¼ cup) granulated sugar",
+                    "1.25ml (¼ teaspoon) cinnamon"
+                ],
+                instructions: [
+                    "Melt butter in large skillet over medium heat.",
+                    "Add apple slices and cook, stirring occasionally, for 5 minutes.",
+                    "Add apple juice, sugar, and cinnamon.",
+                    "Continue cooking, stirring occasionally, until apples are tender and sauce thickens, about 10 minutes.",
+                    "Serve warm as side dish or dessert."
+                ],
+                notes: "A classic Cracker Barrel side dish. Granny Smith apples hold their shape well during cooking. Great with pork chops or as breakfast side."
+            },
+            {
+                name: "Overnight Country Blonde Bread",
+                category: "side",
+                source: "Ken's Artisan Bakery",
+                ingredients: [
+                    "LEVAIN: 100g mature active levain",
+                    "400g (3 cups + 2 tbsp) white flour",
+                    "100g (¾ cup + ½ tbsp) whole wheat flour",
+                    "400g (1¾ cups) water at 29-32°C (85-90°F)",
+                    "FINAL DOUGH: 804g (6¼ cups) white flour",
+                    "26g (3 tbsp) whole wheat flour",
+                    "50g (⅓ cup + 1 tbsp) rye flour",
+                    "684g (scant 3 cups) water at 32-35°C (90-95°F)",
+                    "22g (1 tbsp + 1 tsp) fine sea salt",
+                    "216g (¾ cup + 1 tbsp) levain"
+                ],
+                instructions: [
+                    "FEED LEVAIN: Discard all but 100g levain. Add 400g white flour, 100g whole wheat flour, 400g water at 29-32°C. Mix by hand until incorporated. Cover and rest 7-9 hours at room temperature.",
+                    "AUTOLYSE: After 7-9 hours, mix 804g white flour, 50g rye flour, 26g whole wheat flour in 12-quart tub. Add 684g water at 32-35°C. Mix by hand until incorporated. Cover and rest 20-30 minutes.",
+                    "MIX FINAL DOUGH: Sprinkle 22g salt over dough. Transfer 216g levain (more if kitchen is cool). Mix by hand using pincer method alternating with folds. Target dough temp 25-26°C (77-78°F).",
+                    "FOLD: Do 3-4 folds before bed, anytime convenient. When dough is nearly triple original volume (12-15 hours after mixing), ready to divide.",
+                    "DIVIDE: Ease dough onto lightly floured surface. Cut into 2 equal pieces with dough knife.",
+                    "SHAPE: Dust 2 proofing baskets with flour. Shape each piece into medium-tight ball. Place seam side down in baskets.",
+                    "PROOF: Cover baskets with towel or place in non-perforated plastic bags. Proof about 4 hours at 21°C (70°F). Use finger-dent test.",
+                    "PREHEAT: At least 45 minutes before baking, put 2 Dutch ovens with lids on middle rack. Preheat oven to 245°C (475°F).",
+                    "BAKE: Invert loaf onto counter (seam side up). Carefully place in Dutch oven seam side up. Cover and bake 30 minutes, then uncover and bake 20-25 minutes until medium-dark to very dark brown."
+                ],
+                notes: "Makes 2 loaves of 1½ pounds each. Pure levain bread with no commercial yeast. Long overnight fermentation (12-15 hours bulk, 4 hours proof). Bake as dark as possible without burning for best flavor. If only one Dutch oven, refrigerate second loaf 20 minutes before baking first, then reheat Dutch oven 5 minutes between loaves."
+            },
+            {
+                name: "Sourdough Crackers",
+                category: "side",
+                source: "Copy-cat Rustic Bakery",
+                ingredients: [
+                    "240ml (1 cup) all-purpose flour",
+                    "240ml (1 cup) sourdough starter or discard",
+                    "60ml (¼ cup) olive oil",
+                    "15ml (1 tablespoon) fresh chopped rosemary (optional)",
+                    "2.5ml (½ teaspoon) sea salt"
+                ],
+                instructions: [
+                    "In a non-reactive bowl, add flour, sourdough starter (or discard), olive oil, chopped rosemary (if using), and sea salt.",
+                    "Mix all ingredients until you have a smooth dough that is not sticky. If the dough is still sticky, add a bit more flour until it comes together.",
+                    "Loosely cover the dough and refrigerate for at least 30 minutes or up to 2 hours.",
+                    "Preheat your oven to 190°C (375°F).",
+                    "Roll the dough out on a silicone baking mat as thin as possible. Lift and turn the dough often to get it very thin. If you don't have a silicone mat, use parchment paper.",
+                    "Use a serrated pastry cutter or knife to cut the dough into long strips. Then, cut perpendicular to make squares or rectangles.",
+                    "Prick each square or rectangle twice with a fork to allow air to escape during baking. This will prevent the crackers from puffing up.",
+                    "Bake for 20-25 minutes or until the crackers are golden brown. Rotate the baking sheet halfway through for even baking.",
+                    "Allow the crackers to cool before serving."
+                ],
+                notes: "Healthier version of Rustic Bakery crackers with no sugar or canola oil. Makes 1 container. Great way to use sourdough discard. Roll very thin for crispy crackers."
+            }
+        ];
+
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        function renderRecipes() {
+            const grid = document.getElementById('recipeGrid');
+            const noResults = document.getElementById('noResults');
+            
+            const filtered = recipes.filter(recipe => {
+                const matchesCategory = currentFilter === 'all' || recipe.category === currentFilter;
+                const matchesSearch = recipe.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                    recipe.category.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+
+            grid.innerHTML = filtered.map((recipe, index) => `
+                <div class="recipe-card" onclick="showRecipe(${recipes.indexOf(recipe)})">
+                    <h3>${recipe.name}</h3>
+                    <p style="color: var(--color-text-secondary); margin: 0.5rem 0; font-size: 0.95rem;">
+                        📋 ${recipe.ingredients.length} ingredients • 👨‍🍳 ${recipe.source}
+                    </p>
+                    <span class="recipe-tag ${recipe.category}">${getCategoryLabel(recipe.category)}</span>
+                </div>
+            `).join('');
+        }
+
+        function getCategoryLabel(category) {
+            const labels = {
+                'main': 'Main Dish',
+                'sauce': 'Sauce/Seasoning',
+                'beverage': 'Beverage',
+                'side': 'Side/Appetizer'
+            };
+            return labels[category] || category;
+        }
+
+        function showRecipe(index) {
+            const recipe = recipes[index];
+            const modal = document.getElementById('recipeModal');
+            const detail = document.getElementById('recipeDetail');
+
+            detail.innerHTML = `
+                <h2>${recipe.name}</h2>
+                <p class="recipe-meta">Source: ${recipe.source}</p>
+                
+                <div class="recipe-section">
+                    <h3>Ingredients</h3>
+                    <ul class="ingredient-list">
+                        ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="recipe-section">
+                    <h3>Instructions</h3>
+                    <ol class="instruction-list">
+                        ${recipe.instructions.map(inst => `<li>${inst}</li>`).join('')}
+                    </ol>
+                </div>
+
+                ${recipe.notes ? `
+                    <div class="recipe-section">
+                        <h3>Notes</h3>
+                        <p>${recipe.notes}</p>
+                    </div>
+                ` : ''}
+            `;
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('recipeModal').classList.remove('active');
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderRecipes();
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentFilter = e.target.dataset.category;
+                renderRecipes();
+            });
+        });
+
+        document.getElementById('recipeModal').addEventListener('click', (e) => {
+            if (e.target.id === 'recipeModal') {
+                closeModal();
+            }
+        });
+
+        renderRecipes();
+    </script>
+</body>
+</html>
