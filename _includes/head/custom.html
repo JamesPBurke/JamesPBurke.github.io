@@ -11,4 +11,190 @@
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
+<!-- everything in the script tag is the text-to-speech -->
+<!-- button functionality. It pulls the page content -->
+<!-- and adds the Read button only if the page is a post-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (!("speechSynthesis" in window)) return;
+
+  // Only inject on post pages by checking for the post content element
+  var contentEl = document.querySelector(".page__content");
+  if (!contentEl) return;
+
+  // --- Inject styles ---
+  var style = document.createElement("style");
+  style.textContent = [
+    ".tts-player {",
+    "  display: inline-flex;",
+    "  align-items: center;",
+    "  gap: 0.5rem;",
+    "  margin: 0 0 1.5rem;",
+    "  font-family: inherit;",
+    "}",
+    ".tts-btn {",
+    "  display: inline-flex;",
+    "  align-items: center;",
+    "  gap: 0.4rem;",
+    "  padding: 0.35rem 0.85rem 0.35rem 0.6rem;",
+    "  border: 1.5px solid currentColor;",
+    "  border-radius: 999px;",
+    "  background: transparent;",
+    "  cursor: pointer;",
+    "  font-size: 0.82rem;",
+    "  font-family: inherit;",
+    "  color: inherit;",
+    "  opacity: 0.65;",
+    "  transition: opacity 0.15s, background 0.15s;",
+    "  line-height: 1;",
+    "}",
+    ".tts-btn:hover { opacity: 1; background: rgba(0,0,0,0.05); }",
+    ".tts-btn.tts-active { opacity: 1; }",
+    ".tts-btn-sm { padding: 0.3rem 0.45rem; }",
+    ".tts-controls {",
+    "  display: none;",
+    "  align-items: center;",
+    "  gap: 0.5rem;",
+    "}",
+    ".tts-controls.tts-visible { display: inline-flex; }",
+    ".tts-speed {",
+    "  display: inline-flex;",
+    "  align-items: center;",
+    "  gap: 0.3rem;",
+    "  font-size: 0.78rem;",
+    "  opacity: 0.65;",
+    "}",
+    ".tts-speed select {",
+    "  border: 1px solid currentColor;",
+    "  border-radius: 4px;",
+    "  background: transparent;",
+    "  color: inherit;",
+    "  font-size: 0.78rem;",
+    "  padding: 0.1rem 0.25rem;",
+    "  cursor: pointer;",
+    "  font-family: inherit;",
+    "}"
+  ].join("\n");
+  document.head.appendChild(style);
+
+  // --- SVG icons ---
+  var svgPlay   = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M8 5v14l11-7z"/></svg>';
+  var svgPause  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+  var svgStop   = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><rect x="6" y="6" width="12" height="12"/></svg>';
+
+  // --- Build DOM ---
+  var player = document.createElement("div");
+  player.className = "tts-player";
+
+  var toggleBtn = document.createElement("button");
+  toggleBtn.className = "tts-btn";
+  toggleBtn.setAttribute("aria-label", "Listen to this article");
+  toggleBtn.innerHTML = svgPlay + "<span>Listen</span>";
+
+  var controls = document.createElement("div");
+  controls.className = "tts-controls";
+
+  var stopBtn = document.createElement("button");
+  stopBtn.className = "tts-btn tts-btn-sm";
+  stopBtn.setAttribute("aria-label", "Stop");
+  stopBtn.setAttribute("title", "Stop");
+  stopBtn.innerHTML = svgStop;
+
+  var speedWrap = document.createElement("div");
+  speedWrap.className = "tts-speed";
+  speedWrap.innerHTML = '<label for="tts-rate">Speed</label>';
+
+  var rateEl = document.createElement("select");
+  rateEl.id = "tts-rate";
+  rateEl.setAttribute("aria-label", "Playback speed");
+  [["0.8","0.8×"],["1","1×"],["1.25","1.25×"],["1.5","1.5×"],["2","2×"]].forEach(function(o) {
+    var opt = document.createElement("option");
+    opt.value = o[0];
+    opt.textContent = o[1];
+    if (o[0] === "1") opt.selected = true;
+    rateEl.appendChild(opt);
+  });
+
+  speedWrap.appendChild(rateEl);
+  controls.appendChild(stopBtn);
+  controls.appendChild(speedWrap);
+  player.appendChild(toggleBtn);
+  player.appendChild(controls);
+
+  // Insert player as first child of the post content area
+  contentEl.insertBefore(player, contentEl.firstChild);
+
+  // --- Speech logic ---
+  var synth = window.speechSynthesis;
+  var utterance = null;
+  var paused = false;
+
+  function getCleanText() {
+    var clone = contentEl.cloneNode(true);
+    clone.querySelectorAll("pre, code, figure, nav, .tts-player, script, style, .notice, .page__taxonomy").forEach(function(el) {
+      el.remove();
+    });
+    return clone.innerText.trim();
+  }
+
+  function setUIState(state) {
+    // state: 'idle' | 'playing' | 'paused'
+    var label = toggleBtn.querySelector("span");
+    if (state === "idle") {
+      toggleBtn.innerHTML = svgPlay + "<span>Listen</span>";
+      toggleBtn.classList.remove("tts-active");
+      controls.classList.remove("tts-visible");
+    } else if (state === "playing") {
+      toggleBtn.innerHTML = svgPause + "<span>Pause</span>";
+      toggleBtn.classList.add("tts-active");
+      controls.classList.add("tts-visible");
+    } else if (state === "paused") {
+      toggleBtn.innerHTML = svgPlay + "<span>Resume</span>";
+      toggleBtn.classList.add("tts-active");
+      controls.classList.add("tts-visible");
+    }
+  }
+
+  function speak() {
+    var text = getCleanText();
+    utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = parseFloat(rateEl.value);
+    utterance.onend = function() { paused = false; setUIState("idle"); };
+    utterance.onerror = function() { paused = false; setUIState("idle"); };
+    synth.speak(utterance);
+    setUIState("playing");
+  }
+
+  toggleBtn.addEventListener("click", function() {
+    if (!synth.speaking && !paused) {
+      speak();
+    } else if (synth.speaking && !paused) {
+      synth.pause();
+      paused = true;
+      setUIState("paused");
+    } else if (paused) {
+      synth.resume();
+      paused = false;
+      setUIState("playing");
+    }
+  });
+
+  stopBtn.addEventListener("click", function() {
+    synth.cancel();
+    paused = false;
+    setUIState("idle");
+  });
+
+  rateEl.addEventListener("change", function() {
+    if (synth.speaking || paused) {
+      synth.cancel();
+      paused = false;
+      speak();
+    }
+  });
+
+  window.addEventListener("beforeunload", function() { synth.cancel(); });
+});
+</script>
+
 <!-- end custom head snippets -->
