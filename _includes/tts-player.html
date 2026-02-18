@@ -1,0 +1,156 @@
+<div class="tts-player" id="tts-player" aria-label="Text-to-speech player">
+  <button class="tts-btn" id="tts-toggle" aria-label="Play article audio" title="Listen to this article">
+    <svg class="icon icon-play" id="tts-icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="icon icon-pause" id="tts-icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    <svg class="icon icon-stop" id="tts-icon-stop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="display:none"><rect x="6" y="6" width="12" height="12"/></svg>
+    <span class="tts-label" id="tts-label">Listen</span>
+  </button>
+
+  <div class="tts-controls" id="tts-controls" style="display:none">
+    <button class="tts-btn tts-btn-sm" id="tts-stop" aria-label="Stop" title="Stop">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="6" y="6" width="12" height="12"/></svg>
+    </button>
+    <div class="tts-speed">
+      <label for="tts-rate">Speed</label>
+      <select id="tts-rate" aria-label="Playback speed">
+        <option value="0.8">0.8×</option>
+        <option value="1" selected>1×</option>
+        <option value="1.25">1.25×</option>
+        <option value="1.5">1.5×</option>
+        <option value="2">2×</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<style>
+.tts-player {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.25rem;
+  font-family: inherit;
+}
+.tts-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.65rem;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 0.15s, background 0.15s;
+}
+.tts-btn:hover { opacity: 1; background: rgba(0,0,0,0.06); }
+.tts-btn.active { opacity: 1; }
+.tts-btn-sm {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+}
+.tts-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tts-speed {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+.tts-speed label { cursor: default; }
+.tts-speed select {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+</style>
+
+<script>
+(function () {
+  if (!('speechSynthesis' in window)) return;
+
+  const btn       = document.getElementById('tts-toggle');
+  const labelEl   = document.getElementById('tts-label');
+  const iconPlay  = document.getElementById('tts-icon-play');
+  const iconPause = document.getElementById('tts-icon-pause');
+  const iconStop  = document.getElementById('tts-icon-stop');
+  const controls  = document.getElementById('tts-controls');
+  const stopBtn   = document.getElementById('tts-stop');
+  const rateEl    = document.getElementById('tts-rate');
+
+  // Grab the post content — adjust selector to match your theme
+  const contentEl = document.querySelector('.post-content, .e-content, article .content, article');
+  if (!contentEl) return;
+
+  const synth = window.speechSynthesis;
+  let utterance = null;
+  let paused = false;
+
+  function getCleanText() {
+    // Clone to avoid mutating the DOM
+    const clone = contentEl.cloneNode(true);
+    // Remove code blocks, figures, nav elements
+    clone.querySelectorAll('pre, code, figure, nav, .tts-player, script, style').forEach(el => el.remove());
+    return clone.innerText.trim();
+  }
+
+  function setUIState(state) {
+    // state: 'idle' | 'playing' | 'paused'
+    iconPlay.style.display  = state === 'idle'   ? '' : 'none';
+    iconPause.style.display = state === 'playing' ? '' : 'none';
+    iconStop.style.display  = state === 'paused'  ? '' : 'none';
+    labelEl.textContent     = state === 'idle'   ? 'Listen' : state === 'playing' ? 'Pause' : 'Resume';
+    controls.style.display  = state !== 'idle'   ? 'inline-flex' : 'none';
+    btn.classList.toggle('active', state !== 'idle');
+  }
+
+  function speak() {
+    const text = getCleanText();
+    utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = parseFloat(rateEl.value);
+    utterance.onend  = () => { paused = false; setUIState('idle'); };
+    utterance.onerror = () => { paused = false; setUIState('idle'); };
+    synth.speak(utterance);
+    setUIState('playing');
+  }
+
+  btn.addEventListener('click', () => {
+    if (!synth.speaking && !paused) {
+      speak();
+    } else if (synth.speaking && !paused) {
+      synth.pause();
+      paused = true;
+      setUIState('paused');
+    } else if (paused) {
+      synth.resume();
+      paused = false;
+      setUIState('playing');
+    }
+  });
+
+  stopBtn.addEventListener('click', () => {
+    synth.cancel();
+    paused = false;
+    setUIState('idle');
+  });
+
+  rateEl.addEventListener('change', () => {
+    if (utterance) utterance.rate = parseFloat(rateEl.value);
+  });
+
+  // Cancel speech when navigating away
+  window.addEventListener('beforeunload', () => synth.cancel());
+})();
+</script>
