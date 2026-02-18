@@ -1,7 +1,7 @@
 ---
 title: "Outer Wilds Hot Shot and YouTube Achievements"
 last_modified_at: 2026-02-17 12:55:36-0500
-published: false
+published: true
 header: 
    #image: https://ik.imagekit.io/scurryday/thumb/diditsunstationt.png
    teaser: https://ik.imagekit.io/scurryday/thumb/diditsunstationt.png?tr=w-640
@@ -107,7 +107,9 @@ I have some fans. I wish I could say it were worth the effort to make more video
 Every activity you choose to engage in is pushing aside some other activity with its oen set of feelings that you might want to experience. When you're young, you might choose less carefully. But age an experience bring more reflection and wisdom, and maybe more careful choices that can maximize your focus and elation. 
 
 
-## What is Outer Wilds and Why You Should Play It If You Like Fun
+## What is Outer Wilds and Why You Should Play It If You Like Fun ##
+
+OK, here's my plug for Outer Wilds.
 
 Outer Wilds is a space exploration mystery puzzle game. It's one of the best, most compelling video games I've ever played. This is the kind of game I like.
 
