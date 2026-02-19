@@ -122,7 +122,11 @@ Two other interesting things to know about this game:
 1. little to nothing is "stored" in the save files. Nearly everything that changes as you play is happening in your head and memory (apart from your ship's log). No change you make in the world persists (for long). You are unraveling a mystery by uncovering it, not building or making things.
 2. You are playing within a clockwork universe ruled by (Newtonian) physics. Every action has an equal and opposite reaction; flying full speed toward a planet means spending just as long with your thrusters in reverse. When the moon is overhead, you are ever so slightly lighter. Get caught in the Sun's gravity and you're probably going to burn up. It presents interesting flight challenges and opportunities.
 
-I'm not inking you anywhere other than the [Outer Wilds Steam Page](https://store.steampowered.com/app/753640/Outer_Wilds/) because spoilers will ruin this game for you. Because all progress is in what you know. The Outer Wilds community online are very protective of newcomers because spoilers are so 
+I'm not linking you anywhere other than the [Outer Wilds Steam Page](https://store.steampowered.com/app/753640/Outer_Wilds/) because spoilers will ruin this game for you. Because all progress is in what you know. The Outer Wilds community online are very protective of newcomers because spoilers are so detrimental to enjoying the game, and they don't want to replace your gameplay experience with what they know. 
+
+I have to admit, during some seriously frustrated times I carefully looked at what people were talking about in online communities about some challenge or other. Sometimes just to know if I was wasting my time. Because this game is like: OK, here's your ship, some equipment, and a solar system... you'll figure it out.
+
+Play it!
 
 [^1]: An exception was [the video by MrGuybrush](https://www.youtube.com/watch?v=hLHShjNtneo){:target="_blank"}. While he says he can do the achievement 100% of the time and that it's now easy for him, I think he's underestimating the skill he's gained through practice. But his guide did recommend some tips on orienting your ship that were very useful to get me close.
 
