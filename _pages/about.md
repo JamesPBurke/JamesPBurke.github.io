@@ -27,3 +27,8 @@ My perspective is that of an anti-authoritarian educator. [![](https://ik.imagek
 [Verify my identity across my social accounts](/../verify/){: .btn .btn--primary}
 
 [Read bits of wisdom I have known](/wisdom/){: .btn .btn--info}
+
+
+## Game Achievements via EXOPHASE ##
+
+<a href="https://www.exophase.com/user/Sciuridae/"><img src="https://card.exophase.com/2/0/318378.png?1771522770"></a>
