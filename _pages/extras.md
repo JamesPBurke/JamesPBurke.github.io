@@ -12,4 +12,7 @@ title: "Extras"
 
 - [Tunic Glyph Editor]({{ "https://jamespburke.com/runes/trunegen.html" }})
 
+## Utility References (for myself) ##
+
+- [Linux installation for my Laptop](/linuxinstall/)
 
