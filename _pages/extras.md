@@ -1,6 +1,6 @@
 ---
 permalink: /Extras/
-title: "Extras"
+title: "extras"
 ---
 
 ## Exhibits ##
