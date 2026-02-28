@@ -1,7 +1,7 @@
 ---
 title: Exhibits
 layout: single
-permalink: /linuxinstall
+permalink: /linuxinstall/
 author_profile: false
 ---
 
