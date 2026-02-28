@@ -2,7 +2,7 @@
 title: Exhibits
 layout: single
 permalink: /exhibits/
-redirect_to: /Extras/
+redirect_to: /extras/
 author_profile: true
 ---
 ## Interactive Exhibits
