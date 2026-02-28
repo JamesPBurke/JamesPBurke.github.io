@@ -1,6 +1,6 @@
 ---
-permalink: /Extras/
-title: "extras"
+permalink: /extras/
+title: "Extras"
 ---
 
 ## Exhibits ##
