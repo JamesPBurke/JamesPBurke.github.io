@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Tax Puzzle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            safelist: [
+                'bg-emerald-500/20', 'border-emerald-400', 'text-emerald-400', 
+                'bg-slate-900/60', 'border-slate-700/50', 'text-white', 
+                'hidden', 'flex', 'text-yellow-400', 'bg-yellow-500/10', 'border-yellow-500/30'
+            ]
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1e293b;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* Custom scrollbar for history */
+        #history-list::-webkit-scrollbar { width: 6px; }
+        #history-list::-webkit-scrollbar-track { background: transparent; }
+        #history-list::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        #history-list::-webkit-scrollbar-thumb:hover { background: #64748b; }
+    </style>
+</head>
+<body class="min-h-screen text-slate-100 p-4 md:p-8 font-sans selection:bg-yellow-400/30 pb-20">
+
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+        
+        <!-- Left Column: UI & State -->
+        <div class="flex-1 space-y-6 flex flex-col">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight mb-2">Walking Tax Tracker</h1>
+                <p class="opacity-80 text-sm">Use your keyboard arrows or click the grid to trace a path.</p>
+            </div>
+            
+            <!-- Current Tax Card -->
+            <div id="tax-card" class="p-6 rounded-2xl shadow-xl border-2 transition-all duration-300 bg-slate-900/60 border-slate-700/50">
+                <h2 class="text-sm uppercase tracking-wider opacity-80 mb-2 font-semibold">Current Tax Total</h2>
+                <div id="tax-value" class="text-7xl font-black tabular-nums tracking-tighter text-white">4</div>
+                
+                <div id="victory-msg" class="hidden items-center gap-2 text-emerald-300 font-bold mt-4 bg-emerald-950/50 p-3 rounded-lg w-fit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 10 0 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Tax is zero! You found a valid path.
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="flex gap-4">
+                <button id="btn-undo" onclick="undo()" disabled class="flex-1 flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 disabled:hover:bg-slate-800 py-3 rounded-xl transition-all font-medium border border-slate-600 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+                    Undo
+                </button>
+                <button id="btn-reset" onclick="reset()" disabled class="flex-1 flex items-center justify-center gap-2 bg-red-900/60 hover:bg-red-800 disabled:opacity-40 disabled:hover:bg-red-900/60 py-3 rounded-xl transition-all font-medium border border-red-700/50 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    Reset
+                </button>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 flex-1 min-h-0">
+                <!-- Rules -->
+                <div class="bg-slate-900/60 rounded-xl p-5 text-sm space-y-4 border border-slate-800 flex-1">
+                    <h3 class="font-bold flex items-center gap-2 text-slate-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        Movement Rules
+                    </h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <li class="flex justify-between bg-slate-800/80 p-3 rounded-lg border border-slate-700/50"><span>East (Right)</span> <strong class="text-yellow-400 font-mono text-base">+2</strong></li>
+                        <li class="flex justify-between bg-slate-800/80 p-3 rounded-lg border border-slate-700/50"><span>West (Left)</span> <strong class="text-yellow-400 font-mono text-base">-2</strong></li>
+                        <li class="flex justify-between bg-slate-800/80 p-3 rounded-lg border border-slate-700/50"><span>South (Down)</span> <strong class="text-yellow-400 font-mono text-base">×2</strong></li>
+                        <li class="flex justify-between bg-slate-800/80 p-3 rounded-lg border border-slate-700/50"><span>North (Up)</span> <strong class="text-yellow-400 font-mono text-base">÷2</strong></li>
+                    </ul>
+                    <div class="text-xs opacity-60 leading-relaxed mt-2 p-2 bg-slate-800/50 rounded-lg">
+                        Once you have walked through a block (line segment) you may not pass through it again. You may pass through the same intersection twice.
+                    </div>
+                </div>
+
+                <!-- History Log -->
+                <div class="bg-slate-900/60 rounded-xl p-4 border border-slate-800 flex-1 flex flex-col max-h-[40vh] md:max-h-[50vh]">
+                    <h3 class="font-bold mb-3 text-sm text-slate-300">Path History</h3>
+                    <div id="history-list" class="overflow-y-auto pr-2 flex-col gap-2 flex flex-1 scroll-smooth">
+                        <!-- History injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Grid Visualization -->
+        <div class="flex-1 flex flex-col items-center justify-center p-4">
+            <div class="w-full max-w-lg aspect-square bg-slate-900/80 p-4 md:p-8 rounded-3xl shadow-2xl border border-slate-700/50 backdrop-blur-sm relative">
+                <svg id="game-svg" viewBox="-0.5 -0.5 5 5" class="w-full h-full overflow-visible">
+                    <!-- SVG built by JS -->
+                </svg>
+            </div>
+
+            <!-- Mobile D-Pad -->
+            <div class="grid grid-cols-3 gap-2 mt-8 w-48 lg:hidden">
+                <div></div>
+                <button onclick="moveDir(0, -1)" class="bg-slate-800 active:bg-slate-700 p-4 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                </button>
+                <div></div>
+                <button onclick="moveDir(-1, 0)" class="bg-slate-800 active:bg-slate-700 p-4 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                </button>
+                <button onclick="moveDir(0, 1)" class="bg-slate-800 active:bg-slate-700 p-4 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+                </button>
+                <button onclick="moveDir(1, 0)" class="bg-slate-800 active:bg-slate-700 p-4 rounded-xl flex items-center justify-center border border-slate-700 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let path = [{ x: 2, y: 0 }];
+
+        // Helper to identify traversed edges
+        const getEdgeStr = (p1, p2) => {
+            const x1 = Math.min(p1.x, p2.x);
+            const x2 = Math.max(p1.x, p2.x);
+            const y1 = Math.min(p1.y, p2.y);
+            const y2 = Math.max(p1.y, p2.y);
+            return `${x1},${y1}-${x2},${y2}`;
+        };
+
+        function createHistoryItemHtml(step, op, tax, isLatest) {
+            const bgClass = isLatest ? 'bg-yellow-500/10 border border-yellow-500/30' : 'bg-slate-800/50 border border-transparent';
+            const textClass = isLatest ? 'text-yellow-400' : 'text-slate-300';
+            
+            return `
+                <div class="flex justify-between items-center p-3 rounded-lg transition-colors ${bgClass}">
+                    <span class="text-sm opacity-90">${step}</span>
+                    <div class="flex items-center gap-3">
+                        ${op ? `<span class="text-xs font-mono opacity-50 w-8 text-right">${op}</span>` : ''}
+                        <span class="font-bold font-mono w-10 text-right ${textClass}">${tax}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Core Update Loop
+        function updateUI() {
+            let currentTax = 4;
+            let traversedEdges = new Set(["0,0-1,0", "1,0-2,0"]);
+            
+            // Build History
+            let historyData = [{ step: 'Start at top-middle', op: '', tax: 4 }];
+
+            for (let i = 1; i < path.length; i++) {
+                const prev = path[i - 1];
+                const curr = path[i];
+                traversedEdges.add(getEdgeStr(prev, curr));
+                
+                let op = '';
+                let dir = '';
+                
+                if (curr.x > prev.x) { currentTax += 2; op = '+2'; dir = 'East'; }
+                else if (curr.x < prev.x) { currentTax -= 2; op = '-2'; dir = 'West'; }
+                else if (curr.y > prev.y) { currentTax *= 2; op = '×2'; dir = 'South'; }
+                else if (curr.y < prev.y) { currentTax /= 2; op = '÷2'; dir = 'North'; }
+                
+                historyData.push({ step: `Move ${dir}`, op, tax: currentTax });
+            }
+
+            const isVictory = currentTax === 0;
+
+            // Update DOM Elements
+            const taxCard = document.getElementById('tax-card');
+            const taxValue = document.getElementById('tax-value');
+            const victoryMsg = document.getElementById('victory-msg');
+
+            taxValue.innerText = currentTax;
+
+            if (isVictory) {
+                taxCard.className = "p-6 rounded-2xl shadow-xl border-2 transition-all duration-300 bg-emerald-500/20 border-emerald-400";
+                taxValue.className = "text-7xl font-black tabular-nums tracking-tighter text-emerald-400";
+                victoryMsg.classList.remove('hidden');
+                victoryMsg.classList.add('flex');
+            } else {
+                taxCard.className = "p-6 rounded-2xl shadow-xl border-2 transition-all duration-300 bg-slate-900/60 border-slate-700/50";
+                taxValue.className = "text-7xl font-black tabular-nums tracking-tighter text-white";
+                victoryMsg.classList.add('hidden');
+                victoryMsg.classList.remove('flex');
+            }
+
+            // History List (Render backwards for most recent at top)
+            const historyHtml = historyData.slice().reverse().map((entry, idx) => 
+                createHistoryItemHtml(entry.step, entry.op, entry.tax, idx === 0)
+            ).join('');
+            
+            const historyContainer = document.getElementById('history-list');
+            historyContainer.innerHTML = historyHtml;
+            historyContainer.scrollTop = 0;
+
+            // Buttons
+            document.getElementById('btn-undo').disabled = path.length <= 1;
+            document.getElementById('btn-reset').disabled = path.length <= 1;
+
+            renderSVG(traversedEdges);
+        }
+
+        function renderSVG(traversedEdges) {
+            const currentNode = path[path.length - 1];
+            let svgContent = '';
+
+            // Grid Lines
+            for (let i = 0; i < 5; i++) {
+                svgContent += `<line x1="0" y1="${i}" x2="4" y2="${i}" stroke="#475569" stroke-width="0.04" />`;
+                svgContent += `<line x1="${i}" y1="0" x2="${i}" y2="4" stroke="#475569" stroke-width="0.04" />`;
+            }
+
+            // Dotted Initial Path
+            svgContent += `<line x1="0" y1="0" x2="2" y2="0" stroke="#94a3b8" stroke-width="0.08" stroke-dasharray="0.1 0.1" stroke-linecap="round" />`;
+
+            // Dynamic Path History
+            for (let i = 1; i < path.length; i++) {
+                const prev = path[i - 1];
+                const node = path[i];
+                svgContent += `<line x1="${prev.x}" y1="${prev.y}" x2="${node.x}" y2="${node.y}" stroke="#facc15" stroke-width="0.12" stroke-linecap="round" class="drop-shadow-md" />`;
+            }
+
+            // Node Indicators
+            for (let y = 0; y < 5; y++) {
+                for (let x = 0; x < 5; x++) {
+                    svgContent += `<circle cx="${x}" cy="${y}" r="0.06" fill="#64748b" />`;
+                }
+            }
+
+            // Valid Move Targets (Ghost dots)
+            const directions = [ { dx: 0, dy: -1 }, { dx: 0, dy: 1 }, { dx: -1, dy: 0 }, { dx: 1, dy: 0 } ];
+            
+            directions.forEach(({ dx, dy }) => {
+                const nx = currentNode.x + dx;
+                const ny = currentNode.y + dy;
+                if (nx >= 0 && nx <= 4 && ny >= 0 && ny <= 4) {
+                    if (!traversedEdges.has(getEdgeStr(currentNode, { x: nx, y: ny }))) {
+                        svgContent += `
+                            <g class="cursor-pointer group" onclick="attemptMoveTo(${nx}, ${ny})">
+                                <circle cx="${nx}" cy="${ny}" r="0.25" fill="transparent" />
+                                <circle cx="${nx}" cy="${ny}" r="0.12" fill="#facc15" class="opacity-40 transition-opacity duration-200 pointer-events-none" style="pointer-events: none;" />
+                                <!-- Hack for standard CSS hover without external CSS classes if tailwind group doesn't trigger in SVG -->
+                                <circle cx="${nx}" cy="${ny}" r="0.25" fill="transparent" onmouseenter="this.nextElementSibling.classList.replace('opacity-40', 'opacity-100')" onmouseleave="this.nextElementSibling.classList.replace('opacity-100', 'opacity-40')" />
+                                <circle cx="${nx}" cy="${ny}" r="0.12" fill="#facc15" class="opacity-40 transition-opacity duration-200" style="pointer-events: none;" />
+                            </g>
+                        `;
+                    }
+                }
+            });
+
+            // Current Position Marker
+            svgContent += `<circle cx="${currentNode.x}" cy="${currentNode.y}" r="0.16" fill="#facc15" class="animate-pulse shadow-yellow-500/50 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]" style="pointer-events: none;" />`;
+
+            document.getElementById('game-svg').innerHTML = svgContent;
+        }
+
+        // Actions
+        function undo() {
+            if (path.length > 1) {
+                path.pop();
+                updateUI();
+            }
+        }
+
+        function reset() {
+            path = [{ x: 2, y: 0 }];
+            updateUI();
+        }
+
+        function attemptMoveTo(nx, ny) {
+            const curr = path[path.length - 1];
+            
+            // Bounds check
+            if (nx < 0 || nx > 4 || ny < 0 || ny > 4) return;
+            
+            // Distance check (must be adjacent)
+            if (Math.abs(nx - curr.x) + Math.abs(ny - curr.y) !== 1) return;
+
+            // Rebuild current traversed to prevent looping
+            const currentTraversed = new Set(["0,0-1,0", "1,0-2,0"]);
+            for (let i = 1; i < path.length; i++) {
+                currentTraversed.add(getEdgeStr(path[i-1], path[i]));
+            }
+
+            const edgeStr = getEdgeStr(curr, { x: nx, y: ny });
+            if (currentTraversed.has(edgeStr)) return;
+
+            path.push({ x: nx, y: ny });
+            updateUI();
+        }
+
+        function moveDir(dx, dy) {
+            const curr = path[path.length - 1];
+            attemptMoveTo(curr.x + dx, curr.y + dy);
+        }
+
+        // Key Listeners
+        window.addEventListener('keydown', (e) => {
+            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+                e.preventDefault();
+                if (e.key === 'ArrowUp') moveDir(0, -1);
+                if (e.key === 'ArrowDown') moveDir(0, 1);
+                if (e.key === 'ArrowLeft') moveDir(-1, 0);
+                if (e.key === 'ArrowRight') moveDir(1, 0);
+            } else if ((e.key === 'z' && (e.ctrlKey || e.metaKey)) || e.key === 'Backspace') {
+                undo();
+            }
+        });
+
+        // Initial Render
+        updateUI();
+
+    </script>
+</body>
+</html>
