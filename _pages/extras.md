@@ -11,7 +11,7 @@ title: "Extras"
 ## Random Webapps ##
 
 - [Tunic Glyph Editor]({{ "https://jamespburke.com/runes/trunegen.html" }})
-- [Tunic Glyph Editor]({{ "https://jamespburke.com/exhibits/walktax.html" }})
+- [Walking Tax Puzzle]({{ "https://jamespburke.com/exhibits/walktax.html" }})
 
 
 ## Utility References (for myself) ##
