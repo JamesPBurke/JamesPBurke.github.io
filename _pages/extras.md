@@ -11,8 +11,11 @@ title: "Extras"
 ## Random Webapps ##
 
 - [Tunic Glyph Editor]({{ "https://jamespburke.com/runes/trunegen.html" }})
+- [Tunic Glyph Editor]({{ "https://jamespburke.com/exhibits/walktax.html" }})
+
 
 ## Utility References (for myself) ##
 
 - [Linux installation for my Laptop](/linuxinstall/)
+
 
