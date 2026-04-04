@@ -15,6 +15,9 @@ title: "Extras"
 - [Score Planner]({{ "https://jamespburke.com/resummit/"}})
 
 
+## Productivity and Convenience ##
+- [Daily Briefing and Recommendation Engine](/briefing/)
+
 ## Utility References (for myself) ##
 
 - [Linux installation for my Laptop](/linuxinstall/)
