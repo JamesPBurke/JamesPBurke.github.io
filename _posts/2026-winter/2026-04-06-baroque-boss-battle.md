@@ -11,9 +11,9 @@ tags:
 ---
 {% include video id="Ion6sUF3h-c" provider="youtube" %}
 
-I was messing around with Google's Gemini, and it now has a feature for creating music, and one of the options is for chiptunes. So I gave it a description of what I wanted and had it generate something. 
+I was messing around with Google's Gemini, and it now has a feature for creating music. One of the options is for chiptunes. So I gave it a description of what I wanted and had it generate something. 
 
-The output was rather fun, so I decided to chop it up a bit and feed it to Suno to see if I could mess with it with the covers feature. I decided ot aim it toward creating something with a Baroque musical feel, with harpsichords and aspects of chamber music. Suno, as it so often does, decided ot add drums. Which was actually OK this time.
+The output was rather fun, so I decided to chop it up a bit and fed it to Suno to see if I could mess with it with the covers feature. I decided ot aim it toward creating something with a Baroque musical feel, with harpsichords and aspects of chamber music. Suno, as it so often does, decided ot add drums. Which was actually OK this time.
 
 It hit just what I had in mind, which is unusual for this short a list of "things I messed with." I had been thinking of the Disney Electric Parade from the 80's, [a creation of Jean-Jaques Perrey called Baroque Hoedown.](https://en.wikipedia.org/wiki/Baroque_Hoedown) You can [listen to it on YouTube.](https://www.youtube.com/watch?v=Ax00vnsZPKE)
 
