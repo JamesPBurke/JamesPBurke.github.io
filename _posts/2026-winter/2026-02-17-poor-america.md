@@ -1,6 +1,6 @@
 ---
 title: "Poor America"
-published: true
+published: false
 date: 2026-02-16 12:55:07-0500
 excerpt_separator: "<!--more-->"
 categories:
