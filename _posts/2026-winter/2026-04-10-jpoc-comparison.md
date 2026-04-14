@@ -13,7 +13,7 @@ tags:
   - antiwar
 ---
 
-I saw someone post [this meme](https://imgur.com/a/OBhGr6R) on social media, comparing the Obama-era JPOC vs the mess Trump has made. You can never trust memes, so I checked up on various parts of it and then had an agent put an infographic together. Rather than critique that meme, I decided it should create an infographic that stuck to factual, documented comparisons in our relationship with Iran in the JPOC era vs. the "after Trump tore up JCPOA" era.
+I saw someone post [this meme](https://imgur.com/a/OBhGr6R) on social media, comparing the Obama-era JCPOA vs the mess Trump has made. You can never trust memes, so I checked up on various parts of it and then had an agent put an infographic together. Rather than critique that meme, I decided it should create an infographic that stuck to factual, documented comparisons in our relationship with Iran in the JCPOA era vs. the "after Trump tore up JCPOA" era.
 
 Before you say "but Biden was also president," the question isn't who was or wasn't president. Its about the wake of the decision to tear up a deal that was being monitored by international experts on arms control.
 
