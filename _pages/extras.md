@@ -24,4 +24,4 @@ title: "Extras"
 ## Infographic-Related ##
 
 - [Vaccine Denial Slideshow]({{ "../exhibits/vaccine_denial.html" | relative_url }})
-- [Comparing Obama's maligned JPOC deal with Iran to what we have in April of 2026]({{"../exhibits/infograf/iran_side_by_side.html" | relative_url }})
+- [Comparing Obama's maligned JCPOA deal with Iran to what we have in April of 2026]({{"../exhibits/infograf/iran_side_by_side.html" | relative_url }})
