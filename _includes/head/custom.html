@@ -205,5 +205,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<!-- Service worker registration for PWA installability -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+</script>
+
 <!-- end custom head snippets -->
 
