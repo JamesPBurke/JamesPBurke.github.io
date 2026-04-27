@@ -1,0 +1,828 @@
+---
+# Only the YAML front matter dashes are needed here so Jekyll processes this file.
+# Variables MUST come before @import "minimal-mistakes" or they won't override.
+---
+
+// =============================================================
+//  ADVENTURER'S CLUB — Complete main.scss
+//  Minimal Mistakes override for jamespburke.com
+//  Drop this file at: assets/css/main.scss
+//  Replace the existing file entirely.
+// =============================================================
+
+// ----- SKIN SELECTION -----
+// Using "dirt" skin as base — our overrides supersede it.
+@import "minimal-mistakes/skins/dirt";
+
+// ----- MINIMAL MISTAKES CORE -----
+@import "minimal-mistakes";
+
+// =============================================================
+//  GOOGLE FONTS
+//  These are also loaded in _includes/head/custom.html.
+//  The @import here is a fallback; the <link> in custom.html
+//  is faster (preconnect). You can remove this @import if
+//  custom.html is in place.
+// =============================================================
+// @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+// =============================================================
+//  PALETTE TOKENS
+// =============================================================
+$clr-bg:              #f4ede0;
+$clr-ink:             #2c1a0e;
+$clr-muted:           #6b4c35;
+$clr-link:            #7a3010;
+$clr-link-hover:      #5a2008;
+$clr-masthead:        #1c1108;
+$clr-masthead-border: #8b3a0f;
+$clr-nav-text:        #d4c5a9;
+$clr-border:          #c4a882;
+$clr-footer:          #1c1108;
+$clr-sienna:          #8b3a0f;
+$clr-sienna-hover:    #6e2c08;
+
+$font-heading:        "IM Fell English", "Palatino Linotype", Georgia, serif;
+$font-body:           "Libre Baskerville", Georgia, serif;
+
+// =============================================================
+//  BASE — Body, Links, Headings
+// =============================================================
+
+body {
+  font-family: $font-body;
+  background-color: $clr-bg;
+  color: $clr-ink;
+  line-height: 1.7;
+}
+
+a {
+  color: $clr-link;
+  // MM uses box-shadow to fake underlines on some link styles — kill both
+  text-decoration: none;
+  box-shadow: none;
+  transition: color 0.18s ease;
+  &:hover {
+    color: $clr-link-hover;
+    text-decoration: underline;
+    box-shadow: none;
+  }
+  &:visited {
+    color: $clr-link;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $clr-ink;
+}
+
+p {
+  font-family: $font-body;
+}
+
+// =============================================================
+//  MASTHEAD
+// =============================================================
+
+.masthead {
+  background-color: $clr-masthead !important;
+  border-bottom: 3px solid $clr-masthead-border !important;
+}
+
+// Hide the subtitle from the upper-left masthead.
+// The tagline lives in the hero only.
+.site-subtitle {
+  display: none !important;
+}
+
+// Site title in masthead
+.site-title {
+  font-family: $font-heading !important;
+  font-weight: 400 !important;
+  font-size: 1.3rem !important;
+  color: $clr-nav-text !important;
+  letter-spacing: 0.04em !important;
+  &:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  &:visited {
+    color: $clr-nav-text !important;
+  }
+}
+
+// Nav links
+.greedy-nav {
+  background-color: $clr-masthead !important;
+  a {
+    color: $clr-nav-text !important;
+    font-family: $font-body !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    &:hover {
+      color: #fff !important;
+      background: rgba(212, 197, 169, 0.12) !important;
+      text-decoration: none !important;
+    }
+  }
+  .visible-links a::before {
+    background: $clr-masthead-border !important;
+  }
+}
+
+// Mobile hamburger menu
+.greedy-nav .navicon-button {
+  color: $clr-nav-text !important;
+}
+.greedy-nav .navicon-button .navicon,
+.greedy-nav .navicon-button .navicon::before,
+.greedy-nav .navicon-button .navicon::after {
+  background: $clr-nav-text !important;
+}
+
+// Hidden links dropdown
+.greedy-nav__toggle {
+  color: $clr-nav-text !important;
+}
+nav.hidden-links {
+  background-color: $clr-masthead !important;
+  border: 1px solid rgba(196, 168, 130, 0.3) !important;
+  a {
+    color: $clr-nav-text !important;
+    &:hover {
+      color: #fff !important;
+      background: rgba(212, 197, 169, 0.12) !important;
+    }
+  }
+}
+
+// =============================================================
+//  HERO / PAGE BANNER
+// =============================================================
+
+// The home page hero uses the MM page__hero--overlay component.
+// We need flex + column + center to properly center everything.
+
+.page__hero--overlay {
+  min-height: 336px !important;
+  background-position: center 30% !important;
+  background-size: cover !important;
+
+  // Flex centering — this is the fix that makes centering actually work
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.page__hero--overlay .wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+// Hero title
+.page__hero--overlay .page__title {
+  font-family: $font-heading !important;
+  font-weight: 400 !important;
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.06em !important;
+  color: #f8f0e3 !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55) !important;
+  text-transform: none !important;
+  text-align: center !important;
+  margin-bottom: 0.6rem !important;
+}
+
+// Hero subtitle / tagline (rendered via page excerpt or subtitle field)
+.page__hero--overlay .page__lead,
+.page__hero--overlay .page__meta {
+  font-family: $font-body !important;
+  font-style: italic !important;
+  font-size: clamp(0.85rem, 2.2vw, 1.1rem) !important;
+  color: #d4c5a9 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4) !important;
+  text-align: center !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.5 !important;
+  margin-bottom: 2rem !important;
+}
+
+// "Enter the Archive" CTA button — filled burnt-sienna
+// MM's .btn has very high specificity; use !important + full property set
+.page__hero--overlay .btn,
+.page__hero--overlay a.btn,
+.page__hero--overlay .btn--light-outline {
+  display: inline-block !important;
+  background-color: $clr-sienna !important;
+  border: 2px solid $clr-sienna !important;
+  color: #f8f0e3 !important;
+  font-family: $font-body !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  padding: 0.75rem 1.8rem !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  margin-top: 0.5rem !important;
+  transition: background 0.18s ease !important;
+  &:hover {
+    background-color: $clr-sienna-hover !important;
+    border-color: $clr-sienna-hover !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// =============================================================
+//  AUTHOR SIDEBAR
+// =============================================================
+
+// --- Avatar: perfectly circular ---
+// The failure mode was: MM wraps the img in a div that gets flex layout,
+// squishing the image. Fix requires both wrapper AND img to have explicit dims.
+
+.author__avatar {
+  // Wrapper
+  display: block !important;
+  width: 150px !important;
+  height: 150px !important;
+  max-width: 150px !important;
+  min-height: 150px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  margin: 0 auto 1.25rem !important;
+
+  img {
+    // Image itself
+    display: block !important;
+    width: 150px !important;
+    height: 150px !important;
+    min-width: 150px !important;
+    max-width: none !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 50% !important;
+    border: 3px solid $clr-border !important;
+    filter: sepia(0.1) contrast(1.04);
+  }
+}
+
+// Author name
+.author__name {
+  font-family: $font-heading !important;
+  font-size: 1.3rem !important;
+  font-weight: 400 !important;
+  color: $clr-ink !important;
+  text-align: center !important;
+  margin-top: 0.5rem !important;
+  a {
+    color: $clr-ink !important;
+    text-decoration: none !important;
+    &:hover {
+      color: $clr-link !important;
+    }
+  }
+}
+
+// Bio text — plain, NOT italic
+// Must be explicit here to prevent italic leaking from other selectors
+.author__bio {
+  font-family: $font-body !important;
+  font-style: normal !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+  color: $clr-muted !important;
+  text-align: center !important;
+  p {
+    font-style: normal !important;
+  }
+}
+
+// Woody Guthrie quote — IM Fell italic, brass left border
+// MM outputs author.quote as a <p> after the bio inside .author__content.
+// The selector .author__bio ~ p targets it without touching the bio itself.
+.author__bio ~ p,
+.author__content p.author__quote {
+  font-family: $font-heading !important;
+  font-style: italic !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  color: $clr-muted !important;
+  border-left: 3px solid $clr-border !important;
+  padding-left: 1rem !important;
+  margin-top: 1.2rem !important;
+  text-align: left !important;
+}
+
+// Center the entire author block
+.author__content {
+  text-align: center !important;
+}
+
+// Social links: icon row, no box, no text labels
+.author__urls-wrapper {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  text-align: center !important;
+
+  // Hide the "Follow" toggle button entirely
+  button.btn {
+    display: none !important;
+  }
+}
+
+// Always show the list; lay it out as a centered flex row
+.author__urls-wrapper .author__urls {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  list-style: none !important;
+  padding: 0.5rem 0 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+// Hide the location item
+.author__urls li[itemprop="homeLocation"] {
+  display: none !important;
+}
+
+// Each icon link: square hit target, centered icon
+.author__urls li {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.author__urls li a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  color: $clr-muted !important;
+  font-size: 1.1rem !important;
+  border: none !important;
+  border-top: none !important;
+  background: none !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease !important;
+
+  &:hover {
+    color: $clr-sienna !important;
+    background: none !important;
+    text-decoration: none !important;
+  }
+}
+
+// Hide text labels — icons only
+.author__urls li a .label {
+  display: none !important;
+}
+
+// Sidebar sticky positioning
+.sidebar {
+  &.sticky {
+    top: 80px !important;
+  }
+}
+
+// =============================================================
+//  POST LIST (Home / Archive)
+// =============================================================
+
+// Section header ("Recent Dispatches")
+.archive__subtitle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  font-family: $font-body !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: $clr-muted !important;
+  border-bottom: none !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 1rem !important;
+  // Extending rule after the label
+  &::after {
+    content: "" !important;
+    flex: 1 !important;
+    height: 1px !important;
+    background-color: $clr-border !important;
+  }
+}
+
+// Post list items — double-rule separator
+.list__item {
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.1rem;
+  position: relative;
+  &:not(:last-child) {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(
+        to bottom,
+        #{$clr-border} 0,
+        #{$clr-border} 1px,
+        transparent 1px,
+        transparent 4px,
+        rgba(196, 168, 130, 0.5) 4px,
+        rgba(196, 168, 130, 0.5) 5px
+      );
+    }
+  }
+}
+
+// Post titles — dark ink, no underline, no box-shadow underline
+.archive__item-title {
+  font-family: $font-heading !important;
+  font-weight: 400 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.25 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.4rem !important;
+  a {
+    color: $clr-ink !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    &:hover {
+      color: $clr-link !important;
+      text-decoration: none !important;
+      box-shadow: none !important;
+    }
+    &:visited {
+      color: $clr-ink !important;
+    }
+  }
+}
+
+// Post excerpt text
+.archive__item-excerpt {
+  font-family: $font-body !important;
+  font-size: 0.75rem !important;
+  color: $clr-muted !important;
+  line-height: 1.7 !important;
+}
+
+// Post meta (date, read time)
+.page__meta {
+  font-family: $font-body !important;
+  font-size: 0.75rem !important;
+  color: $clr-muted !important;
+}
+
+// Tag badges in post list
+// These are output by the archive-single.html override (see _includes/)
+// Meta row: read time + tags on one line
+.archive__item-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+
+  .page__meta {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.post-tag {
+  font-family: $font-body;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $clr-muted;
+  border: 1px solid $clr-border;
+  border-radius: 20px;
+  padding: 0.18rem 0.6rem;
+  background: rgba(196, 168, 130, 0.12);
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s;
+  &:hover {
+    background: rgba(196, 168, 130, 0.28);
+    color: $clr-ink;
+    text-decoration: none;
+    box-shadow: none;
+  }
+  &:visited {
+    color: $clr-muted;
+  }
+}
+
+// =============================================================
+//  SINGLE POST PAGE
+// =============================================================
+
+// Post/page title on individual post pages
+.page__title {
+  font-family: $font-heading !important;
+  font-weight: 400 !important;
+  color: $clr-ink !important;
+}
+
+// Post content body
+.page__content {
+  font-family: $font-body;
+  color: $clr-ink;
+  line-height: 1.75;
+
+  p {
+    font-family: $font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    font-weight: 400;
+    color: $clr-ink;
+    border-bottom-color: $clr-border;
+  }
+
+  a {
+    color: $clr-link;
+    box-shadow: none;
+    &:hover {
+      color: $clr-link-hover;
+    }
+  }
+
+  blockquote {
+    border-left-color: $clr-border;
+    font-family: $font-heading;
+    font-style: italic;
+    color: $clr-muted;
+  }
+
+  hr {
+    border-color: $clr-border;
+  }
+
+  code {
+    background-color: rgba(196, 168, 130, 0.18);
+    color: $clr-ink;
+    border-radius: 2px;
+  }
+
+  pre {
+    background-color: darken($clr-bg, 6%) !important;
+    border: 1px solid $clr-border;
+  }
+}
+
+// Tags on single post page
+.page__taxonomy-item {
+  font-family: $font-body !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: $clr-muted !important;
+  border: 1px solid $clr-border !important;
+  border-radius: 20px !important;
+  padding: 0.2rem 0.65rem !important;
+  background: rgba(196, 168, 130, 0.12) !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  &:hover {
+    background: rgba(196, 168, 130, 0.28) !important;
+    color: $clr-ink !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// =============================================================
+//  PAGINATION
+// =============================================================
+
+.pagination {
+  font-family: $font-body;
+  a {
+    color: $clr-link;
+    border: 1px solid $clr-border;
+    border-radius: 2px;
+    background: transparent;
+    &:hover {
+      background: rgba(196, 168, 130, 0.15);
+      color: $clr-link-hover;
+      border-color: $clr-link;
+    }
+  }
+  .current {
+    background: $clr-sienna;
+    color: #f8f0e3;
+    border-color: $clr-sienna;
+    border-radius: 2px;
+  }
+}
+
+// =============================================================
+//  FOOTER
+// =============================================================
+
+.page__footer {
+  background-color: $clr-footer !important;
+  border-top: 3px solid $clr-masthead-border !important;
+
+  footer {
+    background-color: $clr-footer !important;
+  }
+
+  a {
+    color: rgba(212, 197, 169, 0.7) !important;
+    &:hover {
+      color: $clr-nav-text !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
+.page__footer-copyright {
+  font-family: $font-body !important;
+  font-size: 0.72rem !important;
+  color: rgba(212, 197, 169, 0.5) !important;
+  letter-spacing: 0.04em !important;
+}
+
+.page__footer-follow {
+  .social-icons {
+    a {
+      color: rgba(212, 197, 169, 0.7) !important;
+      &:hover {
+        color: $clr-nav-text !important;
+      }
+    }
+  }
+}
+
+// =============================================================
+//  BREADCRUMBS
+// =============================================================
+
+.breadcrumbs {
+  font-family: $font-body;
+  font-size: 0.75rem;
+  a {
+    color: $clr-link;
+  }
+}
+
+// =============================================================
+//  NOTICE BLOCKS (e.g. .notice--info, .notice--warning)
+// =============================================================
+
+.notice {
+  border-left-color: $clr-border;
+  background: rgba(196, 168, 130, 0.1);
+  font-family: $font-body;
+}
+
+// =============================================================
+//  SEARCH
+// =============================================================
+
+.search__toggle {
+  color: $clr-nav-text !important;
+  &:hover {
+    color: #fff !important;
+  }
+}
+
+.search-content {
+  background-color: $clr-bg;
+  input[type="search"] {
+    font-family: $font-body;
+    border-bottom-color: $clr-border;
+    color: $clr-ink;
+    background-color: transparent;
+  }
+}
+
+// =============================================================
+//  MOBILE — Responsive overrides
+// =============================================================
+
+// Below MM's sidebar breakpoint: stack everything as a column,
+// sidebar goes to the bottom below the post list.
+@media (max-width: 64em) {
+  #main {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  // Posts first
+  .archive__subtitle,
+  .entries-list,
+  .pagination {
+    order: 1 !important;
+  }
+
+  // Sidebar below posts — full width, stacked vertically, centered
+  // Use both .sidebar and .sidebar.sticky in case JS hasn't applied .sticky
+  .sidebar,
+  .sidebar.sticky {
+    order: 2 !important;
+    position: relative !important;
+    top: auto !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid $clr-border !important;
+    // Stack the sidebar's own children (avatar, content, urls) vertically
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  // Avatar centered
+  .sidebar .author__avatar,
+  .sidebar.sticky .author__avatar {
+    margin: 0 auto 1.25rem !important;
+  }
+
+  // Content block: constrained width, centered text
+  .sidebar .author__content,
+  .sidebar.sticky .author__content {
+    width: 100% !important;
+    max-width: 480px !important;
+    text-align: center !important;
+  }
+
+  // Quote: constrained, centered as a block, left-aligned text (for the border treatment)
+  .sidebar .author__bio ~ p,
+  .sidebar .author__content p.author__quote,
+  .sidebar.sticky .author__bio ~ p,
+  .sidebar.sticky .author__content p.author__quote {
+    max-width: 380px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  // Hide social icons entirely on narrow screens
+  .sidebar .author__urls-wrapper,
+  .sidebar.sticky .author__urls-wrapper {
+    display: none !important;
+  }
+
+  // Bio: larger, centered, readable
+  .sidebar .author__bio,
+  .sidebar.sticky .author__bio {
+    font-size: 1rem !important;
+    text-align: center !important;
+    color: $clr-ink !important;
+  }
+}
+
+// Small phones: tighter hero
+@media (max-width: 600px) {
+  .page__hero--overlay {
+    min-height: 224px !important;
+  }
+  .page__hero--overlay .page__title {
+    font-size: 2.2rem !important;
+  }
+  .page__hero--overlay .page__lead {
+    font-size: 0.85rem !important;
+  }
+}

@@ -1,18 +1,733 @@
+/*
+ * =============================================================
+ *  ADVENTURER'S CLUB — custom.css
+ *  jamespburke.com — Minimal Mistakes (sunrise skin)
+ *  Drop at: assets/css/custom.css (replace the existing file)
+ * =============================================================
+ *
+ *  Palette
+ *  -------
+ *  Background ........... #f4ede0  (aged parchment)
+ *  Ink (text) ........... #2c1a0e
+ *  Muted text ........... #6b4c35
+ *  Links / accent ....... #7a3010  hover: #5a2008
+ *  Masthead + footer .... #1c1108  (near-black mahogany)
+ *  Masthead border ...... #8b3a0f  (expedition red-brown)
+ *  Nav text ............. #d4c5a9  (warm off-white)
+ *  Borders / dividers ... #c4a882
+ *
+ *  Fonts
+ *  -----
+ *  Headings ............. IM Fell English (loaded in head/custom.html)
+ *  Body ................. Libre Baskerville
+ * =============================================================
+ */
+
+
+/* =============================================================
+   BASE
+   ============================================================= */
 
 body {
-    font-size: 18px;
-    font-family: 'Merriweather', serif;
-  }
-
-.footnotes {
-  color: #444;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 16px;
+  background-color: #f4ede0;
+  color: #2c1a0e;
+  line-height: 1.75;
 }
 
-.sidebar-quote {
-  font-size: 1.0em;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "IM Fell English", "Palatino Linotype", Georgia, serif;
+  font-weight: 400;
+  color: #2c1a0e;
+  line-height: 1.25;
+}
+
+p {
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+
+/* Kill MM's box-shadow fake-underline on links globally */
+a {
+  color: #7a3010;
+  text-decoration: none;
+  box-shadow: none;
+  transition: color 0.18s ease;
+}
+a:visited {
+  color: #7a3010;
+}
+a:hover {
+  color: #5a2008;
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+
+/* =============================================================
+   MASTHEAD
+   ============================================================= */
+
+.masthead {
+  background-color: #1c1108 !important;
+  border-bottom: 3px solid #8b3a0f !important;
+}
+
+/* Hide tagline from masthead — it appears in the hero only */
+.site-subtitle {
+  display: none !important;
+}
+
+/* Site title */
+.site-title,
+.site-title:visited {
+  font-family: "IM Fell English", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #d4c5a9 !important;
+  letter-spacing: 0.04em;
+}
+.site-title:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* Nav bar background */
+.greedy-nav {
+  background-color: #1c1108 !important;
+}
+
+/* Nav links */
+.greedy-nav a {
+  color: #d4c5a9 !important;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.greedy-nav a:hover {
+  color: #ffffff !important;
+  background: rgba(212, 197, 169, 0.12) !important;
+  text-decoration: none;
+}
+
+/* MM puts an accent underline on hovered nav via ::before — match it */
+.greedy-nav .visible-links a::before {
+  background: #8b3a0f !important;
+}
+
+/* Hamburger icon (mobile) */
+.greedy-nav button {
+  color: #d4c5a9 !important;
+}
+.navicon,
+.navicon::before,
+.navicon::after {
+  background: #d4c5a9 !important;
+}
+
+/* Overflow dropdown */
+.greedy-nav__toggle {
+  color: #d4c5a9 !important;
+}
+nav.hidden-links {
+  background-color: #1c1108 !important;
+  border: 1px solid rgba(196, 168, 130, 0.3) !important;
+}
+nav.hidden-links a {
+  color: #d4c5a9 !important;
+}
+nav.hidden-links a:hover {
+  color: #ffffff !important;
+  background: rgba(212, 197, 169, 0.12) !important;
+}
+
+
+/* =============================================================
+   HERO (page__hero--overlay)
+   ============================================================= */
+
+/*
+ * The home page hero is rendered by MM as .page__hero--overlay.
+ * To truly center title + tagline + button we need flex on both
+ * the section and the inner wrapper. text-align: center alone
+ * is not sufficient — this was the root cause of left-alignment.
+ */
+
+.page__hero--overlay {
+  min-height: 420px;
+  background-position: center 30% !important;
+  background-size: cover !important;
+  /* Flex centering of the wrapper inside */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.page__hero--overlay .wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Hero title */
+.page__hero--overlay .page__title {
+  font-family: "IM Fell English", "Palatino Linotype", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: clamp(1.7rem, 4.2vw, 3.3rem) !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.06em !important;
+  color: #f8f0e3 !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+  text-transform: none !important;
+  text-align: center !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Hero tagline / lead */
+.page__hero--overlay .page__lead,
+.page__hero--overlay .page__meta {
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-style: italic !important;
+  font-size: clamp(0.85rem, 2.2vw, 1.1rem) !important;
+  color: #d4c5a9 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  text-align: center !important;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-bottom: 2rem !important;
+}
+
+/*
+ * "Enter the Archive" button
+ *
+ * MM's .btn--light-outline is white outline by default.
+ * We override to filled burnt-sienna. The key failure in past
+ * passes was missing display: inline-block and incomplete
+ * property overrides. All critical properties use !important.
+ */
+.page__hero--overlay .btn,
+.page__hero--overlay a.btn,
+.page__hero--overlay .btn--light-outline,
+.page__hero--overlay a.btn--light-outline {
+  display: inline-block !important;
+  background-color: #8b3a0f !important;
+  border: 2px solid #8b3a0f !important;
+  color: #f8f0e3 !important;
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  padding: 0.75rem 1.8rem !important;
+  border-radius: 2px !important;
+  margin-top: 0.5rem;
+  transition: background 0.18s ease;
+}
+.page__hero--overlay .btn:hover,
+.page__hero--overlay a.btn:hover,
+.page__hero--overlay .btn--light-outline:hover,
+.page__hero--overlay a.btn--light-outline:hover {
+  background-color: #6e2c08 !important;
+  border-color: #6e2c08 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+
+/* =============================================================
+   AUTHOR SIDEBAR
+   ============================================================= */
+
+/*
+ * AVATAR — perfectly circular
+ *
+ * Root cause of the oval: MM's .author__avatar uses flex layout
+ * which allows the container to be squished vertically. The fix:
+ *  1. Lock width + height + aspect-ratio on the <img>
+ *  2. Set overflow: hidden + flex-shrink: 0 on the wrapper div
+ *  3. Keep border-radius: 50% on both
+ */
+.author__avatar {
+  display: block !important;
+  width: 150px !important;
+  height: 150px !important;
+  max-width: 150px !important;
+  min-height: 150px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  margin: 0 auto 1.25rem !important;
+}
+
+.author__avatar img {
+  display: block !important;
+  width: 150px !important;
+  height: 150px !important;
+  min-width: 150px !important;
+  max-width: none !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 50% !important;
+  border: 3px solid #c4a882 !important;
+}
+
+/* Author name */
+.author__name,
+.author__name a {
+  font-family: "IM Fell English", Georgia, serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 400 !important;
+  color: #2c1a0e !important;
+  text-align: center !important;
+}
+.author__name a:hover {
+  color: #7a3010 !important;
+  text-decoration: none;
+}
+
+/*
+ * BIO — plain, NOT italic
+ *
+ * MM does not apply italic to .author__bio by default,
+ * but the sunrise skin + some cascade was making it italic.
+ * Be explicit: normal style on the bio, no exceptions.
+ */
+.author__bio {
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-style: normal !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+  color: #6b4c35 !important;
+  text-align: center !important;
+}
+.author__bio p {
+  font-style: normal !important;
+}
+
+/*
+ * GUTHRIE QUOTE
+ *
+ * MM outputs author.quote as a plain <p> inside .author__content,
+ * after the .author__bio element. The selector below targets
+ * exactly that — any <p> that is a sibling AFTER .author__bio.
+ * It does NOT touch the bio itself.
+ */
+.author__bio ~ p {
+  font-family: "IM Fell English", Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  color: #6b4c35 !important;
+  border-left: 3px solid #c4a882 !important;
+  padding-left: 1rem !important;
+  margin-top: 1.2rem !important;
+  text-align: left !important;
+}
+
+/* Center author block */
+.author__content {
+  text-align: center !important;
+}
+
+/* Social links: no box, no button, icons only in a row */
+
+/* Hide the "Follow" toggle button */
+.author__urls-wrapper button.btn {
+  display: none !important;
+}
+
+/* Hide the location li */
+.author__urls li[itemprop="homeLocation"] {
+  display: none !important;
+}
+
+/* Always show the list (MM hides it until button is clicked on mobile) */
+.author__urls-wrapper .author__urls {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.75rem 0 0 !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Each icon link */
+.author__urls li {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.author__urls li a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  color: #6b4c35 !important;
+  border: none !important;
+  border-top: none !important;
+  background: none !important;
+  font-size: 1.1rem !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease !important;
+}
+.author__urls li a:hover {
+  color: #8b3a0f !important;
+  background: none !important;
+  text-decoration: none !important;
+}
+
+/* Hide the text labels — icons only */
+.author__urls li a .label {
+  display: none !important;
+}
+
+/* Also hide MM's wrapper-level padding/border */
+.author__urls-wrapper {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  text-align: center !important;
+}
+
+
+/* =============================================================
+   POST LIST (Home page / Archive)
+   ============================================================= */
+
+/* Section header — "Recent Dispatches" */
+.archive__subtitle {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #6b4c35 !important;
+  border-bottom: none !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 1rem !important;
+}
+/* Extending rule after the label text */
+.archive__subtitle::after {
+  content: "" !important;
+  flex: 1 !important;
+  height: 1px !important;
+  background-color: #c4a882 !important;
+}
+
+/* Post list item — double-rule separator */
+.list__item {
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.25rem;
+  position: relative;
+}
+.list__item:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    to bottom,
+    #c4a882 0,
+    #c4a882 1px,
+    transparent 1px,
+    transparent 4px,
+    rgba(196, 168, 130, 0.5) 4px,
+    rgba(196, 168, 130, 0.5) 5px
+  );
+}
+
+/* Post titles — dark ink, no underline, no box-shadow underline */
+.archive__item-title {
+  font-family: "IM Fell English", "Palatino Linotype", Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.25 !important;
+  margin-bottom: 0.4rem !important;
+}
+.archive__item-title a,
+.archive__item-title a:visited {
+  color: #2c1a0e !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+.archive__item-title a:hover {
+  color: #7a3010 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* Post excerpt */
+.archive__item-excerpt {
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-size: 0.88rem !important;
+  color: #6b4c35 !important;
+  line-height: 1.7 !important;
+}
+
+/* Post meta (date, read time) */
+.page__meta {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.75rem;
+  color: #6b4c35;
+}
+
+/*
+ * TAG BADGES
+ * These are output by the _includes/archive-single.html override.
+ * See: _includes/archive-single.html in this package.
+ */
+.post-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.post-tag,
+.post-tag:visited {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b4c35 !important;
+  border: 1px solid #c4a882;
+  border-radius: 20px;
+  padding: 0.18rem 0.6rem;
+  background: rgba(196, 168, 130, 0.12);
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s;
+}
+.post-tag:hover {
+  background: rgba(196, 168, 130, 0.28);
+  color: #2c1a0e !important;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+
+/* =============================================================
+   SINGLE POST PAGE
+   ============================================================= */
+
+.page__title {
+  font-family: "IM Fell English", "Palatino Linotype", Georgia, serif !important;
+  font-weight: 400 !important;
+  color: #2c1a0e !important;
+}
+
+.page__content {
+  font-family: "Libre Baskerville", Georgia, serif;
+  color: #2c1a0e;
+  line-height: 1.75;
+}
+.page__content p {
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6 {
+  font-family: "IM Fell English", "Palatino Linotype", Georgia, serif;
+  font-weight: 400;
+  color: #2c1a0e;
+  border-bottom-color: #c4a882;
+}
+.page__content a {
+  color: #7a3010;
+  box-shadow: none;
+}
+.page__content a:hover {
+  color: #5a2008;
+  box-shadow: none;
+}
+.page__content blockquote {
+  border-left-color: #c4a882;
+  font-family: "IM Fell English", Georgia, serif;
   font-style: italic;
-  font-weight: 600;
-  color: #000000;
-  background-color: #eadac0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #6b4c35;
+}
+.page__content hr {
+  border-color: #c4a882;
+}
+.page__content code {
+  background-color: rgba(196, 168, 130, 0.18);
+  color: #2c1a0e;
+  border-radius: 2px;
+}
+.page__content pre {
+  background-color: #ede3d1 !important;
+  border: 1px solid #c4a882;
+}
+
+/* Tags on single post page */
+.page__taxonomy-item,
+.page__taxonomy-item:visited {
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #6b4c35 !important;
+  border: 1px solid #c4a882 !important;
+  border-radius: 20px !important;
+  padding: 0.2rem 0.65rem !important;
+  background: rgba(196, 168, 130, 0.12) !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+.page__taxonomy-item:hover {
+  background: rgba(196, 168, 130, 0.28) !important;
+  color: #2c1a0e !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+
+/* =============================================================
+   PAGINATION
+   ============================================================= */
+
+.pagination {
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+.pagination a {
+  color: #7a3010;
+  border: 1px solid #c4a882;
+  border-radius: 2px;
+  background: transparent;
+}
+.pagination a:hover {
+  background: rgba(196, 168, 130, 0.15);
+  color: #5a2008;
+  border-color: #7a3010;
+  text-decoration: none;
+}
+.pagination .current {
+  background: #8b3a0f;
+  color: #f8f0e3;
+  border-color: #8b3a0f;
+  border-radius: 2px;
+}
+
+
+/* =============================================================
+   FOOTER
+   ============================================================= */
+
+.page__footer {
+  background-color: #1c1108 !important;
+  border-top: 3px solid #8b3a0f !important;
+}
+.page__footer footer {
+  background-color: #1c1108 !important;
+}
+.page__footer a,
+.page__footer a:visited {
+  color: rgba(212, 197, 169, 0.7) !important;
+}
+.page__footer a:hover {
+  color: #d4c5a9 !important;
+  text-decoration: none !important;
+}
+.page__footer-copyright {
+  font-family: "Libre Baskerville", Georgia, serif !important;
+  font-size: 0.72rem !important;
+  color: rgba(212, 197, 169, 0.5) !important;
+  letter-spacing: 0.04em !important;
+}
+
+
+/* =============================================================
+   MISC — Breadcrumbs, notices, search
+   ============================================================= */
+
+.breadcrumbs {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.75rem;
+}
+.breadcrumbs a {
+  color: #7a3010;
+}
+
+.notice {
+  border-left-color: #c4a882;
+  background: rgba(196, 168, 130, 0.1);
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+
+.search__toggle {
+  color: #d4c5a9 !important;
+}
+.search__toggle:hover {
+  color: #ffffff !important;
+}
+.search-content input[type="search"] {
+  font-family: "Libre Baskerville", Georgia, serif;
+  border-bottom-color: #c4a882;
+  color: #2c1a0e;
+  background-color: transparent;
+}
+
+/* Footnotes */
+.footnotes {
+  color: #6b4c35;
+  font-size: 0.85rem;
+  border-top: 1px solid #c4a882;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+
+/* =============================================================
+   MOBILE
+   ============================================================= */
+
+@media (max-width: 900px) {
+  /* Posts first, sidebar below */
+  .sidebar {
+    order: 2 !important;
+  }
+  #main {
+    order: 1 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .page__hero--overlay {
+    min-height: 280px !important;
+  }
+  .page__hero--overlay .page__title {
+    font-size: 2.6rem !important;
+  }
+  .page__hero--overlay .page__lead {
+    font-size: 0.9rem !important;
+  }
 }

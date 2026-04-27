@@ -1,0 +1,15 @@
+# UI text overrides — Adventurer's Club redesign
+# Minimal Mistakes reads these to replace default label strings.
+# Full reference: https://mmistakes.github.io/minimal-mistakes/docs/ui-text/
+
+en:
+  recent_posts    : "Recent Dispatches"
+  follow_label    : "Follow:"
+  more_label      : "Continue reading"
+  meta_label      : ""
+  tags_label      : "Tags:"
+  categories_label: "Categories:"
+  date_label      : ""
+  reading_time    :
+    one   : "%{count} min read"
+    other : "%{count} min read"

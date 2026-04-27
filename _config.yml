@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: jamespburke
+subtitle: "Field Notes on a Curious Expedition"
 
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -22,7 +23,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 # twitter_username: username
 bluesky_username: jamespburke.com
 github_username: JamesPBurke
-minimal_mistakes_skin: sunrise
+minimal_mistakes_skin: dirt
+locale: "en"
 search: true
 
 # Build settings
@@ -71,7 +73,8 @@ plugins:
 author:
   name   : "JP Burke"
   avatar : "/assets/images/bio-snap.jpg"
-  bio    : "Playful educator, culinary explorer, and lifelong learner. B.Sc. Computer Science, Ph.D. Mathematics Education."
+  bio    : "Educator. Technologist. Prankster? B.S. Computer Science, Ph.D. Mathematics Education."
+  quote  : "\"All of my words, if not well put or well taken, are well meant.\" — Woody Guthrie"
   location: "Massachusetts, USA"
   home: "/about/"
   links:

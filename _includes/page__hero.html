@@ -1,0 +1,35 @@
+{% if page.header.overlay_color or page.header.overlay_image %}
+
+{% assign overlay_img_path = page.header.overlay_image | relative_url %}
+{% if page.header.overlay_filter contains "rgba" or page.header.overlay_filter contains "linear-gradient" %}
+  {% assign overlay_filter = page.header.overlay_filter %}
+{% elsif page.header.overlay_filter %}
+  {% assign overlay_filter = "rgba(0, 0, 0, " | append: page.header.overlay_filter | append: ")" %}
+{% endif %}
+
+<div class="page__hero--overlay"
+  style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color }};{% endif %}{% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+>
+  {% if page.header.image_description %}
+    <span class="visually-hidden">{{ page.header.image_description }}</span>
+  {% endif %}
+  <div class="wrapper">
+    <h1 id="page-title" class="page__title" itemprop="headline">
+      {% if page.header.tagline %}{{ page.header.tagline }}{% else %}{{ page.title | default: site.title }}{% endif %}
+    </h1>
+    {% if page.header.excerpt %}
+      <p class="page__lead">{{ page.header.excerpt | markdownify | strip_html }}</p>
+    {% elsif site.subtitle %}
+      <p class="page__lead">{{ site.subtitle }}</p>
+    {% endif %}
+    {% if page.header.actions %}
+      <p>
+        {% for action in page.header.actions %}
+        <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label }}</a>
+        {% endfor %}
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+{% endif %}

@@ -7,9 +7,17 @@
 <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
 <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap">
+<!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap"-->
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<!--link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}"-->
+
+
+<!-- Google Fonts: IM Fell English + Libre Baskerville -->
+<!-- Adventurer's Club redesign — loaded here for performance (preconnect) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
 
 <!-- everything in the script tag is the text-to-speech -->
 <!-- button functionality. It pulls the page content -->
@@ -197,4 +205,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<!-- Service worker registration for PWA installability -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+</script>
+
 <!-- end custom head snippets -->
+
