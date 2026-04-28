@@ -40,7 +40,7 @@ For an agent to function, it requires a "harness"—a software framework that pr
 | Tool Name | Core Function | Educational/Professional Utility |
 | :--- | :--- | :--- |
 | **Maritime** | Cloud hosting for AI agents (OpenClaw harness). | Provides a safe hosting environment for school agents without the need for a VPN. |
-| **Egbe** | Platform for autonomous companies/entrepreneurship. | Used to explore business logic; allows users to "Redeem & start" a business (Promo Code: IIA). |
+| **Egbe** | Platform for autonomous companies/entrepreneurship. | Used to explore business logic; allows users to "Redeem & start" a business. |
 | **Theona** | Agent builder for team-based tasks. | A high-level agentic tool that creates its own specialized agents to handle specific team roles. |
 
 **Maritime** is of particular strategic value to school districts. By providing a hosted version of OpenClaw, it allows faculty to experiment with agentic capabilities without the security risks of opening local networks or the technical overhead of manual server configuration.
