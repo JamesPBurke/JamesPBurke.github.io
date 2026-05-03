@@ -10,7 +10,7 @@ All the thoughts shared on this site are my own and do not reflect the thinking 
   <div style="font-size: 0.88em; color: #555; margin-top: 5px; letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Helvetica Neue', Arial, sans-serif;">Contact Me</div>
   <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 18px 0 14px;">
   <div style="font-size: 0.83em; color: #444; font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.9;">
-    <div><i class="fas fa-fw fa-envelope" style="color:#888;"></i> burkej@sbregional.org</div>
+    <div><i class="fas fa-fw fa-envelope" style="color:#888;"></i> <a href="mailto:burkej@sbregional.org" title="Use my school email only for education-related contacts">burkej@sbregional.org</a> [school-only]</div>
   </div>
   <div style="margin-top: 16px; font-size: 1.25em; line-height: 1;">
     <a href="https://github.com/JamesPBurke/" title="GitHub" style="margin-right: 14px; color: #333; text-decoration:none;"><i class="fab fa-fw fa-github"></i></a>
@@ -23,10 +23,9 @@ All the thoughts shared on this site are my own and do not reflect the thinking 
 
 I am a Science and Technology teacher, Massachusetts-licensed in Digital Literacy and Computer Science teacher (5-12) with a PhD in Mathematics Education. Formerly a software engineer and UMass Dartmouth research associate, I now teach high school engineering and serve on the [Kaput Center](https://www.umassd.edu/kaput-center/) executive board. I am a maker and problem-solver dedicated to playful lifelong learning, sourdough baking, and sci-fi/horror entertainment.
 
-I believe that [intellect & romance should triumph over brute force & cynicism](https://www.youtube.com/watch?v=M9P4SxtphJ4){:target="_blank"}. Masks save lives.
+[![](https://ik.imagekit.io/scurryday/asst/AntiAuthoritarianEducation.png?tr=w-100)](https://ik.imagekit.io/scurryday/asst/AntiAuthoritarianEducation.png){: style="float: right; margin-left: 10px;"}
 
-
-My perspective is that of a pro-democracy, anti-authoritarian, [progressive educator](https://www.usnews.com/education/k12/articles/what-is-progressive-education). [![](https://ik.imagekit.io/scurryday/asst/AntiAuthoritarianEducation.png?tr=w-100)](https://ik.imagekit.io/scurryday/asst/AntiAuthoritarianEducation.png)
+My perspective is that of a pro-democracy, anti-authoritarian, [progressive educator](https://www.usnews.com/education/k12/articles/what-is-progressive-education). I believe that [intellect & romance should triumph over brute force & cynicism](https://www.youtube.com/watch?v=M9P4SxtphJ4){:target="_blank"}. Masks save lives.
 
 
 
