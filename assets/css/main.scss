@@ -148,14 +148,16 @@ p {
 .greedy-nav__toggle {
   color: $clr-nav-text !important;
 }
-nav.hidden-links {
-  background-color: $clr-masthead !important;
-  border: 1px solid rgba(196, 168, 130, 0.3) !important;
+// selector must be .hidden-links (ul), not nav.hidden-links — MM renders this as a <ul>
+.hidden-links {
+  background-color: $clr-bg !important;
+  border: 1px solid $clr-border !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
   a {
-    color: $clr-nav-text !important;
+    color: $clr-ink !important;
     &:hover {
-      color: #fff !important;
-      background: rgba(212, 197, 169, 0.12) !important;
+      color: $clr-link !important;
+      background: rgba(196, 168, 130, 0.15) !important;
     }
   }
 }
@@ -703,6 +705,43 @@ nav.hidden-links {
   font-size: 0.75rem;
   a {
     color: $clr-link;
+  }
+}
+
+// =============================================================
+//  BUTTONS (general — outside hero context)
+//  The dirt skin assigns tan background + dark YIQ text to .btn--primary,
+//  and the global `a { color }` rule bleeds in dark-red text on visited links.
+//  These overrides enforce readable, on-theme colors everywhere.
+// =============================================================
+
+.btn--primary {
+  background-color: $clr-sienna !important;
+  border-color: $clr-sienna !important;
+  color: #f8f0e3 !important;
+  &:visited {
+    color: #f8f0e3 !important;
+  }
+  &:hover {
+    background-color: $clr-sienna-hover !important;
+    border-color: $clr-sienna-hover !important;
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+}
+
+.btn--info {
+  background-color: $clr-muted !important;
+  border-color: $clr-muted !important;
+  color: #f8f0e3 !important;
+  &:visited {
+    color: #f8f0e3 !important;
+  }
+  &:hover {
+    background-color: darken($clr-muted, 10%) !important;
+    border-color: darken($clr-muted, 10%) !important;
+    color: #fff !important;
+    text-decoration: none !important;
   }
 }
 
