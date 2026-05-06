@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: JamesPBurke/JamesPBurke.github.io
+  branch: master
+  base_url: https://your-worker.workers.dev  # replace after Cloudflare Worker is deployed
+
+media_folder: assets/images/uploads
+public_folder: /assets/images/uploads
+
+collections:
+  - name: posts
+    label: Blog Posts
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Published, name: published, widget: boolean, default: true }
+      - label: Categories
+        name: categories
+        widget: list
+        default: [Blog]
+      - { label: Tags, name: tags, widget: list, required: false }
+      - label: Header
+        name: header
+        widget: object
+        required: false
+        fields:
+          - { label: Teaser Image URL, name: teaser, widget: string, required: false }
+          - { label: OG Image URL, name: og_image, widget: string, required: false }
+      - { label: Body, name: body, widget: markdown }
