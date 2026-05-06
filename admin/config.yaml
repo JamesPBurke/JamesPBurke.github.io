@@ -2,7 +2,7 @@ backend:
   name: github
   repo: JamesPBurke/JamesPBurke.github.io
   branch: master
-  base_url: https://your-worker.workers.dev  # replace after Cloudflare Worker is deployed
+  auth_type: token
 
 media_folder: assets/images/uploads
 public_folder: /assets/images/uploads
