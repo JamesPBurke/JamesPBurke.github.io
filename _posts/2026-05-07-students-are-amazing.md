@@ -20,4 +20,4 @@ I won't go into detail about the Raspberry PI device, but I was trying to do wha
 
 And it must have been a bit of a sight, because that's when we had the exchange I mentioned. 
 
-After a pause, I said, "Why is it weird?"
+After a pause, I said, "Why is it weird?" He stared at me. "Huh?" I continued, "I mean, I know why _I_ think it's weird.
