@@ -19,8 +19,6 @@
     </h1>
     {% if page.header.excerpt %}
       <p class="page__lead">{{ page.header.excerpt | markdownify | strip_html }}</p>
-    {% elsif site.subtitle %}
-      <p class="page__lead">{{ site.subtitle }}</p>
     {% endif %}
     {% if page.header.actions %}
       <p>
@@ -30,6 +28,20 @@
       </p>
     {% endif %}
   </div>
+  {% if page.header.caption %}
+    <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  {% endif %}
+</div>
+
+{% elsif page.header.image %}
+
+<div class="page__hero">
+  {% unless page.header.image == "none" %}
+  <img src="{{ page.header.image | relative_url }}" alt="{{ page.header.image_description | default: page.title }}" class="page__hero-image">
+  {% endunless %}
+  {% if page.header.caption %}
+    <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  {% endif %}
 </div>
 
 {% endif %}

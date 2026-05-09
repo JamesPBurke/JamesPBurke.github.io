@@ -7,9 +7,11 @@ tags:
   - food
   - cooking
 header:
-  image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-400,c-at_max,f-auto,q-80
+  overlay_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-400,c-at_max,f-auto,q-80
+  overlay_filter: 0.3
   teaser: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-500,h-300,c-at_max,f-auto,q-75
   og_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-630,c-at_least,fo-auto,f-auto,q-85
+  caption: "The burger in question, featured with some air fries."
 ---
 
 Yesterday, I tried a new method of cooking burgers after a few years of only making smash burgers. My opinion has been that flattening burgers prioritizes browned bits over thickness, producing better flavor. For people who wanted thicker burgers, my advice has been to just layer multiple smash burgers. You could even put cheese between them, so that's an additional win for cheeseburger lovers. Smash burgers are also cooked far beyond the minimum safe temperature, which is popular in my house because nobody wants to get an E. coli infection from ground meat.
