@@ -7,6 +7,7 @@ tags:
   - food
   - cooking
 header:
+  overlay_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-400,c-at_max,f-auto,q-80
   teaser: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-500,h-300,c-at_max,f-auto,q-75
   og_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-630,c-at_least,fo-auto,f-auto,q-85
 ---
