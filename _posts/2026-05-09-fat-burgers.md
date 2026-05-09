@@ -35,7 +35,7 @@ I saw this method in a video short, and I don't have the source[^1]. It might ha
 13. This phase may take about five minutes. But it will depend on your tolerance for low cookedness. I cooked it to well over 145 degrees. WELL OVER. Which, for me, is not ideal. I'd like exactly 145 degrees.
 14. Remove, place on bun, serve, eat.
 
-Additionally, I produced some onions and mushrooms for Maggie, because she loves that stuff (it \*is\* good).
+Additionally, I produced some onions and mushrooms for Maggie, because she loves that stuff (it *is* good).
 
 # Mushrooms
 
