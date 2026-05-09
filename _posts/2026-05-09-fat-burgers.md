@@ -7,11 +7,8 @@ tags:
   - food
   - cooking
 header:
-  overlay_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-400,c-at_max,f-auto,q-80
-  overlay_filter: 0.3
   teaser: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-500,h-300,c-at_max,f-auto,q-75
   og_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-630,c-at_least,fo-auto,f-auto,q-85
-  caption: "The burger in question, featured with some air fries."
 ---
 
 Yesterday, I tried a new method of cooking burgers after a few years of only making smash burgers. My opinion has been that flattening burgers prioritizes browned bits over thickness, producing better flavor. For people who wanted thicker burgers, my advice has been to just layer multiple smash burgers. You could even put cheese between them, so that's an additional win for cheeseburger lovers. Smash burgers are also cooked far beyond the minimum safe temperature, which is popular in my house because nobody wants to get an E. coli infection from ground meat.
@@ -26,7 +23,7 @@ I saw this method in a video short, and I don't have the source[^1]. It might ha
 2.  Form burgers from 1/2 lb of ground beef. Round, even thickness, about 4" in diameter.
 3. Salt both sides of the burgers.
 4. Heat a deep stainless steel pot until water droplets dance on the bottom.
-5. Add a couple of teaspoons of oil to the bottom of the pot, then tilt the pot to coat it (you might want to use your exhaust fan for this).
+5. Add a couple of teaspoons of oil to the bottom of the pot, then tilt the pot to coat it (you might want to use your exhaust fan).
 6. Fit your burgers in the bottom of your pot. Pepper generously.
 7. Turn heat to medium high (that's what worked for me, YMMV).
 8. Leave the burgers alone until you can tell the meat has released from the pan. Tilt the pot or poke a little with a utensil. 
@@ -51,6 +48,8 @@ Additionally, I produced some onions and mushrooms for Maggie, because she loves
 8. As you can see, the mushrooms begin to shrink, and the onions soften. Season with salt and pepper to taste, and about 1/2 tsp of thyme. 
 9. Throw in about an ounce of water and a tsp of butter. Cover until the butter melts. (This stage allows some of the flavors that may have stuck to the pan to unstick and soak into the mushrooms).
 10. Place on extremely low heat (or no heat) until you are ready to serve.
+
+![](https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?updatedAt=1778353092090tr=w-800,f-auto,q-75)
 
 # Verdict
 
