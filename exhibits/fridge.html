@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caloric GFS207 Repair Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --surface: #ffffff;
+    --ink: #1a1a18;
+    --mid: #5a5a54;
+    --rule: #d8d5cc;
+    --accent: #c8320a;
+    --accent2: #1a5c8f;
+    --warn: #d97706;
+    --ok: #2d7a3a;
+    --tag-bg: #1a1a18;
+    --tag-fg: #f5f3ee;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  /* ── HEADER ── */
+  header {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 36px 48px 28px;
+    border-bottom: 4px solid var(--accent);
+  }
+  .header-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #aaa89e;
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  header h1 span { color: var(--accent); }
+  .header-meta {
+    margin-top: 14px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: #aaa89e;
+  }
+  .header-meta b { color: var(--bg); }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px 60px; }
+
+  /* ── SECTION ── */
+  section { margin-top: 44px; }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 22px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  p { margin-bottom: 10px; color: var(--mid); }
+  p b, p strong { color: var(--ink); }
+
+  /* ── CALLOUTS ── */
+  .callout {
+    border-left: 4px solid var(--warn);
+    background: #fef9ec;
+    padding: 12px 16px;
+    border-radius: 0 4px 4px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #7c5a00;
+  }
+  .callout.danger {
+    border-color: var(--accent);
+    background: #fdf0ec;
+    color: #7c1a00;
+  }
+  .callout.ok {
+    border-color: var(--ok);
+    background: #edf7ee;
+    color: #1a4d22;
+  }
+  .callout-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* ── PARTS TABLE ── */
+  .parts-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  .parts-grid .th {
+    background: var(--tag-bg);
+    color: var(--tag-fg);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    font-weight: 600;
+  }
+  .parts-grid .td {
+    padding: 10px 14px;
+    border-top: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .parts-grid .td:nth-child(3n+1) { background: #faf9f6; }
+  .part-num {
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* ── STEP LIST ── */
+  .steps { list-style: none; margin: 10px 0 20px; }
+  .steps li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+    align-items: start;
+  }
+  .step-num {
+    width: 32px;
+    height: 32px;
+    background: var(--ink);
+    color: var(--bg);
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-body { color: var(--mid); font-size: 14px; line-height: 1.65; padding-top: 6px; }
+  .step-body b { color: var(--ink); }
+
+  /* ── TOOLS LIST ── */
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 20px;
+  }
+  .tool-tag {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 5px 12px;
+    font-size: 13px;
+    color: var(--ink);
+    font-family: var(--mono);
+  }
+
+  /* ── MEDIA LINKS ── */
+  .media-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .media-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--accent2);
+    font-weight: 600;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .media-link:hover { border-color: var(--accent2); background: #f0f5fa; }
+  .media-link .icon { font-size: 16px; }
+  .media-link .lbl { font-size: 11px; color: var(--mid); font-weight: 400; display: block; line-height: 1; }
+
+  /* ── DIAGRAM ── */
+  .diagram-box {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .diagram-box svg { width: 100%; max-width: 700px; }
+  .diagram-caption {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--mid);
+    margin-top: 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist { list-style: none; margin: 10px 0; }
+  .checklist li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    font-size: 14px;
+    color: var(--mid);
+    border-bottom: 1px solid var(--rule);
+  }
+  .checklist li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    color: var(--mid);
+    top: 5px;
+  }
+  .checklist li b { color: var(--ink); }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 2px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: #aaa;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 24px 20px 20px; }
+    header h1 { font-size: 22px; }
+    .container { padding: 0 16px 40px; }
+    .parts-grid { grid-template-columns: 1fr; }
+    .parts-grid .th:not(:first-child) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-label">Technical Repair Manual</div>
+  <h1>Caloric <span>GFS207</span> Refrigerator<br>Thermostat &amp; Defrost Timer Replacement</h1>
+  <div class="header-meta">
+    <div><b>Model Family:</b> GFS207 / GFS227*02 / GFS271*10</div>
+    <div><b>Repairs:</b> Cold Control + Defrost Timer</div>
+    <div><b>Skill Level:</b> Beginner–Intermediate</div>
+    <div><b>Est. Time:</b> 45–90 minutes</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ── SYMPTOM OVERVIEW ── -->
+  <section>
+    <div class="section-label">Section 01</div>
+    <h2>Symptom Overview &amp; Diagnosis</h2>
+    <p>This manual covers two repairs for a common failure pattern on the GFS207: an <b>intermittent cold control thermostat</b> and an <b>aging defrost timer</b>. Both parts live in the same interior control housing, so they are replaced together in a single service visit.</p>
+
+    <div class="callout">
+      <div class="callout-title">⚠ Confirm your symptoms match before ordering parts</div>
+      Freezer temperature climbs to <b>20–22 °F</b> while the fridge is <b>completely silent</b> (no compressor, no fans). Wiggling or turning the <b>"Fridge Temp" knob</b> reliably restarts the unit. Power-cycling (unplug 5–10 min, replug, move knob) also restores normal operation. When running, temperatures and sounds are normal.
+    </div>
+
+    <p>The thermostat's internal contacts have developed an intermittent open—mechanical movement of the knob temporarily closes them. The defrost timer is replaced preventively; on older units it can stick in defrost mode and lock out the compressor until power is interrupted.</p>
+
+    <div class="media-links">
+      <a class="media-link" href="http://www.appliance411.com/faq/howdefrostworks.shtml" target="_blank">
+        <span class="icon">📖</span>
+        <span><span class="lbl">Reference</span>How Refrigerator Defrost Works</span>
+      </a>
+      <a class="media-link" href="https://www.hnkparts.com/blog/post/how-to-test-a-refrigerator-thermostat" target="_blank">
+        <span class="icon">📖</span>
+        <span><span class="lbl">Reference</span>How to Test a Fridge Thermostat</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── PARTS ── -->
+  <section>
+    <div class="section-label">Section 02</div>
+    <h2>Parts Required</h2>
+
+    <div class="parts-grid">
+      <div class="th">Part No.</div>
+      <div class="th">Description</div>
+      <div class="th">Ref No.</div>
+      <div class="td"><span class="part-num">37189</span></div>
+      <div class="td"><b>Cold Control Thermostat</b> — primary suspect; the "Fridge Temp" knob assembly. <em>Note: Part 311127 on the same sheet is for the GFS271*10 variant only — do not substitute.</em></div>
+      <div class="td" style="font-family:var(--mono);font-size:13px;">Ref. 10</div>
+      <div class="td"><span class="part-num">57862</span></div>
+      <div class="td"><b>Defrost Timer</b> — small motor-driven timer box; replaced preventively due to age and intermittent-cooling history.</div>
+      <div class="td" style="font-family:var(--mono);font-size:13px;">Ref. 6</div>
+    </div>
+
+    <p>Search either part number on <a href="https://www.repairclinic.com" target="_blank" style="color:var(--accent2)">RepairClinic</a>, <a href="https://www.appliancepartspros.com" target="_blank" style="color:var(--accent2)">AppliancePartsPros</a>, or <a href="https://www.searspartsdirect.com" target="_blank" style="color:var(--accent2)">Sears PartsDirect</a>. Confirm model number on the label inside the fresh-food door jamb before ordering.</p>
+  </section>
+
+  <!-- ── TOOLS ── -->
+  <section>
+    <div class="section-label">Section 03</div>
+    <h2>Tools &amp; Materials</h2>
+    <div class="tools-grid">
+      <span class="tool-tag">Phillips #2 screwdriver</span>
+      <span class="tool-tag">Flat-head screwdriver</span>
+      <span class="tool-tag">Needle-nose pliers</span>
+      <span class="tool-tag">Multimeter (optional)</span>
+      <span class="tool-tag">Masking tape + marker</span>
+      <span class="tool-tag">Smartphone (photos)</span>
+      <span class="tool-tag">Flashlight or headlamp</span>
+      <span class="tool-tag">Small container for screws</span>
+    </div>
+    <div class="callout danger">
+      <div class="callout-title">🔴 Safety First — Read Before Starting</div>
+      <strong>Unplug the refrigerator from the wall outlet before touching any internal components.</strong> These repairs do not require moving the fridge. Do not attempt any step with power connected. If the fridge is on a 20 A dedicated circuit, confirm the cord is fully withdrawn from the outlet.
+    </div>
+  </section>
+
+  <!-- ── CONTROL HOUSING DIAGRAM ── -->
+  <section>
+    <div class="section-label">Section 04</div>
+    <h2>Control Housing — Component Overview</h2>
+    <p>Both parts are located in the <b>interior control housing</b>: the plastic box mounted at the top of the fresh-food compartment. It contains the interior light socket, the cold control thermostat (with "Fridge Temp" knob), and the defrost timer.</p>
+
+    <div class="diagram-box">
+      <!-- Annotated SVG diagram of the control housing area -->
+      <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Sans', sans-serif">
+        <!-- Fridge outline -->
+        <rect x="60" y="20" width="560" height="300" rx="8" fill="#f0ede8" stroke="#c8c5bc" stroke-width="2"/>
+        <text x="340" y="14" text-anchor="middle" font-size="11" fill="#888" font-family="'IBM Plex Mono',monospace" letter-spacing="1">INTERIOR — FRESH-FOOD COMPARTMENT (top, viewed from front)</text>
+
+        <!-- Control housing box -->
+        <rect x="180" y="50" width="320" height="90" rx="5" fill="#ddd9d0" stroke="#999" stroke-width="1.5"/>
+        <text x="340" y="44" text-anchor="middle" font-size="11" fill="#555" font-family="'IBM Plex Mono',monospace" letter-spacing="1">CONTROL HOUSING</text>
+
+        <!-- Light socket area -->
+        <circle cx="220" cy="95" r="22" fill="#e8e4da" stroke="#bbb" stroke-width="1.5"/>
+        <text x="220" y="98" text-anchor="middle" font-size="10" fill="#555">LIGHT</text>
+
+        <!-- Thermostat body -->
+        <rect x="278" y="62" width="80" height="56" rx="3" fill="#c8d8e8" stroke="#1a5c8f" stroke-width="2"/>
+        <text x="318" y="82" text-anchor="middle" font-size="11" fill="#1a4060" font-weight="700">THERMO-</text>
+        <text x="318" y="96" text-anchor="middle" font-size="11" fill="#1a4060" font-weight="700">STAT</text>
+        <text x="318" y="110" text-anchor="middle" font-size="10" fill="#1a4060">P/N 37189</text>
+
+        <!-- Knob -->
+        <circle cx="318" cy="145" r="14" fill="#888" stroke="#555" stroke-width="1.5"/>
+        <text x="318" y="148" text-anchor="middle" font-size="9" fill="#fff">KNOB</text>
+
+        <!-- Defrost timer body -->
+        <rect x="388" y="62" width="80" height="56" rx="3" fill="#e8c8c0" stroke="#c8320a" stroke-width="2"/>
+        <text x="428" y="82" text-anchor="middle" font-size="11" fill="#5a1000" font-weight="700">DEFROST</text>
+        <text x="428" y="96" text-anchor="middle" font-size="11" fill="#5a1000" font-weight="700">TIMER</text>
+        <text x="428" y="110" text-anchor="middle" font-size="10" fill="#5a1000">P/N 57862</text>
+
+        <!-- Timer shaft -->
+        <circle cx="428" cy="140" r="10" fill="#c8320a" stroke="#7c1a00" stroke-width="1.5" opacity="0.7"/>
+        <text x="428" y="143" text-anchor="middle" font-size="8" fill="#fff">SHAFT</text>
+
+        <!-- Wiring harness -->
+        <line x1="318" y1="118" x2="318" y2="200" stroke="#333" stroke-width="2" stroke-dasharray="4,3"/>
+        <line x1="428" y1="118" x2="428" y2="200" stroke="#333" stroke-width="2" stroke-dasharray="4,3"/>
+        <line x1="318" y1="200" x2="428" y2="200" stroke="#333" stroke-width="2" stroke-dasharray="4,3"/>
+        <rect x="355" y="188" width="58" height="24" rx="3" fill="#444"/>
+        <text x="384" y="203" text-anchor="middle" font-size="10" fill="#fff">HARNESS</text>
+
+        <!-- Capillary tube -->
+        <path d="M280 90 Q200 90 200 180 Q200 240 300 240" stroke="#1a5c8f" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+        <text x="195" y="220" text-anchor="end" font-size="10" fill="#1a5c8f">capillary</text>
+        <text x="195" y="232" text-anchor="end" font-size="10" fill="#1a5c8f">tube</text>
+
+        <!-- Compressor / fan (schematic) -->
+        <rect x="80" y="220" width="100" height="44" rx="4" fill="#eee" stroke="#bbb" stroke-width="1"/>
+        <text x="130" y="237" text-anchor="middle" font-size="10" fill="#555">COMPRESSOR</text>
+        <text x="130" y="250" text-anchor="middle" font-size="10" fill="#555">+ FANS</text>
+        <line x1="130" y1="220" x2="318" y2="200" stroke="#333" stroke-width="1.5" opacity="0.4"/>
+
+        <!-- Callout bubbles -->
+        <!-- Thermostat callout -->
+        <line x1="358" y1="85" x2="430" y2="60" stroke="#1a5c8f" stroke-width="1.2"/>
+        <rect x="432" y="42" width="190" height="36" rx="3" fill="#e8f1fa" stroke="#1a5c8f" stroke-width="1"/>
+        <text x="442" y="56" font-size="11" fill="#1a4060" font-weight="700">① Cold Control (Primary)</text>
+        <text x="442" y="70" font-size="10" fill="#1a4060">Intermittent contacts → replace</text>
+
+        <!-- Timer callout -->
+        <line x1="468" y1="85" x2="540" y2="135" stroke="#c8320a" stroke-width="1.2"/>
+        <rect x="500" y="135" width="158" height="36" rx="3" fill="#fdf0ec" stroke="#c8320a" stroke-width="1"/>
+        <text x="510" y="149" font-size="11" fill="#7c1a00" font-weight="700">② Defrost Timer</text>
+        <text x="510" y="163" font-size="10" fill="#7c1a00">Age/stuck risk → replace</text>
+
+        <!-- Housing cover screws indication -->
+        <circle cx="185" cy="52" r="5" fill="none" stroke="#888" stroke-width="1.5"/>
+        <circle cx="495" cy="52" r="5" fill="none" stroke="#888" stroke-width="1.5"/>
+        <circle cx="185" cy="136" r="5" fill="none" stroke="#888" stroke-width="1.5"/>
+        <circle cx="495" cy="136" r="5" fill="none" stroke="#888" stroke-width="1.5"/>
+        <text x="340" y="165" text-anchor="middle" font-size="10" fill="#888">○ = cover screws</text>
+      </svg>
+      <div class="diagram-caption">Fig. 1 — Control housing layout, Caloric GFS207 (schematic, not to scale)</div>
+    </div>
+
+    <div class="media-links">
+      <a class="media-link" href="https://www.youtube.com/watch?v=rsv0ary__p4" target="_blank">
+        <span class="icon">▶</span>
+        <span><span class="lbl">YouTube · Control Panel Access</span>Opening the Control Housing</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── PROCEDURE 1: ACCESS ── -->
+  <section>
+    <div class="section-label">Section 05</div>
+    <h2>Procedure 1 — Accessing the Control Housing</h2>
+
+    <ol class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body"><b>Unplug the refrigerator.</b> Pull the power cord fully from the wall. Do not proceed until this is done.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body"><b>Empty the top shelf</b> of the fresh-food compartment to give yourself clear access to the control housing overhead.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body"><b>Photograph the control area</b> with your phone before touching anything — capture the knob position, wire colors, and any visible screw locations. You will reference these photos during reassembly.</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body"><b>Remove cover screws.</b> Using a Phillips #2, remove the screws securing the plastic control-housing cover (typically 2–4 screws; see ○ positions in Fig. 1). Place screws in your container.</div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-body"><b>Lower or swing open the housing cover.</b> The cover may hinge downward or detach completely. Work slowly — the light socket and wiring harness are still attached. Do not yank.</div>
+      </li>
+      <li>
+        <div class="step-num">6</div>
+        <div class="step-body"><b>Take a second set of reference photos</b> now showing the fully exposed interior: wire colors at each terminal on both the thermostat and defrost timer.</div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ── PROCEDURE 2: THERMOSTAT ── -->
+  <section>
+    <div class="section-label">Section 06</div>
+    <h2>Procedure 2 — Replace Cold Control Thermostat (P/N 37189)</h2>
+
+    <div class="media-links">
+      <a class="media-link" href="https://www.youtube.com/watch?v=09MmevMH0hA" target="_blank">
+        <span class="icon">▶</span>
+        <span><span class="lbl">YouTube · Thermostat Replacement</span>Refrigerator Cold Control Swap (walkthrough)</span>
+      </a>
+    </div>
+
+    <h3>A. Remove the old thermostat</h3>
+    <ol class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body"><b>Pull the "Fridge Temp" knob</b> straight off its shaft. It should pull free without tools. Set it aside.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body"><b>Label each wire before disconnecting.</b> Use masking tape + marker or stick-on labels: write the terminal name (e.g., "C", "1", "2") on each wire. Refer to your reference photos.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body"><b>Disconnect wires</b> from the thermostat terminals. Most are push-on spade connectors — grip the connector body (not the wire) with needle-nose pliers and pull straight off.</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body"><b>Unscrew or unclip the thermostat body</b> from its mounting bracket. Note the orientation — the replacement must sit the same way.</div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-body"><b>Carefully withdraw the capillary/sensing bulb.</b> This is a thin copper tube that runs from the thermostat body into a channel clipped along the interior wall. <b>Do not kink or sharply bend it</b> — a kink can damage the replacement part. Work it free gently along its entire routed path.</div>
+      </li>
+    </ol>
+
+    <h3>B. Install the new thermostat</h3>
+    <ol class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body"><b>Route the new capillary bulb</b> through the same channel the old one occupied. The bulb end should terminate at the same position (usually near the evaporator air channel). Avoid sharp bends; gentle curves only.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body"><b>Mount the thermostat body</b> in the bracket, matching the same orientation as the original.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body"><b>Reconnect all wires</b> to the correct terminals using your labels and reference photos. Push each spade connector firmly onto its terminal until it seats.</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body"><b>Reinstall the "Fridge Temp" knob</b> by pressing it onto the shaft. Align the indicator mark to the mid-range position.</div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ── PROCEDURE 3: DEFROST TIMER ── -->
+  <section>
+    <div class="section-label">Section 07</div>
+    <h2>Procedure 3 — Replace Defrost Timer (P/N 57862)</h2>
+
+    <div class="media-links">
+      <a class="media-link" href="https://www.instructables.com/How-to-Replace-Fridge-Defrost-Timer/" target="_blank">
+        <span class="icon">🔧</span>
+        <span><span class="lbl">Instructables · Step-by-step Guide</span>How to Replace a Fridge Defrost Timer</span>
+      </a>
+      <a class="media-link" href="https://prspartsinc.com/blogs/news/how-and-when-to-replace-a-faulty-refrigerator-defrost-timer" target="_blank">
+        <span class="icon">📖</span>
+        <span><span class="lbl">Reference</span>When to Replace a Defrost Timer</span>
+      </a>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body"><b>Locate the defrost timer</b> — a small plastic box (roughly 2" × 3") with a rotating dial or exposed shaft, adjacent to the thermostat in the control housing. On some GFS207 units it may be mounted on a side wall of the control cavity rather than directly on the housing board.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body"><b>Photograph the wires before disconnecting</b> — four colored wires connect to the timer terminals. Labeling is strongly recommended here as terminal positions matter.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body"><b>Remove retaining screws or squeeze the mounting clips</b> to free the timer body from its bracket.</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body"><b>Disconnect the wiring harness plug</b> (or individual spade connectors) from the old timer.</div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-body"><b>Install the new timer</b> in the same orientation. Reconnect all wires to the correct terminals per your labels/photos. Secure in its bracket.</div>
+      </li>
+      <li>
+        <div class="step-num">6</div>
+        <div class="step-body"><b>Manually advance the timer shaft</b> with a flat-head screwdriver, turning clockwise until you hear/feel a distinct <em>click</em>. This advances the timer out of any defrost cycle into cooling mode, ensuring the compressor can start immediately when powered on.</div>
+      </li>
+    </ol>
+
+    <div class="diagram-box">
+      <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Sans', sans-serif">
+        <!-- Timer body -->
+        <rect x="160" y="40" width="180" height="100" rx="6" fill="#f5e8e4" stroke="#c8320a" stroke-width="2"/>
+        <text x="250" y="68" text-anchor="middle" font-size="12" fill="#5a1000" font-weight="700">DEFROST TIMER 57862</text>
+
+        <!-- Timer dial -->
+        <circle cx="250" cy="105" r="28" fill="#ddd" stroke="#999" stroke-width="1.5"/>
+        <circle cx="250" cy="105" r="4" fill="#c8320a"/>
+        <line x1="250" y1="105" x2="250" y2="82" stroke="#c8320a" stroke-width="2"/>
+        <text x="250" y="148" text-anchor="middle" font-size="10" fill="#888">← advance with flat-head</text>
+
+        <!-- Terminal labels -->
+        <line x1="160" y1="70" x2="80" y2="50" stroke="#888" stroke-width="1"/>
+        <text x="76" y="48" text-anchor="end" font-size="10" fill="#333">Term. <tspan font-weight="700">BK</tspan> (Common)</text>
+        <line x1="160" y1="90" x2="80" y2="90" stroke="#888" stroke-width="1"/>
+        <text x="76" y="93" text-anchor="end" font-size="10" fill="#333">Term. <tspan font-weight="700">OR</tspan> (Defrost Heater)</text>
+        <line x1="340" y1="70" x2="420" y2="50" stroke="#888" stroke-width="1"/>
+        <text x="424" y="48" font-size="10" fill="#333">Term. <tspan font-weight="700">BR</tspan> (Compressor)</text>
+        <line x1="340" y1="90" x2="420" y2="90" stroke="#888" stroke-width="1"/>
+        <text x="424" y="93" font-size="10" fill="#333">Term. <tspan font-weight="700">RD</tspan> (Fans)</text>
+
+        <text x="250" y="170" text-anchor="middle" font-size="10" fill="#888" font-family="'IBM Plex Mono',monospace" letter-spacing="0.05em">FIG. 2 — DEFROST TIMER TERMINAL LAYOUT (TYPICAL)</text>
+      </svg>
+      <div class="diagram-caption">Actual wire colors may vary — always confirm with reference photos taken in Step 2</div>
+    </div>
+  </section>
+
+  <!-- ── REASSEMBLY ── -->
+  <section>
+    <div class="section-label">Section 08</div>
+    <h2>Reassembly</h2>
+    <ol class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body">Verify all wire connections are firmly seated on both the thermostat and timer.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body">Tuck all wiring back into the control housing without pinching any conductors.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body">Close or raise the housing cover and reinstall all screws. Do not overtighten plastic bosses — snug is sufficient.</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body">Confirm the "Fridge Temp" knob is installed and set to the <b>mid-range</b> position (typically marked "5" or the center detent).</div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ── TESTING ── -->
+  <section>
+    <div class="section-label">Section 09</div>
+    <h2>Post-Repair Testing</h2>
+
+    <ol class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body"><b>Plug the refrigerator back in.</b> Stand by for the first 2–3 minutes.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body"><b>Listen for the compressor and condenser fan to start within 1–3 minutes.</b> You should hear a low hum from the compressor and airflow from the interior evaporator fan. If nothing starts after 5 minutes, unplug immediately and re-check wiring connections.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body"><b>Allow 2–4 hours</b> for temperatures to stabilize. The freezer should reach 0–5 °F and the fresh-food compartment 35–38 °F.</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body"><b>Verify no knob-wiggling is needed.</b> The unit should start, run, cycle off, and restart entirely on its own over the following 24 hours without any intervention.</div>
+      </li>
+    </ol>
+
+    <div class="callout ok">
+      <div class="callout-title">✔ Success Criteria</div>
+      Compressor and fans start automatically · Freezer holds 0–5 °F · Fresh food holds 35–38 °F · Unit does not require knob manipulation or power-cycling to restart after a normal off-cycle.
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">⚠ Also Recommended (While You Have Access)</div>
+      Inspect and vacuum the <b>condenser coils</b> (typically at the back or underneath the unit). Dust buildup on coils forces the compressor to run hotter and longer, shortening its life. This takes 10 minutes with a vacuum and brush attachment.
+    </div>
+  </section>
+
+  <!-- ── POST-REPAIR CHECKLIST ── -->
+  <section>
+    <div class="section-label">Section 10</div>
+    <h2>Final Checklist</h2>
+    <ul class="checklist">
+      <li>Refrigerator unplugged before any work began</li>
+      <li>Reference photos taken before wire removal (thermostat <em>and</em> timer)</li>
+      <li>Thermostat P/N <b>37189</b> installed; capillary tube routed without kinks</li>
+      <li>All thermostat wires reconnected to correct terminals</li>
+      <li>Timer P/N <b>57862</b> installed in same orientation as original</li>
+      <li>All timer wires reconnected to correct terminals</li>
+      <li>Timer shaft manually advanced until <em>click</em> (cooling mode confirmed)</li>
+      <li>Housing cover reinstalled; all screws returned</li>
+      <li>"Fridge Temp" knob installed at mid-range position</li>
+      <li>Compressor and fans start within 3 min of powering on</li>
+      <li>Freezer reaches ≤ 5 °F within 4 hours</li>
+      <li>Unit cycles normally for 24 hours without intervention</li>
+    </ul>
+  </section>
+
+  <!-- ── ADDITIONAL RESOURCES ── -->
+  <section>
+    <div class="section-label">Section 11</div>
+    <h2>Additional Resources</h2>
+    <div class="media-links" style="flex-direction:column;gap:8px;">
+      <a class="media-link" href="https://www.youtube.com/watch?v=rsv0ary__p4" target="_blank">
+        <span class="icon">▶</span>
+        <span><span class="lbl">YouTube</span>Control Housing Access — Caloric/similar fridge</span>
+      </a>
+      <a class="media-link" href="https://www.youtube.com/watch?v=09MmevMH0hA" target="_blank">
+        <span class="icon">▶</span>
+        <span><span class="lbl">YouTube</span>Cold Control Thermostat Replacement Walkthrough</span>
+      </a>
+      <a class="media-link" href="https://www.instructables.com/How-to-Replace-Fridge-Defrost-Timer/" target="_blank">
+        <span class="icon">🔧</span>
+        <span><span class="lbl">Instructables</span>Defrost Timer Replacement — Step-by-Step with Photos</span>
+      </a>
+      <a class="media-link" href="http://www.appliance411.com/faq/howdefrostworks.shtml" target="_blank">
+        <span class="icon">📖</span>
+        <span><span class="lbl">Appliance411</span>How Refrigerator Defrost Systems Work</span>
+      </a>
+      <a class="media-link" href="https://www.rtings.com/refrigerator/learn/defrost" target="_blank">
+        <span class="icon">📖</span>
+        <span><span class="lbl">RTINGS</span>Refrigerator Defrost Cycles Explained</span>
+      </a>
+      <a class="media-link" href="https://www.hnkparts.com/blog/post/how-to-test-a-refrigerator-thermostat" target="_blank">
+        <span class="icon">📖</span>
+        <span><span class="lbl">HNK Parts</span>How to Test a Refrigerator Thermostat (multimeter method)</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Caloric GFS207 · P/N 37189 Cold Control · P/N 57862 Defrost Timer · Technical Repair Manual
+</footer>
+
+</body>
+</html>
