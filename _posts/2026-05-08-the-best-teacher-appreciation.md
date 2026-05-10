@@ -1,13 +1,13 @@
 ---
 title: The Best Teacher Appreciation
-published: false
+published: true
 categories:
   - Blog
 tags:
   - teaching
 header:
-  teaser: https://ik.imagekit.io/scurryday/aht/teaching_discovery.png?tr=w-600
-  og_image: https://ik.imagekit.io/scurryday/aht/teaching_discovery.png
+  teaser: https://ik.imagekit.io/scurryday/aht/teaching_discovery.png?tr=w-500,h-300,c-at_max,f-auto,q-75
+  og_image: https://ik.imagekit.io/scurryday/aht/teaching_discovery.png?tr=w-500,h-300,c-at_max,f-auto,q-75
 ---
 
 It's teacher appreciation week, which means that teachers all over (as seen in places like the [Reddit teacher forum](https://www.reddit.com/r/Teachers/search/?q=appreciation&cId=71ab527e-8207-4a12-b110-fe87cb8f472a&iId=d45f574c-03fd-4ad5-95c9-59983f8dbf36))  are discussing what their districts do to appreciate them. I'll let you check that out yourself.
@@ -18,8 +18,10 @@ Teachers are feeling underappreciated in many places, and nobody really knows wh
 
 But this is about Teacher Appreciation Week. 
 
->\*\*The best teacher appreciation is professionalism.\*\*
+>**The best teacher appreciation is professionalism.**
 
 The PTO in my town, the school committee, and the administration have made what I think are appropriate (and even substantive) gestures. I think an ice cream truck is coming today, Friday, on the day students have half the day off for Senior Prom. We had lunch provided yesterday. Also, yesterday, we were given the "gift of time" (a meeting was canceled), which -- and I don't know if this sounds silly -- is music to a teacher's ears. But the best appreciation is professionalism.
 
-Teaching is chock full of indignities. You have to swallow your pride on an ongoing basis. The well-documented inability to use the restroom when we need to is just a sample. And this is why getting treated like a professional is a big deal for appreciation. I've
+Teaching is chock full of indignities. You have to swallow your pride on an ongoing basis. This is why getting treated like a professional is a big deal. It says that the indignities are worth bearing for the professional mission. 
+
+For teachers who embrace professionalism, being treated as a professional is the ongoing appreciation that helps us push through the most difficult times.
