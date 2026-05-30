@@ -12,7 +12,8 @@ title: "Extras"
 - [Tunic Glyph Editor]({{ "https://jamespburke.com/runes/trunegen.html" }})
 - [Walking Tax Puzzle]({{ "https://jamespburke.com/exhibits/walktax.html" }})
 - [Score Planner]({{ "https://jamespburke.com/resummit/"}})
-
+- [Electric State Thing]({{ "https://jamespburke.com/estate/"}})
+- [Thenopi]({{ "https://jamespburke.com/thenopi/"}})
 
 ## Productivity and Convenience ##
 - [Daily Briefing and Recommendation Engine](/briefing/)
