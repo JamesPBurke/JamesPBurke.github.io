@@ -1,6 +1,6 @@
 ---
 title: On Canon
-published: false
+published: true
 categories:
   - Blog
 tags:
