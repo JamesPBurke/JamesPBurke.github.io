@@ -1,5 +1,5 @@
 ---
-title: Is a Story a Record
+title: Canon I be Straight With You For a Moment?
 published: false
 categories:
   - Blog
