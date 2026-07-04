@@ -4,8 +4,11 @@ gem "jekyll", "~> 4.3"
 gem "minimal-mistakes-jekyll", "~> 4.28"
 
 gem "tzinfo-data"
-gem "wdm", "~> 0.2.0" if Gem.win_platform?
 gem "faraday-retry"
+
+install_if -> { Gem.win_platform? } do
+  gem "wdm", "~> 0.2.0"
+end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
