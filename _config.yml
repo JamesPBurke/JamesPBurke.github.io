@@ -31,7 +31,10 @@ search: true
 markdown: kramdown
 kramdown:
   math_engine: mathjax
-remote_theme: mmistakes/minimal-mistakes
+sass:
+  quiet_deps: true
+  silence_deprecations: [import]
+theme: minimal-mistakes-jekyll
 # Outputting
 permalink: /:categories/:title/
 
@@ -72,6 +75,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jekyll-scholar
 
 author:
   name   : "JP Burke"
@@ -149,3 +153,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+scholar:
+  style: apa
+  locale: en
+  source: _bibliography
+  bibliography: main.bib
+  type_order: [book, article, incollection, misc]

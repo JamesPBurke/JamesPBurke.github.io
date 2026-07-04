@@ -3,6 +3,8 @@
 # Variables MUST come before @import "minimal-mistakes" or they won't override.
 ---
 
+@use "sass:color";
+
 // =============================================================
 //  ADVENTURER'S CLUB — Complete main.scss
 //  Minimal Mistakes override for jamespburke.com
@@ -605,7 +607,7 @@ p {
   }
 
   pre {
-    background-color: darken($clr-bg, 6%) !important;
+    background-color: color.adjust($clr-bg, $lightness: -6%) !important;
     border: 1px solid $clr-border;
   }
 }
@@ -738,8 +740,8 @@ p {
     color: #f8f0e3 !important;
   }
   &:hover {
-    background-color: darken($clr-muted, 10%) !important;
-    border-color: darken($clr-muted, 10%) !important;
+    background-color: color.adjust($clr-muted, $lightness: -10%) !important;
+    border-color: color.adjust($clr-muted, $lightness: -10%) !important;
     color: #fff !important;
     text-decoration: none !important;
   }
@@ -863,5 +865,20 @@ p {
   }
   .page__hero--overlay .page__lead {
     font-size: 0.85rem !important;
+  }
+}
+
+// jekyll-scholar renders the reference list as an <ol> by default, which
+// numbers entries — APA reference lists are unnumbered and use a hanging
+// indent (first line flush left, wrapped lines indented).
+.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 1.5em;
   }
 }
