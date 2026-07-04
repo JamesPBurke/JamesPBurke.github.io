@@ -1,6 +1,6 @@
 ---
 title: Freedom 250
-published: false
+published: true
 use_math: false
 categories:
   - Blog
@@ -19,7 +19,7 @@ tags:
 What does it mean to live in a free society? If "freedom isn't free," what price does it demand of us, if any?
 
 > “Indifference to evil is more insidious than evil itself. It is a silent justification affording evil acceptability in society.”
-> — Rabbi Abraham Joshua Heschel
+> {% cite heschel_heschel_1963_religion_and_race %}
 
 Rabbi Abraham Joshua Heschel spoke from his personal experience when he made this statement about life in a free society.
 
@@ -36,16 +36,13 @@ Have a reflective Independence Day.
 # Inspiration and References
 
 
----
+This post was inspired by a lecture on how to think like a philosopher and what it means to be human by the distinguished philosopher Professor Cornell West {% cite west_cornel_masterclass %}. When the reference to Rabbi Heschel came up, I was motivated to seek the context of the quotation I presented above. Pages that collected some of his ideas and references to his history and works were helpful {% cite rosenberg_heschel_sefaria %}.
 
-This post was inspired by a lecture on how to think like a philosopher and what it means to be human by the distinguished philosopher Professor Cornell West. When the reference to Rabbi Heschel came up, I was motivated to seek the context of the quotation I presented above.[^1]
+## References
+
+{% bibliography --cited %}
 
 
+## AI Disclosure
 
-[^1]: AI Disclosure: AI-assisted search was used to turn up primary sources in the research into the context of Rabbi Heschel's comments, and was also used in spelling and grammar checking, as it is integrated into the grammar-checker tool I use.
-
-Heschel, A. (1963, January 14). Heschel, “religion and race,” speech text. Voices of Democracy. https://voicesofdemocracy.umd.edu/heschel-religion-and-race-speech-text/
-
-Rosenberg, D. (n.d.). Heschel | voices on sefaria. Retrieved July 4, 2026, from https://voices.sefaria.org/sheets/393398.5?lang=bi
-
-West, C. (n.d.). Cornel West Teaches Philosophy [Video]. Retrieved https://www.masterclass.com/classes/cornel-west-teaches-philosophy/
+AI-assisted search was used to turn up primary sources in the research into the context of Rabbi Heschel's comments, and was also used in spelling and grammar checking, as it is integrated into the grammar-checker tool I use.
