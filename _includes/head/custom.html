@@ -203,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("beforeunload", function() { synth.cancel(); });
 });
+
 </script>
 
 <!-- Service worker registration for PWA installability -->
@@ -213,6 +214,19 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+
+{% if page.use_math or page.mathjax %}
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
 
 <!-- end custom head snippets -->
 
