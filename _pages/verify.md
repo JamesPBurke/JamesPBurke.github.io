@@ -3,6 +3,11 @@ layout: none
 permalink: /verify/
 title: Verify My Identity
 description: PGP key verification and signed statement for James Patrick Burke.
+header:
+  custom_links:
+    - rel: "me"
+      href: "https://keyoxide.org/1C0657927C3EE4DD6638C17D016CD7014FCDB4C9"
+
 ---
 # 🔐 Verify James Patrick Burke
 
