@@ -11,7 +11,6 @@ This page exists so you can confirm my identity, verify signed messages, encrypt
 Also, if I lose control over one or more of my social media accounts, PGP signing will allow me to prove that I am the same person who created this page,
 and seek help from friends who can vouch for me. If you use PGP, please add my key to your keyring.
 
-
 ---
 
 ## 🧾 Current PGP Key
@@ -28,6 +27,32 @@ and seek help from friends who can vouch for me. If you use PGP, please add my k
 
 ---
 
+## ✅ How to Verify This Page
+
+The claims on this page — my identity, key fingerprint, and the accounts listed below — are backed by a PGP-signed statement, not just plain text anyone could edit. Here's how to check it yourself:
+
+**1. Get my public key.** Either download it above, or pull it straight from the keyserver:
+
+```bash
+gpg --keyserver keyserver.ubuntu.com --recv-keys 1C0657927C3EE4DD6638C17D016CD7014FCDB4C9
+```
+
+If you downloaded the file instead: `gpg --import james-patrick-burke-public.asc`
+
+**2. Download the signed statement:** [identity-statement.txt.asc](/verify/identity-statement.txt.asc) — a signed snapshot of this page's claims (name, fingerprint, verified accounts).
+
+**3. Verify it:**
+
+```bash
+gpg --verify identity-statement.txt.asc
+```
+
+A valid result shows **"Good signature from James Patrick Burke"** and a fingerprint matching the one above, exactly. If the fingerprint doesn't match, or GPG reports a bad signature, don't trust the statement — reach out through one of the other verified channels below instead.
+
+**Using Kleopatra (Windows GUI)** instead of the command line: import the public key file via **File → Import Certificates**, then right-click `identity-statement.txt.asc` → **More GpgEX options → Verify**.
+
+---
+
 ## 🔗 Verified Accounts
 
 - **Blog:** [https://jamespburke.com](https://jamespburke.com/blog/)
@@ -37,43 +62,9 @@ and seek help from friends who can vouch for me. If you use PGP, please add my k
 - **Instagram:** [drjpburke](https://www.instagram.com/drjpburke/)
 - **LinkedIn:** [jpburke](https://www.linkedin.com/in/jpburke/)
 - **Personal YouTube Channel:** [@JamesPBurke](https://www.youtube.com/@JamesPBurke)
+- **Venmo:** [@DrJamesPBurke](https://account.venmo.com/u/DrJamesPBurke)
 - **GMRS Callsign:** WSHY826
-- **Signal Public Account:** JPBPublic.31
-  - Note: If you know me personally, contact me on Signal via my phone number. The public account is not checked daily and is for new people contacting me.
-
----
-```
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
-
----
-
-I, James Patrick Burke, certify that these are my accounts. Verify this signed message with PGP.
-
-## 🔗 Verified Accounts
-
-- - **Blog:** [https://jamespburke.com](https://jamespburke.com/blog/)
-- - **Bluesky:** [@jamespburke.com](https://bsky.app/profile/jamespburke.com)
-- - **Keybase:** [@sciuridae67](https://keybase.io/sciuridae67)
-- - **GitHub:** [JamesPBurke](https://github.com/JamesPBurke)
-- - **Instagram:** [drjpburke](https://www.instagram.com/drjpburke/)
-- - **LinkedIn:** [jpburke](https://www.linkedin.com/in/jpburke/)
-- - **Personal YouTube Channel:** [@JamesPBurke](https://www.youtube.com/@JamesPBurke)
-- - **GMRS Callsign:** WSHY826
-- - **Signal Public Account:** JPBPublic.31
-  - Note: If you know me personally, contact me on Signal via my phone number. The public account is not checked daily and is for new people contacting me.
-
----
-
------BEGIN PGP SIGNATURE-----
-
-iHUEARYKAB0WIQQcBleSfD7k3WY4wX0BbNcBT820yQUCaAlqJAAKCRABbNcBT820
-ydDzAQCWn/Sfav85N7yKL1yp1TCuwDESfdbTVqIP/NQVOOFz5gEA6ueANunTixk8
-RQPQObQckXSu7k6aTN0DSjlfxa6PQQY=
-=fU5W
------END PGP SIGNATURE-----
-```
----
+- **Signal:** If you know me personally, contact me on Signal via my phone number. If you don't know my phone number, connect with me via one of our other trusted channels to get my personal Signal account.
 
 ## 📜 Past Key Migration Notice
 
@@ -87,5 +78,3 @@ Because Keybase is no longer awesome, I transitioned to the independently contro
 - 🔗 Also available on [Keybase public folder](keybase://public/sciuridae67/migration.txt.asc)
 
 After signing my current key with the old key, I revoked the old key and removed it from Keybase, replacing it with my new key to reduce possible confusion and make it easier to contact/verify me. However, this page is the definitive source.
-
----
