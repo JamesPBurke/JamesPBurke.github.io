@@ -1,9 +1,14 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+gem "minimal-mistakes-jekyll", "~> 4.28"
 
 gem "tzinfo-data"
-gem "wdm", "~> 0.2.0" if Gem.win_platform?
+gem "faraday-retry"
+
+install_if -> { Gem.win_platform? } do
+  gem "wdm", "~> 0.2.0"
+end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -14,6 +19,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jemoji"
   gem "jekyll-include-cache"
+  gem "jekyll-redirect-from"
+  gem "jekyll-scholar"
 #  gem "jekyll-algolia"
-#  gem "minimal-mistakes-jekyll"
 end

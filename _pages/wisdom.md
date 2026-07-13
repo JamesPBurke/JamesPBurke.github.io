@@ -28,3 +28,6 @@ title: "Wisdom"
 — Walt Disney
 {: .notice--success}
 
+“Our goal should be to live life in radical amazement. ....get up in the morning and look at the world in a way that takes nothing for granted. Everything is phenomenal; everything is incredible; never treat life casually. To be spiritual is to be amazed.”
+— Rabbi Abraham Joshua Heschel
+{: .notice--warning}

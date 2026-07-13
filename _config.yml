@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: jamespburke
 subtitle: "Field Notes on a Curious Expedition"
+url: "https://jamespburke.com"
 
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -29,7 +30,12 @@ search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+kramdown:
+  math_engine: mathjax
+sass:
+  quiet_deps: true
+  silence_deprecations: [import]
+theme: minimal-mistakes-jekyll
 # Outputting
 permalink: /:categories/:title/
 
@@ -70,6 +76,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jekyll-scholar
 
 author:
   name   : "JP Burke"
@@ -81,7 +88,7 @@ author:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/JamesPBurke/"
     - label: "Bluesky"
       icon: "fa-brands fa-bluesky"
       url: "https://bsky.app/profile/jamespburke.com/"
@@ -147,3 +154,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+scholar:
+  style: apa
+  locale: en
+  source: _bibliography
+  bibliography: main.bib
+  type_order: [book, article, incollection, misc]

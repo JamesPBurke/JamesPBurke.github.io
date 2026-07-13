@@ -9,6 +9,8 @@
 <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
 <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap"-->
 
+<link rel="me" href="https://keyoxide.org/1C0657927C3EE4DD6638C17D016CD7014FCDB4C9">
+
 <!--link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}"-->
 
 
@@ -203,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("beforeunload", function() { synth.cancel(); });
 });
+
 </script>
 
 <!-- Service worker registration for PWA installability -->
@@ -213,6 +216,19 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+
+{% if page.use_math or page.mathjax %}
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
 
 <!-- end custom head snippets -->
 
