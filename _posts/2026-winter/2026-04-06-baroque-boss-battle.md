@@ -8,6 +8,9 @@ tags:
 - video
 - ai
 - music
+- entertainment
+- creativity
+- artificial intelligence
 ---
 {% include video id="Ion6sUF3h-c" provider="youtube" %}
 

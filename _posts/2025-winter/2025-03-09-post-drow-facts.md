@@ -8,6 +8,8 @@ tags:
   - link
   - programming
   - javascript
+  - playables
+  - fandom
 ---
 
 That's right, the [Drow Facts](http://drowfacts.com) webapp is back. There's a story behind this. Here's the short version. The DrowFacts Project is something I threw together in basically a weekend's time after doing some training in App Inventor, and using some prior knowledge of JavaScript and a lot of Google searching. A whole two years before people started to be able to whip these things out using AI.

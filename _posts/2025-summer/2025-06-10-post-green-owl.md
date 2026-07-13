@@ -10,6 +10,7 @@ categories:
 - Blog
 tags:
 - moods
+- personal
 ---
 ![Gameplay from Monkey Escort Mission](https://ik.imagekit.io/scurryday/thumb/foulowl.png?tr=w-640)
 

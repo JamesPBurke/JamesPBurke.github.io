@@ -12,6 +12,8 @@ tags:
   - video
   - classroom
   - education
+  - teaching
+  - joy
 ---
 
 Yesterday in Eng Design we had students make different kinds of stick bombs as a way to demonstrate structures held together by tension. I used a square configuration for my example.

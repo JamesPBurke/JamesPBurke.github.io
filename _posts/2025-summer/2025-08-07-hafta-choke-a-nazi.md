@@ -12,6 +12,9 @@ tags:
 - antifa
 - media
 - history
+- politics
+- culture
+- patriotism
 ---
 {% include figure image_path="https://ik.imagekit.io/scurryday/thumb/super_fight_nazi.png?updatedAt=1754580843797?tr=w-640" alt="Superman fighting a German WWII soldier" caption="Image generated, with difficulty, using MidJourney. Intentionally missing a certain insignia, but that's intended to be a German soldier in WWII." %}
 

@@ -12,6 +12,8 @@ tags:
 - politics
 - libertarians
 - airesearch
+- philosophy
+- artificial intelligence
 ---
 
 

@@ -4,7 +4,7 @@ published: false
 categories:
   - Blog
 tags:
-  - Post Formats
+  - post formats
   - quote
 ---
 

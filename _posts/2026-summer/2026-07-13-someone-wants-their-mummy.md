@@ -4,10 +4,11 @@ published: true
 categories:
   - Blog
 tags:
-  - Miniview
-  - Review
-  - Horror
-  - Movies
+  - miniview
+  - review
+  - horror
+  - movies
+  - entertainment
 header: null
 ---
 _Unable to focus myself to the point of writing full, high-quality reviews, but in the interest of doing more journaling about the media I consume, I'm starting to post "miniviews."  "Miniviews" is a word I'm adopting to signal somewhere between a good effort reviewing and a drive-by microblog. In other words, managing expectations. Enjoy._

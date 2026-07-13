@@ -12,6 +12,7 @@ tags:
 - humor
 - ai
 - music
+- personal
 ---
 {% include video id="d8JqgShZWpQ" provider="youtube" %}
 

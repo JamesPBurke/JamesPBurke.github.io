@@ -6,6 +6,8 @@ categories:
 tags:
   - maintenance
   - blogging
+  - personal
+  - jekyll
 header: null
 ---
 

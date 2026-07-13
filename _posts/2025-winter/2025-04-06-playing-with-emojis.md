@@ -4,8 +4,10 @@ published: true
 categories:
 - Blog
 tags:
-- Jekyll
+- jekyll
 - programming
+- blogging
+- humor
 ---
 I know this post looks political because :fist: :us: :fire: was recently in the news,
 but I thought I would look into how to use emojis on this blog, and it turns out that either emojis are

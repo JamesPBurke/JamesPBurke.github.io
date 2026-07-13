@@ -10,7 +10,8 @@ categories:
 - Blog
 tags:
 - entertainment
-- reviews
+- review
+- movies
 ---
 ![]()
 

@@ -6,6 +6,8 @@ categories:
 tags:
   - food
   - cooking
+  - personal
+  - joy
 header:
   overlay_image: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-1200,h-400,c-at_max,f-auto,q-80
   teaser: https://ik.imagekit.io/scurryday/postimg/burger202605.jpg?tr=w-500,h-300,c-at_max,f-auto,q-75

@@ -7,6 +7,9 @@ tags:
   - playables
   - programming
   - makecode
+  - video games
+  - humor
+  - classroom
 link: https://jamespburke.com/ycca-sharks
 ---
 

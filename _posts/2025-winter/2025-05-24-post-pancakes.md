@@ -20,6 +20,9 @@ tags:
 - joy
 - cooking
 - recipes
+- food
+- baking
+- personal
 ---
 
 

@@ -14,6 +14,9 @@ tags:
   - artificial intelligence
   - linux
   - computing
+  - ai
+  - update
+  - personal
 gallery1:
   - url: https://ik.imagekit.io/scurryday/postimg/jp2-magic-camera.jpg
     image_path: https://ik.imagekit.io/scurryday/postimg/jp2-magic-camera.jpg?tr=w-300,h-300,c-at_max

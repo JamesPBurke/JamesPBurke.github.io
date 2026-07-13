@@ -5,7 +5,8 @@ categories:
   - Blog
 tags:
   - link
-  - Post Formats
+  - post formats
+  - personal
 link: https://www.npr.org/2026/05/04/nx-s1-5787940/tool-survey-helps-plan-aging-longevity-retirement
 ---
 
