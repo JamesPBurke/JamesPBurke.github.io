@@ -12,6 +12,9 @@ tags:
 - video
 - personal
 - video games
+- entertainment
+- joy
+- scifi
 ---
 {% include video id="lrpkllOLvjo" provider="youtube" %}
 

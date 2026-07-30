@@ -10,6 +10,9 @@ categories:
 tags:
 - humor
 - generative ai
+- ai
+- politics
+- history
 ---
 
 

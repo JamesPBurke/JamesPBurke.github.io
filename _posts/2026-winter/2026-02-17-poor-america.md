@@ -7,6 +7,9 @@ categories:
   - Song
 tags:
   - parody
+  - politics
+  - humor
+  - music
 ---
 
 "Poor America"[^1]

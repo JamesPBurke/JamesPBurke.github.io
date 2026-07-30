@@ -6,6 +6,8 @@ categories:
 tags:
 - baking
 - recipes
+- food
+- cooking
 gallery:
 - url: /assets/images/posts/032025_boules.jpg
   image_path:  /assets/images/posts/032025_boules.jpg

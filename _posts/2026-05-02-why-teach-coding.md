@@ -8,6 +8,8 @@ tags:
   - technology
   - artificial intelligence
   - programming
+  - education
+  - computer science
 ---
 # Teaching Code in a World Where AI Writes It
 

@@ -11,6 +11,9 @@ categories:
 tags:
   - hope
   - resistance
+  - writing
+  - politics
+  - patriotism
 ---
 I wrote a poem this week, and it was inspired by a poem about Lebanon that was written
 by Kahlil Gibran. [Here is his poem in an Instagram post.](https://www.instagram.com/gibranslebanon/p/DBjqMjTMjji/https:/)

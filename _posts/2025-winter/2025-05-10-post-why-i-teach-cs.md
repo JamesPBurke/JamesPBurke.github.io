@@ -6,6 +6,9 @@ categories:
 tags:
 - education
 - computer science
+- teaching
+- technology
+- programming
 ---
 
 # Teaching the Future: Why Computer Science Matters Now

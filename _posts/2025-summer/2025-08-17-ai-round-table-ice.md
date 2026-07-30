@@ -11,6 +11,8 @@ categories:
 tags:
 - politics
 - ai
+- artificial intelligence
+- civil rights
 
 ---
 

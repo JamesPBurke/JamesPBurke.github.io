@@ -11,6 +11,9 @@ categories:
 tags:
 - programming
 - education
+- makecode
+- classroom
+- computer science
 ---
 
 

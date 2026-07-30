@@ -7,6 +7,9 @@ categories:
 tags:
   - technology
   - artificial intelligence
+  - ai
+  - education
+  - generative ai
 
 ---
 

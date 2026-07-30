@@ -7,6 +7,8 @@ tags:
   - playables
   - programming
   - makecode
+  - video games
+  - history
 link: https://jamespburke.com/sinistar_arcade
 ---
 Back when I was first learning MakeCode Arcade, I tried to write a mini-[clone of the arcade classic Sinistar](https://jamespburke.com/sinistar_arcade). At the time I'm making this blog post, it's largely incomplete. Sinistar comes right at you instead of flying around. The world (universe?) doesn't wrap. It's not really the original game -- there's no collecting the little crystals, and there are no bouncy enemies or asteroids. And you have no weapons with which to fight Sinistar.

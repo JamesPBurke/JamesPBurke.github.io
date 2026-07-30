@@ -6,6 +6,8 @@ categories:
 tags:
   - teaching
   - social emotional learning
+  - education
+  - classroom
 header: null
 ---
 

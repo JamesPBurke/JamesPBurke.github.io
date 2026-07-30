@@ -5,6 +5,8 @@ categories:
   - Blog
 tags:
   - teaching
+  - education
+  - joy
 header:
   teaser: https://ik.imagekit.io/scurryday/aht/teaching_discovery.png?tr=w-500,h-300,c-at_max,f-auto,q-75
   og_image: https://ik.imagekit.io/scurryday/aht/teaching_discovery.png?tr=w-500,h-300,c-at_max,f-auto,q-75

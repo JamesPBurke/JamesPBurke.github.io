@@ -7,6 +7,9 @@ categories:
 tags:
   - programming
   - makecode
+  - education
+  - classroom
+  - technology
 ---
 It took me a bit of time to figure out what was going wrong with my deployed MakeCode Arcade games that were being hosted by GitHub pages here on my website (see [the playables tag entries]({% link _pages/tag-archive.md %}#playables) for Silly Shark Game and Sinistar)
 

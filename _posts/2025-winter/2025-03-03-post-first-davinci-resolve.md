@@ -7,6 +7,8 @@ categories:
   - Blog
 tags:
   - video
+  - personal
+  - tools
 ---
 
 Here's a video I made yesterday using DaVinci Resolve. There's an explanation below.

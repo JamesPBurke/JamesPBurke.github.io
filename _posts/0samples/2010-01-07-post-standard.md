@@ -5,7 +5,7 @@ excerpt_separator: "<!--more-->"
 categories:
   - Blog
 tags:
-  - Post Formats
+  - post formats
   - readability
   - standard
 ---

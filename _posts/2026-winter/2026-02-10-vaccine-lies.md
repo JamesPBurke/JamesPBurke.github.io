@@ -7,6 +7,9 @@ tags:
   - vaccines
   - science-denial
   - exhibits
+  - politics
+  - news
+  - media
 ---
 
 > "We have advocated for measles vaccines all along"  

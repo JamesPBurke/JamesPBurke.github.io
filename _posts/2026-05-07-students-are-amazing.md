@@ -5,6 +5,8 @@ categories:
   - Blog
 tags:
   - teaching
+  - education
+  - joy
 header: null
 ---
 

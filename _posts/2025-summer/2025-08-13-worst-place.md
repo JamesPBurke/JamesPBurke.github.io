@@ -12,4 +12,5 @@ tags:
 - politics
 - culture
 - socialmedia
+- news
 ---

@@ -8,6 +8,9 @@ tags:
   - scifi
   - writing
   - creativity
+  - entertainment
+  - media
+  - philosophy
 header: null
 ---
 People are noting that in the television show _Star City_, which is a spinoff of _For All Mankind_, some details are different between the two. They have re-shot a moon scene with a new actor, for example, that was a significant reveal in the first series, but not in the spinoff. So the moment plays a little differently.

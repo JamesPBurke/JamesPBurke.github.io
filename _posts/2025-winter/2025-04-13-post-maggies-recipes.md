@@ -10,6 +10,8 @@ tags:
   - recipes
   - downloadables
   - link
+  - food
+  - culture
 link: https://jpb-blog-files.s3.us-east-2.amazonaws.com/downloadables/2025_04_Maggie-s-Lebanese-Family-Recipe-Book.pdf
 ---
 

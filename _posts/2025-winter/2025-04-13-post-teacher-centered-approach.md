@@ -7,6 +7,8 @@ tags:
   - link
   - education
   - computer science
+  - teaching
+  - technology
 link: https://csteachers.org/a-teacher-centered-approach-to-reimagining-cs-professional-development/
 ---
 

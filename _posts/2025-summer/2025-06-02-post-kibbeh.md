@@ -11,6 +11,8 @@ tags:
 - joy
 - cooking
 - recipes
+- food
+- lebanese
 ---
 
 ![](https://ik.imagekit.io/scurryday/thumb/kibbeh.jpg?tr=w-640)

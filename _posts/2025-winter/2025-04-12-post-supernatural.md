@@ -8,8 +8,11 @@ header:
 categories:
 - Blog
 tags:
-- Jekyll
+- jekyll
 - programming
+- humor
+- classroom
+- education
 ---
 *The image above and the following explanation were created with ChatGPT for entertainment purposes. The narrative of the images above is as follows:*
 

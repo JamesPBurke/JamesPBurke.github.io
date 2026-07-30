@@ -11,6 +11,8 @@ tags:
 - programming
 - playables
 - makecode
+- video games
+- education
 ---
 ![Gameplay from Monkey Escort Mission](https://ik.imagekit.io/scurryday/thumb/escort_gameplay.gif?tr=w-640)
 

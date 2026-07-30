@@ -7,6 +7,8 @@ categories:
 tags:
   - home
   - pools
+  - personal
+  - maintenance
 header:
   overlay_image: https://ik.imagekit.io/scurryday/aht/poolsopen.png?updatedAt=1782787167588?tr=w-1200,c-at_max,f-auto,q-75
   overlay_filter: 0.5
