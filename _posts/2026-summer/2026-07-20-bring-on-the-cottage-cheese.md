@@ -1,6 +1,6 @@
 ---
 title: Bring on the Cottage Cheese
-published: true
+published: false
 categories:
   - Blog
 tags:
@@ -33,5 +33,9 @@ This recipe is inspired by a relative's creamy cream cheese buffalo chicken dip.
 ### Instructions
 
 Mix cottage cheese with hot sauce and spices, then fold in the shredded chicken. Once combined, add the grape tomatoes if desired.
+
+### Preparation
+
+Place 
 
 [^1]: I use the term loosely, but it's close enough. Many of my diet meals are basically just combining ingredients.
