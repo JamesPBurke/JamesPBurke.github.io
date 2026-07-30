@@ -77,9 +77,11 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll-scholar
+  - jekyll-email-protect
 
 author:
   name   : "JP Burke"
+  email  : "jp@JamesPBurke.com"
   avatar : "/assets/images/bio-snap.jpg"
   bio    : "Educator. Technologist. Prankster? B.S. Computer Science, Ph.D. Mathematics Education."
   quote  : "\"All of my words, if not well put or well taken, are well meant.\" — Woody Guthrie"

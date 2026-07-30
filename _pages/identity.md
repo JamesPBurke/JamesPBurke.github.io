@@ -14,7 +14,7 @@ If I ever lose control of an account, this page and my signed statement are how 
 ## 🧾 Current PGP Key
 
 - **Name:** James Patrick Burke
-- **Email:** jp@JamesPBurke.com
+- **Email:** <a href="mailto:{{ 'jp@JamesPBurke.com' | encode_email }}">jp [at] JamesPBurke [dot] com</a>
 - **Fingerprint:** `1C06 5792 7C3E E4DD 6638  C17D 016C D701 4FCD B4C9`
 - **Expires:** July 2031
 - [Download my public key](/verify/james-patrick-burke-public.asc)
@@ -26,6 +26,8 @@ If I ever lose control of an account, this page and my signed statement are how 
 Some accounts below are cryptographically linked to my PGP key, and independently checked by **[Keyoxide](https://keyoxide.org/1C0657927C3EE4DD6638C17D016CD7014FCDB4C9)** — green checks there mean the link is real, not just claimed. To check the entire list (even the ones unverifiable by Keyoxide) you can use PGP and my public key. [Instructions are here](/identity/instructions/).
 
 ### Cryptographically Verified via Keyoxide:
+
+[![Keyoxide Identity](https://img.shields.io/badge/Keyoxide-Verified_Profile-brightgreen?style=for-the-badge&logo=shield&logoColor=white)](https://keyoxide.org/1C0657927C3EE4DD6638C17D016CD7014FCDB4C9)
 
 - **Keyoxide (identity aggregator):** [keyoxide.org/1C065792...](https://keyoxide.org/1C0657927C3EE4DD6638C17D016CD7014FCDB4C9)
 - **Blog:** [https://jamespburke.com](https://jamespburke.com/blog/)

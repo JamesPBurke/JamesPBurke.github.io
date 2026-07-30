@@ -21,5 +21,6 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-redirect-from"
   gem "jekyll-scholar"
+  gem "jekyll-email-protect"
 #  gem "jekyll-algolia"
 end

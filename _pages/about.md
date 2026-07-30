@@ -10,8 +10,8 @@ All the thoughts shared on this site are my own and do not reflect the thinking 
   <div style="font-size: 0.88em; color: #555; margin-top: 5px; letter-spacing: 0.06em; text-transform: uppercase; font-family: 'Helvetica Neue', Arial, sans-serif;">Contact Me</div>
   <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 18px 0 14px;">
   <div style="font-size: 0.83em; color: #444; font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.9;">
-    <div><i class="fas fa-fw fa-envelope" style="color:#888;"></i> <a href="mailto:burkej@sbregional.org" title="Use my school email only for education-related contacts">burkej@sbregional.org</a> [school-only]</div>
-    <div><i class="fas fa-fw fa-envelope" style="color:#888;"></i> <a href="mailto:jp@JamesPBurke.com" title="Use my personal email for general contacts">jp@JamesPBurke.com</a> [personal/first-contact]</div>
+    <div><i class="fas fa-fw fa-envelope" style="color:#888;"></i> <a href="mailto:{{ 'burkej@sbregional.org' | encode_email }}" title="Use my school email only for education-related contacts">{{ 'burkej@sbregional.org' | html_encode_email }}</a> [school-only]</div>
+    <div><i class="fas fa-fw fa-envelope" style="color:#888;"></i> <a href="mailto:{{ 'jp@JamesPBurke.com' | encode_email }}" title="Use my personal email for general contacts">{{ 'jp@JamesPBurke.com' | html_encode_email }}</a> [personal/first-contact]</div>
   </div>
   <div style="margin-top: 16px; font-size: 1.25em; line-height: 1;">
     <a href="https://github.com/JamesPBurke/" title="GitHub" style="margin-right: 14px; color: #333; text-decoration:none;"><i class="fab fa-fw fa-github"></i></a>
