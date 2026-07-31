@@ -1,5 +1,5 @@
 ---
-title: End of June Journal
+title: End of July Journal
 published: true
 toc: true
 toc_label: "Post Contents"
