@@ -13,6 +13,7 @@ tags:
 - entertainment
 - diet
 - health
+- horror
 
 header:
    image: https://ik.imagekit.io/scurryday/thumb/ObsessionVerdict.png?tr=w-1200,h-630,c-at_least,fo-auto,f-auto,q-85
