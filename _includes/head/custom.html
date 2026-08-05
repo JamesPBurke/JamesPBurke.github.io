@@ -136,43 +136,135 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- Speech logic ---
   var synth = window.speechSynthesis;
-  var utterance = null;
+  var utteranceQueue = [];
+  var queueIndex = 0;
   var paused = false;
+  var startWatchdog = null;
 
   function getCleanText() {
     var clone = contentEl.cloneNode(true);
-    clone.querySelectorAll("pre, code, figure, nav, .tts-player, script, style, .notice, .page__taxonomy").forEach(function(el) {
+    clone.querySelectorAll("pre, code, nav, .tts-player, script, style, .notice, .page__taxonomy").forEach(function(el) {
       el.remove();
+    });
+    // innerText skips <img> entirely, so surface the alt text as words
+    // instead of silently losing the image's description.
+    clone.querySelectorAll("img[alt]").forEach(function(img) {
+      var alt = img.getAttribute("alt").trim();
+      if (alt) img.replaceWith(document.createTextNode("Image: " + alt + ". "));
     });
     return clone.innerText.trim();
   }
 
+  // Long articles as a single utterance hit two real-world limits: Chrome
+  // silently truncates utterances after ~15s, and many mobile TTS engines
+  // reject utterances past a length cap outright. Sentence-sized chunks,
+  // queued one after another, dodge both. Uses split() rather than a
+  // match-and-filter regex so no text is ever silently discarded — headings
+  // and other punctuation-free lines, or sentences ending in a closing
+  // quote/paren after the period, previously vanished entirely.
+  function splitIntoChunks(text) {
+    var paragraphs = text.split(/\n{2,}/).map(function(p) { return p.trim(); }).filter(Boolean);
+    var chunks = [];
+    paragraphs.forEach(function(paragraph) {
+      var sentences = paragraph.split(/(?<=[.!?][)\]"'’”]*)\s+/);
+      var current = "";
+      sentences.forEach(function(sentence) {
+        if (current && (current.length + sentence.length + 1) > 200) {
+          chunks.push(current);
+          current = sentence;
+        } else {
+          current = current ? current + " " + sentence : sentence;
+        }
+      });
+      if (current) chunks.push(current);
+    });
+    return chunks;
+  }
+
   function setUIState(state) {
-    // state: 'idle' | 'playing' | 'paused'
-    var label = toggleBtn.querySelector("span");
-    if (state === "idle") {
-      toggleBtn.innerHTML = svgPlay + "<span>Listen</span>";
-      toggleBtn.classList.remove("tts-active");
-      controls.classList.remove("tts-visible");
-    } else if (state === "playing") {
+    // state: 'idle' | 'playing' | 'paused' | 'error'
+    if (state === "playing") {
       toggleBtn.innerHTML = svgPause + "<span>Pause</span>";
       toggleBtn.classList.add("tts-active");
       controls.classList.add("tts-visible");
+      toggleBtn.removeAttribute("title");
     } else if (state === "paused") {
       toggleBtn.innerHTML = svgPlay + "<span>Resume</span>";
       toggleBtn.classList.add("tts-active");
       controls.classList.add("tts-visible");
+    } else if (state === "error") {
+      toggleBtn.innerHTML = svgPlay + "<span>Unavailable</span>";
+      toggleBtn.classList.remove("tts-active");
+      controls.classList.remove("tts-visible");
+      toggleBtn.setAttribute("title", "Text-to-speech isn't responding in this browser.");
+    } else {
+      toggleBtn.innerHTML = svgPlay + "<span>Listen</span>";
+      toggleBtn.classList.remove("tts-active");
+      controls.classList.remove("tts-visible");
     }
   }
 
-  function speak() {
-    var text = getCleanText();
-    utterance = new SpeechSynthesisUtterance(text);
-    utterance.rate = parseFloat(rateEl.value);
-    utterance.onend = function() { paused = false; setUIState("idle"); };
-    utterance.onerror = function() { paused = false; setUIState("idle"); };
+  function clearWatchdog() {
+    if (startWatchdog) {
+      clearTimeout(startWatchdog);
+      startWatchdog = null;
+    }
+  }
+
+  function armWatchdog() {
+    clearWatchdog();
+    // If the engine never calls back (e.g. no TTS voice installed on
+    // Linux), don't leave the controls stuck in "playing" forever.
+    startWatchdog = setTimeout(function() {
+      synth.cancel();
+      paused = false;
+      utteranceQueue = [];
+      setUIState("error");
+    }, 4000);
+  }
+
+  function speakNext() {
+    if (queueIndex >= utteranceQueue.length) {
+      paused = false;
+      setUIState("idle");
+      return;
+    }
+    var utterance = utteranceQueue[queueIndex];
+    queueIndex++;
+    armWatchdog();
     synth.speak(utterance);
+  }
+
+  function buildQueue(rate) {
+    var chunks = splitIntoChunks(getCleanText());
+    return chunks.map(function(chunk) {
+      var u = new SpeechSynthesisUtterance(chunk);
+      u.rate = rate;
+      u.onstart = clearWatchdog;
+      u.onend = function() {
+        clearWatchdog();
+        if (!paused) speakNext();
+      };
+      u.onerror = function(event) {
+        clearWatchdog();
+        console.error("Text-to-speech error:", event.error);
+        paused = false;
+        if (event.error === "canceled" || event.error === "interrupted") {
+          setUIState("idle");
+        } else {
+          utteranceQueue = [];
+          setUIState("error");
+        }
+      };
+      return u;
+    });
+  }
+
+  function speak() {
+    utteranceQueue = buildQueue(parseFloat(rateEl.value));
+    queueIndex = 0;
     setUIState("playing");
+    speakNext();
   }
 
   toggleBtn.addEventListener("click", function() {
@@ -181,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (synth.speaking && !paused) {
       synth.pause();
       paused = true;
+      clearWatchdog();
       setUIState("paused");
     } else if (paused) {
       synth.resume();
@@ -190,13 +283,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   stopBtn.addEventListener("click", function() {
+    clearWatchdog();
     synth.cancel();
     paused = false;
+    utteranceQueue = [];
     setUIState("idle");
   });
 
   rateEl.addEventListener("change", function() {
     if (synth.speaking || paused) {
+      clearWatchdog();
       synth.cancel();
       paused = false;
       speak();
