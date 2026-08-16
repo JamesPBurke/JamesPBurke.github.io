@@ -59,7 +59,7 @@ I have mostly adopted [Trouble Free Pool](https://www.troublefreepool.com/blog/2
 
 - Liquid chlorine for sanitizing (12% strength from local sources, but basic supermarket bleach is also effective, though less concentrated, so you'll need more)
 - Baking soda (sodium bicarbonate) to raise pH and Total Alkalinity
-- Muratic Acid to lower pH (especially needed if a lot of organic stuff has fallen into he pool)
+- Muriatic Acid to lower pH (especially needed if a lot of organic stuff has fallen into he pool)
 - Water (it's a chemical)
 
 I recommend you visit [Trouble Free Pool](https://www.troublefreepool.com) and check out their Pool School. You will learn a lot in a short amount of time, and it could save you a lot of cash. I've only paid attention to the recommendations there for chlorinated pools, but they give info on SWG (salt water generator) systems, which essentially maintain a level of chlorine using sodium chloride (table salt).
@@ -110,7 +110,7 @@ SOURCE: [Trouble-Free Pools](https://www.troublefreepool.com/blog/2019/01/18/ope
 
 General above-ground-pool helpful knowledge
 
-## Muratic acid 20° Bé (Baumé rating) to bring pH down
+## Muriatic acid 20° Bé (Baumé rating) to bring pH down
 
 It does it very quickly. Great if you're trying to get the pH down to start killing algae.
 
