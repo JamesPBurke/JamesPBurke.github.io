@@ -22,6 +22,8 @@ permalink: /snack-tier-list/
   {% endfor %}
 </div>
 
+*See the list of all snack reviews in the [Snack Category](/categories/#snacks) of this website.*
+
 # Notes
 
 This is called a ***Snack Tier List***, but may contain items that fall into several categories and subcategories: 
