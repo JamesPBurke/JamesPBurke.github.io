@@ -2,6 +2,9 @@
 title: Trick For Evaluating Protein Content
 published: true
 use_math: true
+permalink: /proteintrick/
+redirect_from:
+  - /blog/trick-for-evaluating-protein-content/
 categories:
   - Blog
 tags:

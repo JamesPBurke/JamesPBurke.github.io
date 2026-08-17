@@ -3,8 +3,9 @@ permalink: /extras/
 title: "Extras"
 ---
 
-## Exhibits ##
+## Exhibits and Features ##
 
+- [Snack Review Tier List](/snack-tier-list/)
 - [Recipes from Google Drive WebApp]({{ "../exhibits/found_recipes_gdrive.html" | relative_url }})
 
 ## Random Webapps ##
@@ -21,6 +22,7 @@ title: "Extras"
 ## Utility References (for myself) ##
 
 - [Linux installation for my Laptop](/linuxinstall/)
+- [Stuff to Know About Pools](/poolfacts/)
 
 ## Infographic-Related ##
 

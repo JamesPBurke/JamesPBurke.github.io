@@ -1,3 +1,14 @@
+/* ============================================================= *
+ *  !!! ORPHANED FILE — NOT LOADED BY THE SITE !!!
+ *
+ *  The <link> for this stylesheet is commented out in
+ *  _includes/head/custom.html (line ~14). Nothing below this
+ *  notice reaches the browser. The site's real, active
+ *  stylesheet is assets/css/main.scss — edit rules there.
+ *
+ *  Do not add new rules here expecting them to take effect.
+ * ============================================================= */
+
 /*
  * =============================================================
  *  ADVENTURER'S CLUB — custom.css
@@ -731,3 +742,7 @@ nav.hidden-links a:hover {
     font-size: 0.9rem !important;
   }
 }
+
+/* Tier list styles moved to assets/css/main.scss — this file's
+   <link> is commented out in _includes/head/custom.html, so
+   nothing here actually loads on the site. */

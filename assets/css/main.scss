@@ -868,6 +868,100 @@ p {
   }
 }
 
+// =============================================================
+//  SNACK TIER LIST
+// =============================================================
+
+.tier-list {
+  font-family: $font-body;
+  margin: 2rem 0;
+  border: 2px solid #333;
+}
+
+.tier-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 2px solid #333;
+  min-height: 60px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.tier-label {
+  width: 60px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-right: 2px solid #333;
+  color: #111;
+
+  &.tier-S { background: #ff7f7f; }
+  &.tier-A { background: #ffbf7f; }
+  &.tier-B { background: #ffdf7f; }
+  &.tier-C { background: #bfff7f; }
+  &.tier-D { background: #7fbfff; }
+}
+
+.tier-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.6rem;
+  background: #1a1a1a;
+  flex: 1;
+}
+
+.tier-desc {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: #1a1a1a;
+  color: #f0e6d3;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  align-self: center;
+}
+
+// Sized so ~5 chips of a ~2.5-word snack name fit per row — this will
+// matter once there are enough reviews to fill out each tier.
+// Specificity note: .page__content a / a:hover / a:visited (defined
+// above) outrank a bare .tier-item class, which silently swapped this
+// cream text for the site's dark link color — unreadable on the tray.
+// Qualifying with .page__content here restores the intended contrast.
+.page__content .tier-item,
+.tier-item {
+  background: #2d2d2d;
+  color: #f0e6d3;
+  border: 1px solid #555;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.68rem;
+  white-space: nowrap;
+  transition: background 0.15s;
+
+  &:visited {
+    color: #f0e6d3;
+  }
+
+  &:hover {
+    background: #444;
+    color: #fff;
+  }
+
+  .tier-list--badge {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: auto;
+  }
+}
+
 // jekyll-scholar renders the reference list as an <ol> by default, which
 // numbers entries — APA reference lists are unnumbered and use a hanging
 // indent (first line flush left, wrapped lines indented).
@@ -880,5 +974,121 @@ p {
     padding-left: 2em;
     text-indent: -2em;
     margin-bottom: 1.5em;
+  }
+}
+
+// =============================================================
+//  KRAMDOWN SNACK REVIEW TABLE
+// =============================================================
+
+table.snack-review-table {
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  // A card surface distinct from the page: mostly white, warmed by
+  // a touch of the parchment background rather than plain #fff.
+  background-color: color.mix(#fff, $clr-bg, 55%);
+  border: 1px solid rgba($clr-border, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba($clr-ink, 0.06);
+
+  // Header row
+  thead tr {
+    background-color: rgba($clr-border, 0.25);
+    border-bottom: 2px solid rgba($clr-border, 0.6);
+  }
+
+  th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: $clr-muted;
+  }
+
+  // Base cell styling
+  td {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    border-bottom: 1px solid rgba($clr-border, 0.35);
+    color: $clr-ink;
+  }
+
+  // Left column (feature labels)
+  td:first-child {
+    width: 32%;
+    font-weight: 600;
+    color: $clr-muted;
+    background-color: rgba($clr-border, 0.12);
+    border-right: 1px solid rgba($clr-border, 0.35);
+  }
+
+  tbody {
+    // Subtle alternating row background
+    tr:nth-child(even) {
+      background-color: rgba($clr-border, 0.08);
+    }
+
+    // Readable scan-line as the cursor moves down the table
+    tr:hover {
+      background-color: rgba($clr-border, 0.18);
+    }
+
+    // No stray line under the last row — the rounded corner already closes it
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  // Below this width, stop scrolling a cramped table sideways and
+  // stack each row as a label above its value instead. Relies on every
+  // row being exactly two <td>s (feature name, then value) — kramdown
+  // emits no <thead> for this table shape, so there's no header to hide.
+  @media (max-width: 640px) {
+    display: block;
+
+    tbody,
+    tr,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid rgba($clr-border, 0.35);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 0;
+      border: none;
+      background: none;
+    }
+
+    td:first-child {
+      width: auto;
+      margin-bottom: 0.2rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $clr-muted;
+    }
+
+    td:last-child {
+      color: $clr-ink;
+    }
   }
 }
