@@ -7,6 +7,8 @@ header:
   # image: https://ik.imagekit.io/scurryday/tr:w-1200/postimg/wildebuffalo.jpg?updatedAt=1786978258002
   og_image: https://ik.imagekit.io/scurryday/tr:w-1200/postimg/wildebuffalo.jpg?updatedAt=1786978258002
 published: true
+redirect_from:
+  - /snack reviews/ReviewWildeBuffalo/
 tags:
   - reviews
   - food

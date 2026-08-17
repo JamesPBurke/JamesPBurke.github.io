@@ -6,7 +6,7 @@ permalink: /snack-tier-list/
 
 <div class="tier-list">
   {% assign tiers = "S,A,B,C,D" | split: "," %}
-  {% assign snacks = site.posts | where_exp: "post", "post.categories contains 'Snack Reviews'" %}
+  {% assign snacks = site.posts | where_exp: "post", "post.categories contains 'Snacks'" %}
 
   {% for tier in tiers %}
   <div class="tier-row">
