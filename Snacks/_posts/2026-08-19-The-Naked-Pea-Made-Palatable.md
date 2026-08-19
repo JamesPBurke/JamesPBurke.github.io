@@ -16,6 +16,7 @@ toc_sticky: true
 tags:
   - reviews
   - food
+  - diet
 ---
 
 [!["The Naked Pea 5 LB. container"](https://ik.imagekit.io/scurryday/postimg/tr:w-320/naked-pea.jpg?updatedAt=1787155060750)](https://ik.imagekit.io/scurryday/postimg/naked-pea.jpg?updatedAt=1787155060750){: .align-right}
