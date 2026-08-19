@@ -4,6 +4,7 @@ published: true
 toc: true
 toc_label: "Post Contents"
 toc_icon: "hand-o-right"
+toc_sticky: true
 use_math: false
 categories:
 - Blog

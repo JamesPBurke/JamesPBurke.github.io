@@ -1,8 +1,9 @@
 ---
 title: "Snack Tier List"
 layout: single
+author_profile: false
 permalink: /snack-tier-list/
----
+--- 
 
 <div class="tier-list">
   {% assign tiers = "S,A,B,C,D" | split: "," %}

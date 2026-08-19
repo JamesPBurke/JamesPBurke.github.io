@@ -5,6 +5,7 @@ use_math: true
 toc: true
 toc_label: "Post Contents"
 toc_icon: "hand-o-right"
+toc_sticky: true
 permalink: /poolfacts/
 redirect_from:
   - /blog/stuff-about-pools/

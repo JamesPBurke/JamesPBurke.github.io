@@ -564,6 +564,22 @@ p {
   color: $clr-ink !important;
 }
 
+// MM's .page always reserves a right-hand gutter sized for the left
+// sidebar (author profile / page.sidebar), even when no sidebar renders.
+// Reclaim that space on pages with author_profile: false and no
+// page.sidebar — useful for wide content like the egg simulator.
+#main:not(:has(.sidebar)) .page {
+  @include breakpoint($large) {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
 // Post content body
 .page__content {
   font-family: $font-body;
@@ -1091,4 +1107,173 @@ table.snack-review-table {
       color: $clr-ink;
     }
   }
+}
+
+// =============================================================
+//  EGG DONENESS SIMULATOR
+// =============================================================
+
+.egg-sim {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.egg-sim__panel {
+  background-color: color.mix(#fff, $clr-bg, 55%);
+  border: 1px solid rgba($clr-border, 0.5);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba($clr-ink, 0.06);
+}
+
+// Settings sit below the simulation now, laid out as a compact row of
+// fieldsets rather than a tall stacked list, with much smaller text than
+// the rest of the page — this is a controls strip, not prose.
+.egg-sim__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; // don't stretch short fieldsets to match a taller sibling
+  gap: 1rem 2rem;
+}
+
+// Fixed px, not rem: Minimal Mistakes scales the root font-size up at wider
+// breakpoints (20-22px, not 16px), which made rem-based sizes here come out
+// far larger than intended. Pinning to px keeps this panel reliably small
+// regardless of viewport-driven root scaling.
+.egg-sim__field {
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 170px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start; // pack wrapped option rows tight, don't spread them
+  column-gap: 0.8rem;
+  row-gap: 0.2rem;
+
+  legend {
+    font-family: $font-body;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $clr-muted;
+    padding: 0 0 0.3rem;
+    flex: 0 0 100%; // own row, above the options
+  }
+
+  // Options flow left to right and wrap only when a row actually runs out
+  // of width, instead of every option forcing its own line regardless of
+  // how short it is.
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    line-height: 1.5;
+    color: $clr-ink;
+    cursor: pointer;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      margin-right: 0.35rem;
+      accent-color: $clr-sienna;
+      transform: scale(0.85);
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.egg-sim__slider-row {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%; // sliders always get their own row within .egg-sim__field
+  gap: 0.25rem;
+  font-size: 11px;
+  color: $clr-muted;
+
+  input[type='range'] {
+    width: 100%;
+    accent-color: $clr-sienna;
+  }
+}
+
+.egg-sim__readouts {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.egg-sim__diagram {
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+
+  @media (max-width: 480px) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.egg-sim__labels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.egg-sim__label-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.egg-sim__label-name {
+  font-family: $font-body;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $clr-muted;
+}
+
+.egg-sim__label-value {
+  font-family: $font-heading;
+  font-size: 1.4rem;
+  color: $clr-ink;
+}
+
+.egg-sim__label-temp {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  color: $clr-muted;
+}
+
+.egg-sim__chart {
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
+.egg-sim__scrub-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+
+  input[type='range'] {
+    flex: 1;
+    accent-color: $clr-sienna;
+  }
+}
+
+.egg-sim__time-label {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  color: $clr-muted;
+  min-width: 3.5em;
+  text-align: right;
 }
