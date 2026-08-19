@@ -3,6 +3,7 @@ title: Almost Perfect Cooked Eggs
 published: true
 tier: S
 snack_name: "Boiled Egg"
+last_modified_at: "2026-08-19 10:18:24 -0400"
 categories:
   - Blog
   - Snacks
@@ -289,6 +290,29 @@ Do you have a big ol' insulated bottle? Or a small cooler? As long as you let th
 I swear I've seen people put a pot in an oven to sous vide stuff. I have no idea how successful this would be. Method: heat some water to 167 degrees F (75 degrees C) on the stove or whatever, and heat your oven to the same, or maybe just slightly higher. Put the eggs in the water, and the pot in the oven. Since the oven environment is temperature-controlled, it should keep the water from cooling off, but also shouldn't heat the water up much. This works as a thought experiment. Anyone want to try this? May work best in a convection oven, which uses a fan to keep the whole oven temperature consistent.
 
 Finito.
+
+# Update 2026.19.08
+
+My egg-description-table earlier was a joke, and even though I linked to a reputable source on egg nutrition, it really bugged me that I didn't have a real table in this post. So, here. I don't want to update the joke table.
+
+| Feature | Details |
+| --- | --- |
+| Product Name | Hard Boiled Egg |
+| Brand | Whole Food / Generic |
+| Flavor | Natural / Plain |
+| Category | Whole Food Snack / High-Protein Snack |
+| Key Ingredients | Whole chicken egg |
+| Full Ingredients | 100% Whole Chicken Egg (Cooked) |
+| Selling Point | 8g of complete protein, naturally nutrient-dense, single-ingredient whole food |
+| Net Weight | 2.25 oz (64g per egg) |
+| Calories | ~100 kcal / egg |
+| Macros (Per Egg) | Protein: 8.1g \| Fat: 6.8g \| Carbs: 0.7g (0g Fiber, 0.7g Sugar) |
+| Sodium | 79 mg (3% DV) |
+| Dietary Badges | Gluten-Free, Keto, Paleo, Vegetarian, Dairy-Free, Zero Added Sugar |
+| Allergens | Contains: Egg |
+{: .snack-review-table }
+
+A standard large hard-boiled egg provides approximately **32% of its total calories from protein**. While it doesn't meet the protein * 10 (aka. 40% calories from protein) rule of thumb, for most people that's more than enough protein for an approximately 100 calorie snack.
 
 *AI Disclosure: Language models were used to check the spelling and grammar on this post, and also for formatting/CSS generation. Always follow up on sources when a result has any AI involved, including with Google searches. All writing, math, perceptions, and reasoning on this post are my own. For AI use related to the creation of the dynamic simulations, refer to [the page dedicated to those simulations](/egg-doneness-simulator/).*
 
