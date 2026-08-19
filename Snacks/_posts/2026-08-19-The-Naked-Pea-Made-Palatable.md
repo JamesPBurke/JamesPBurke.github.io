@@ -24,7 +24,7 @@ tags:
 
 After trying some pretty decent protein shake powders (currently unreviewed), I decided to get a powder with a much higher protein content and much lower calorie count. And that led me to The Naked Pea, which can be acquired in its pure form as entirely pea protein. But, by accident, I bought the one that sounds more like a protein shake powder, because it includes two additional ingredients to make it more palatable.
 
-The full product specs are listed below, but the short story is that for 140 kcal a serving, this stuff promises. nearly 26g or protein. For those of you familiar with the math, that's a whopping 74% calories from protein. That rivals one of the protein superstars: chicken breast, which provides 80% of its calories from protein. That means if you're trying ot hit your protein target at the end of the day, this is a decent go-to.
+The full product specs are listed below, but the short story is that for 140 kcal a serving, this stuff promises. nearly 26g or protein. For those of you familiar with the math, that's a whopping 74% calories from protein. That rivals one of the protein superstars: chicken breast, which provides 80% of its calories from protein. That means if you're trying to hit your protein target at the end of the day, this is a decent go-to.
 
 
 # Expectations
@@ -39,7 +39,7 @@ That was a mistake.
 
 The flavorings included in the mix do nothing to cover up the sort of mealiness of pea. It it is hard to describe the flavor. Incomplete mixing (I did use a shaker bottle) meant that the shake was overly gritty. I would say that if you're familiar with dried chickpeas, imagine unsalted, dried chickpeas. Now imagine chewing on them for a while without swallowing them. It was kind of like that. Not exactly, but enough. It reinforced my thought that I should have gotten the unflavored, because I immediately considered using it in a savory mixture instead of expecting sweetness.
 
-So, aha. I guess I could use this as an ingredient rather than a food. The rest of htis post is about how I made the thing more palatable. ***That*** is the actual snack I am going ot review.
+So, aha. I guess I could use this as an ingredient rather than a food. The rest of htis post is about how I made the thing more palatable. ***That*** is the actual snack I am going to review.
 
 # Recipe
 
