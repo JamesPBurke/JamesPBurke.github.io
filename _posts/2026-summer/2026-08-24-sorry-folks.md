@@ -23,7 +23,9 @@ header:
 
 # Spoiler
 
-To spoil this whole post, I'm sorry folks. I'm going to not be doing some things. I'm pretty sure you'll forgive me. But if you want to understand, there's this post.
+To spoil this whole post, I'm sorry folks. I'm going to not be doing some things. I'm pretty sure you'll forgive me. But if you want to understand, there's this post[^where].
+
+[^where]: I'm off doing my job and trying to get healthy and stay sane. SO I'm a little scarce. See, I spoiled it again.
 
 # Memories
 
