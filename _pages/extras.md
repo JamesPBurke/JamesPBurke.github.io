@@ -23,6 +23,7 @@ title: "Extras"
 
 - [Linux installation for my Laptop](/linuxinstall/)
 - [Stuff to Know About Pools](/poolfacts/)
+- [Egg Doneness Simulator](/egg-doneness-simulator/)
 
 ## Infographic-Related ##
 
