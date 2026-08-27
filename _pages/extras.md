@@ -7,6 +7,7 @@ title: "Extras"
 
 - [Snack Review Tier List](/snack-tier-list/)
 - [Recipes from Google Drive WebApp]({{ "../exhibits/found_recipes_gdrive.html" | relative_url }})
+- [Egg Doneness Simulator](/egg-doneness-simulator/)
 
 ## Random Webapps ##
 
@@ -23,7 +24,6 @@ title: "Extras"
 
 - [Linux installation for my Laptop](/linuxinstall/)
 - [Stuff to Know About Pools](/poolfacts/)
-- [Egg Doneness Simulator](/egg-doneness-simulator/)
 
 ## Infographic-Related ##
 
