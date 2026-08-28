@@ -24,7 +24,7 @@ Logging that I have revisited two earlier posts. I have new info!
 
 # Egg Update: An Easier Way
 
-Sous vide is great for boiling 10 eggs ([see my last post on this](/blog/snacks/almost-perfect-hard-boiled-eggs/)) because it is less susceptible to the fact that the eggs will lower the temperature of the water when they're added. That's because it's a longer cooking method, and there's a lot of wiggle room when you're cooking na egg for 45 minutes plus cooldown time. But the Instant Pot is an imperfect sous vide vehicle and I don't want to set up the circulator for every time I want a bunch of boiled eggs.
+Sous vide is great for boiling 10 eggs ([see my last post on this](/blog/snacks/almost-perfect-hard-boiled-eggs/)) because it is less susceptible to the fact that the eggs will lower the temperature of the water when they're added. That's because it's a longer cooking method, and there's a lot of wiggle room when you're cooking an egg for 45 minutes plus cooldown time. But the Instant Pot is an imperfect sous vide vehicle and I don't want to set up the circulator for every time I want a bunch of boiled eggs.
 
 I was also curious if my simulator did a good job predicting how an egg would turn out. At least, in my ideal range of donenesses. So, I fiddled with the controls, and settled on this set of settings:
 
@@ -133,3 +133,4 @@ The simulator really was created for display purposes, not for prediction. SO I 
 
 I believe it wouldn't be much different if you used the plain Naked Pea mix. The vanilla flavoring is not prominent, so I doubt it would be missed.
 
+*AI Disclosure: I used an LLM to quickly fix the markup on my recipe. The writing is mine. There's probably even typos.*
