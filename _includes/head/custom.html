@@ -1,5 +1,9 @@
 <!-- start custom head snippets -->
 
+<!-- Pages with `noindex: true` in front matter ask search engines not to index or follow them. -->
+<!-- Used alongside `sitemap: false` for pages that are public but not meant to be casually discovered (e.g. /ed/). -->
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />

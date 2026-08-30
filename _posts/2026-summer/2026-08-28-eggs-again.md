@@ -7,6 +7,7 @@ categories:
   - Snacks
 tags:
   - food
+  - recipes
   - cooking
   - diet
 toc: true

@@ -5,7 +5,6 @@ categories:
   - Blog
 tags:
   - link
-  - post formats
   - technology
   - philosophy
   - artificial intelligence
