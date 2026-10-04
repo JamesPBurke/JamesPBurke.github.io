@@ -131,9 +131,9 @@ I have ordered this brand's answer to Kraft Dinner (a.k.a. Kraft Macaroni and Ch
 | Full Ingredients | Lupini Flour, Fava Bean Protein, Organic Tapioca Starch, Xanthan Gum |
 | Selling Point | 80g protein and 15g fiber per box, only 6g net carbs per serving |
 | Net Weight | 8 oz (226g) |
-| Calories | 130 kcal / serving (520 kcal / bag) |
-| Macros (Per Bag) | Protein: 80g \| Fat: 14g \| Carbs: 84g (60g Fiber) |
-| Sodium | 400 mg (17% DV per bag) |
+| Calories | 130 kcal / serving (520 kcal / box) |
+| Macros (Per Serving) | Protein: 40g \| Fat: 3.5g \| Carbs: 21g (15g Fiber) |
+| Sodium | 100 mg per serving |
 | Dietary Badges | Non-GMO Project Verified, Certified Gluten-Free |
 | Allergens | Contains Lupini (a legume in the same family as peanuts), and **contains Fava Bean Protein which may cause problems in people with [G6PD deficiency](https://g6pddf.org/g6pd-deficiency/)** |
 {: .snack-review-table }
