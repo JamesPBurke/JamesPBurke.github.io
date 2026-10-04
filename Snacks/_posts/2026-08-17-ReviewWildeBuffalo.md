@@ -13,8 +13,8 @@ tags:
   - reviews
   - food
 ---
-
 [![Wilde Buffalo Chips Bag](https://ik.imagekit.io/scurryday/tr:w-320/postimg/wildebuffalo.jpg?updatedAt=1786978258002)](https://ik.imagekit.io/scurryday/postimg/wildebuffalo.jpg?updatedAt=1786978258002){: .align-right}
+
 
 Wilde Protein Chips, as the package will tell you, are a type of snack chip made from ingredients like chicken breast, egg whites, and bone broth -- all things that people are trying to get into them if they're eating a primarily protein diet. Full product breakdown at the bottom of this post.
 

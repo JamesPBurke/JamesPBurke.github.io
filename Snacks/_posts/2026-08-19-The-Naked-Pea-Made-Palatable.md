@@ -1,6 +1,6 @@
 ---
 title: "Review: Palatable Naked Pea Protein Shake"
-tier: "B"
+tier: "A"
 snack_name: "Dressed Up Pea Shake"
 header:
   teaser: https://ik.imagekit.io/scurryday/postimg/naked-pea.jpg?updatedAt=1787155060750
