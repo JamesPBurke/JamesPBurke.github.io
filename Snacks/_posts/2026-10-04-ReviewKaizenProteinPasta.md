@@ -7,7 +7,10 @@ header:
   overlay_image: "https://ik.imagekit.io/scurryday/postimg/kaizencover.jpg?tr:w-640"
   og_image: "https://ik.imagekit.io/scurryday/postimg/kaizencover.jpg"
   overlay_filter: 0.5
-  published: false
+toc: true
+toc_label: "Post Contents"
+toc_icon: "hand-o-right"
+published: true
 tags:
   - reviews
   - food
