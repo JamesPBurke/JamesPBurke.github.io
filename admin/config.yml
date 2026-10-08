@@ -2,7 +2,6 @@ backend:
   name: github
   repo: JamesPBurke/JamesPBurke.github.io
   branch: master
-  auth_type: token
 
 media_folder: assets/images/uploads
 public_folder: /assets/images/uploads
